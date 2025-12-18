@@ -1,0 +1,34 @@
+# MonoDesk Landing Page - Project Rules
+
+## CSS Architecture
+
+- **Each HTML page must have its own unique CSS file** - do not share stylesheets between pages
+- CSS files should be named to match their HTML page (e.g., `bundle.html` → `css/bundle.css`)
+- This allows each landing page variant to be fully independent and easily customizable
+
+## Assets
+
+- Assets in the `/assets` folder can be shared across all pages
+- Common assets include logos, icons, and images
+
+## File Structure
+
+```
+monodesk-landing/
+├── index.html          → css/styles.css
+├── vibes.html          → css/styles.css (legacy, can be split)
+├── bundle.html         → css/bundle.css
+├── css/
+│   ├── styles.css      # For index.html and vibes.html
+│   └── bundle.css      # For bundle.html
+└── assets/             # Shared assets
+    └── logo-lockup.svg
+```
+
+## When Creating New Pages
+
+1. Create the HTML file in the root directory
+2. Create a corresponding CSS file in `/css` with the same name
+3. Link only that CSS file in the HTML `<head>`
+4. Reuse assets from `/assets` as needed
+
