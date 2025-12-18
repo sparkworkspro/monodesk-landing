@@ -15,11 +15,11 @@
 
 ```
 monodesk-landing/
-├── index.html          → css/index.css
+├── example.html        → css/example.css
 ├── vibes.html          → css/vibes.css
 ├── bundle.html         → css/bundle.css
 ├── css/
-│   ├── index.css       # For index.html
+│   ├── example.css     # For example.html
 │   ├── vibes.css       # For vibes.html
 │   └── bundle.css      # For bundle.html
 └── assets/             # Shared assets

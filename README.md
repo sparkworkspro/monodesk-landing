@@ -10,11 +10,11 @@ Simple landing pages for MonoDesk with early access booking.
 
 ```
 monodesk-landing/
-├── index.html          # Landing page (Option 1)
-├── vibes.html          # Landing page (Option 2)
+├── example.html        # Example landing page
+├── vibes.html          # Landing page (Vibes)
 ├── bundle.html         # Landing page (Bundle/Suite)
 ├── css/
-│   ├── index.css       # Styles for index.html
+│   ├── example.css     # Styles for example.html
 │   ├── vibes.css       # Styles for vibes.html
 │   └── bundle.css      # Styles for bundle.html
 ├── assets/
@@ -28,7 +28,7 @@ monodesk-landing/
 
 | Page | CSS File |
 |------|----------|
-| `index.html` | `css/index.css` |
+| `example.html` | `css/example.css` |
 | `vibes.html` | `css/vibes.css` |
 | `bundle.html` | `css/bundle.css` |
 
