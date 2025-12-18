@@ -1,4 +1,32 @@
-/* Bundle Page - Wireframe Styles */
+/* Bundle Page - MonoDesk Brand Styles */
+
+/* ========================================
+   Brand Variables
+   ======================================== */
+:root {
+    /* Brand Colors */
+    --brand-blue: #1C64F5;
+    --brand-black: #161616;
+    --brand-white: #FFFFFF;
+    --surface-tint: #EEF2F5;
+    --surface-grey: #DADEE1;
+    --smoke: #D8D9D4;
+    --brand-highlighter: #D1FF6E;
+    --brand-pink: #FF3CFE;
+    --brand-orange: #FF5B26;
+    --brand-green: #026232;
+    
+    /* Typography */
+    --font-primary: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: 'Instrument Serif', Georgia, serif;
+    --font-mono: 'Geist Mono', 'JetBrains Mono', monospace;
+    
+    /* Rounded Corners */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 20px;
+    --radius-xl: 24px;
+}
 
 * {
     margin: 0;
@@ -7,10 +35,15 @@
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: #f5f5f5;
-    color: #1a1a1a;
+    font-family: var(--font-primary);
+    background: var(--surface-tint);
+    color: var(--brand-black);
     line-height: 1.6;
+}
+
+/* Global image styling - exclude SVG logos */
+img:not([src$=".svg"]) {
+    border-radius: var(--radius-md);
 }
 
 .container {
@@ -19,36 +52,54 @@ body {
     padding: 0 2rem;
 }
 
-/* Hero Section - Big & Bold */
+/* ========================================
+   Hero Section
+   ======================================== */
 .hero {
     text-align: center;
-    padding: 8rem 0 6rem;
-    background: #fff;
-    border-bottom: 1px dashed #ccc;
+    padding: 6rem 0 5rem;
+    background: var(--brand-blue);
+    color: var(--brand-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -25%;
+    width: 150%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+    pointer-events: none;
 }
 
 .hero .container {
     max-width: 1400px;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-logo {
-    max-width: 160px;
+    max-width: 180px;
     margin-bottom: 3rem;
+    filter: brightness(0) invert(1);
 }
 
 .hero h1 {
     font-size: 3.5rem;
-    font-weight: 700;
-    max-width: 1400px;
+    font-weight: 600;
+    max-width: 1200px;
     margin: 0 auto 1rem;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
 }
 
 .hero-subhead {
     font-size: 1.25rem;
     font-weight: 400;
-    color: #555;
+    color: rgba(255,255,255,0.85);
     max-width: 600px;
     margin: 0 auto 0;
     line-height: 1.5;
@@ -59,16 +110,15 @@ body {
     position: relative;
     max-width: 100%;
     margin: 0 auto 1rem;
-    padding: 0 2rem;
+    padding: 0 4rem;
 }
 
 .carousel-content {
-    height: 180px;
+    min-height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 
 .carousel-slide {
     display: none;
@@ -83,8 +133,8 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: none;
-    border: 2px solid #ddd;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.3);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -93,7 +143,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #1a1a1a;
+    color: var(--brand-white);
 }
 
 .carousel-nav svg {
@@ -110,107 +160,118 @@ body {
 }
 
 .carousel-nav:hover {
-    border-color: #1a1a1a;
-    background: #1a1a1a;
-    color: #fff;
+    background: var(--brand-white);
+    border-color: var(--brand-white);
+    color: var(--brand-blue);
 }
 
 .carousel-counter {
-    font-size: 0.9rem;
-    color: #888;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
     margin-bottom: 2rem;
 }
 
-.gcal-btn-wrapper {
-    margin-top: 1rem;
+.hero .gcal-btn-wrapper {
+    margin-top: 1.5rem;
 }
 
-.gcal-btn-wrapper button {
-    background: #1a1a1a !important;
-    border-radius: 8px !important;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+.hero .gcal-btn-wrapper button {
+    background: var(--brand-white) !important;
+    color: var(--brand-blue) !important;
+    border-radius: var(--radius-sm) !important;
+    font-family: var(--font-primary) !important;
     font-size: 1rem !important;
-    font-weight: 400 !important;
+    font-weight: 500 !important;
     padding: 1rem 2rem !important;
     height: auto !important;
 }
 
-.gcal-btn-wrapper button:hover {
-    background: #333 !important;
+.hero .gcal-btn-wrapper button:hover {
+    background: var(--surface-tint) !important;
 }
 
-.gcal-btn-wrapper button * {
+.hero .gcal-btn-wrapper button * {
     font-family: inherit !important;
     font-size: 1rem !important;
-    font-weight: 400 !important;
+    font-weight: 500 !important;
+    color: var(--brand-blue) !important;
 }
 
-/* Before / After Section - Side by side with visual weight */
+/* ========================================
+   Before / After Section
+   ======================================== */
 .before-after {
     padding: 6rem 0;
-    background: #fff;
-    border-bottom: 1px dashed #ccc;
+    background: var(--brand-white);
 }
 
 .comparison {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
-    gap: 3rem;
-    align-items: center;
+    gap: 2rem;
+    align-items: stretch;
 }
 
 .before {
-    border: 1px dashed #ccc;
-    border-radius: 12px;
+    border: 1px solid var(--surface-grey);
+    border-radius: var(--radius-xl);
     padding: 2.5rem;
-    min-height: 400px;
+    min-height: 420px;
     position: relative;
-    background: #fafafa;
+    background: var(--surface-tint);
 }
 
 .after {
-    border: 1px solid #1a1a1a;
-    border-radius: 12px;
+    border: 2px solid var(--brand-blue);
+    border-radius: var(--radius-xl);
     padding: 2.5rem;
-    min-height: 400px;
+    min-height: 420px;
     position: relative;
-    background: #fff;
+    background: var(--brand-white);
 }
 
 .before h2, .after h2 {
     position: absolute;
     top: -0.75rem;
     left: 1.5rem;
-    background: #fff;
+    background: var(--brand-white);
     padding: 0 0.75rem;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: #888;
+    letter-spacing: 0.1em;
+    color: var(--smoke);
+}
+
+.before h2 {
+    background: var(--surface-tint);
 }
 
 .after h2 {
-    color: #1a1a1a;
+    color: var(--brand-blue);
 }
 
 .tool-scatter {
     position: relative;
-    height: 320px;
+    height: 340px;
 }
 
 .tool-logo {
     position: absolute;
-    background: #e8e8e8;
-    border: 1px solid #ccc;
-    padding: 0.6rem 1.2rem;
+    background: var(--brand-white);
+    border: 1px solid var(--surface-grey);
+    padding: 0.5rem 1rem;
     border-radius: 6px;
-    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
     color: #666;
     white-space: nowrap;
     transform: rotate(var(--rotate, 0deg));
     animation: float var(--duration, 3s) ease-in-out infinite;
     animation-delay: var(--delay, 0s);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 @keyframes float {
@@ -249,25 +310,28 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 320px;
+    height: 340px;
 }
 
 .monodesk-logo img {
     max-width: 180px;
 }
 
-/* Benefits Section - Large text, left aligned */
+/* ========================================
+   Benefits Section
+   ======================================== */
 .benefits {
     padding: 6rem 0;
-    background: #fff;
-    border-bottom: 1px dashed #ccc;
+    background: var(--brand-white);
+    border-top: 1px solid var(--surface-grey);
 }
 
 .benefits h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 600;
     margin-bottom: 3rem;
     text-align: center;
+    letter-spacing: -0.02em;
 }
 
 .benefits .container {
@@ -283,9 +347,9 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 1.25rem;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid #eee;
-    font-size: 1.5rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--surface-grey);
+    font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.4;
 }
@@ -295,23 +359,25 @@ body {
 }
 
 .checkbox {
-    color: #1a1a1a;
+    color: var(--brand-blue);
     font-size: 1.5rem;
     flex-shrink: 0;
 }
 
-/* Features Section - Compact grid */
+/* ========================================
+   Features Section
+   ======================================== */
 .features {
     padding: 6rem 0;
-    background: #fff;
-    border-bottom: 1px dashed #ccc;
+    background: var(--surface-tint);
 }
 
 .features h2 {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 2.5rem;
     text-align: center;
+    letter-spacing: -0.02em;
 }
 
 .features-list {
@@ -324,44 +390,54 @@ body {
 }
 
 .features-list li {
-    background: #f5f5f5;
-    border: 1px solid #ddd;
-    padding: 1.25rem 1.5rem;
-    border-radius: 12px;
+    background: var(--brand-white);
+    border: 1px solid var(--surface-grey);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.features-list li:hover {
+    border-color: var(--brand-blue);
+    box-shadow: 0 4px 20px rgba(28, 100, 245, 0.1);
 }
 
 .features-list li strong {
     font-size: 1rem;
     font-weight: 600;
+    color: var(--brand-black);
 }
 
 .features-list li span {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: #666;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
-/* Urgency Section - Big statement */
+/* ========================================
+   Urgency Section
+   ======================================== */
 .urgency {
     padding: 6rem 0;
-    background: #fff;
-    border-bottom: 1px dashed #ccc;
+    background: var(--brand-white);
+    border-top: 1px solid var(--surface-grey);
 }
 
 .urgency h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
     line-height: 1.2;
+    letter-spacing: -0.02em;
 }
 
 .urgency-text {
-    font-size: 1.25rem;
-    margin-bottom: 2.5rem;
-    color: #555;
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    color: #666;
     max-width: 800px;
 }
 
@@ -376,31 +452,34 @@ body {
 
 .urgency-list li {
     font-size: 1.1rem;
-    padding: 0.5rem 0;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--surface-grey);
 }
 
 .urgency-cta {
-    font-weight: 600;
-    font-size: 1.25rem;
-    background: #1a1a1a;
-    color: #fff;
-    padding: 1.5rem 2rem;
-    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1.125rem;
+    background: var(--brand-blue);
+    color: var(--brand-white);
+    padding: 1.25rem 2rem;
+    border-radius: var(--radius-sm);
     display: inline-block;
 }
 
-/* Why Us Section - Stacked comparison */
+/* ========================================
+   Why Us Section
+   ======================================== */
 .why-us {
     padding: 6rem 0;
-    background: #fff;
-    border-bottom: 1px dashed #ccc;
+    background: var(--surface-tint);
 }
 
 .why-us h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 600;
     margin-bottom: 3rem;
     text-align: center;
+    letter-spacing: -0.02em;
 }
 
 .comparison-table {
@@ -411,29 +490,29 @@ body {
 }
 
 .compare-item {
-    border: 1px dashed #ccc;
+    border: 1px solid var(--surface-grey);
     padding: 1.5rem;
-    border-radius: 8px;
-    background: #fafafa;
+    border-radius: var(--radius-md);
+    background: var(--brand-white);
 }
 
 .compare-item h3 {
     font-size: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     font-weight: 600;
 }
 
 .compare-item p {
     color: #666;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.5;
 }
 
 .compare-item.highlight {
     grid-column: 1 / -1;
-    border: 1px solid #1a1a1a;
-    background: #fff;
-    padding: 2.5rem;
+    border: 2px solid var(--brand-blue);
+    background: var(--brand-white);
+    padding: 2rem;
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 1.5rem;
@@ -443,48 +522,58 @@ body {
 .compare-item.highlight h3 {
     font-size: 1.5rem;
     margin: 0;
+    color: var(--brand-blue);
 }
 
 .compare-item.highlight p {
-    color: #1a1a1a;
+    color: var(--brand-black);
     font-size: 1.1rem;
     margin: 0;
 }
 
-/* What's New Section - Offset cards */
+/* ========================================
+   What's New Section
+   ======================================== */
 .whats-new {
     padding: 6rem 0;
-    background: #fff;
-    border-bottom: 1px dashed #ccc;
+    background: var(--brand-white);
+    border-top: 1px solid var(--surface-grey);
 }
 
 .whats-new h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 600;
     margin-bottom: 3rem;
     text-align: center;
+    letter-spacing: -0.02em;
 }
 
 .diff-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 .diff-item {
-    border: 1px dashed #ccc;
+    border: 1px solid var(--surface-grey);
     padding: 2rem;
-    border-radius: 12px;
-    background: #fff;
+    border-radius: var(--radius-lg);
+    background: var(--surface-tint);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.diff-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
 
 .diff-item h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
-    line-height: 1.2;
+    line-height: 1.3;
+    font-weight: 600;
 }
 
 .diff-item p {
@@ -493,18 +582,20 @@ body {
     line-height: 1.6;
 }
 
-/* Proof Section - Large showcase */
+/* ========================================
+   Proof Section
+   ======================================== */
 .proof {
     padding: 6rem 0;
-    background: #fff;
-    border-bottom: 1px dashed #ccc;
+    background: var(--surface-tint);
 }
 
 .proof h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 600;
     margin-bottom: 3rem;
     text-align: center;
+    letter-spacing: -0.02em;
 }
 
 .screenshots {
@@ -518,32 +609,36 @@ body {
 }
 
 .screenshot-placeholder {
-    background: #e8e8e8;
-    border: 1px dashed #ccc;
-    border-radius: 12px;
+    background: var(--brand-white);
+    border: 1px solid var(--surface-grey);
+    border-radius: var(--radius-lg);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #888;
-    font-size: 0.9rem;
+    color: var(--smoke);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
 }
 
 .screenshot-placeholder:first-child {
     grid-row: 1 / -1;
 }
 
-/* How It Works Section - Horizontal steps */
+/* ========================================
+   How It Works Section
+   ======================================== */
 .how-it-works {
     padding: 6rem 0;
-    background: #fff;
-    border-bottom: 1px dashed #ccc;
+    background: var(--brand-white);
+    border-top: 1px solid var(--surface-grey);
 }
 
 .how-it-works h2 {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 3rem;
     text-align: center;
+    letter-spacing: -0.02em;
 }
 
 .steps {
@@ -562,7 +657,7 @@ body {
     left: 10%;
     right: 10%;
     height: 2px;
-    background: #ddd;
+    background: var(--surface-grey);
     z-index: 0;
 }
 
@@ -579,11 +674,12 @@ body {
     justify-content: center;
     width: 50px;
     height: 50px;
-    background: #1a1a1a;
-    color: white;
+    background: var(--brand-blue);
+    color: var(--brand-white);
     border-radius: 50%;
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-family: var(--font-mono);
+    font-size: 1.125rem;
+    font-weight: 500;
     margin-bottom: 1.5rem;
 }
 
@@ -599,18 +695,20 @@ body {
     line-height: 1.5;
 }
 
-/* Testimonials Section - Quote style */
+/* ========================================
+   Testimonials Section
+   ======================================== */
 .testimonials {
     padding: 6rem 0;
-    background: #fff;
-    border-bottom: 1px dashed #ccc;
+    background: var(--surface-tint);
 }
 
 .testimonials h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 600;
     margin-bottom: 3rem;
     text-align: center;
+    letter-spacing: -0.02em;
 }
 
 .testimonial-grid {
@@ -622,14 +720,16 @@ body {
 }
 
 .testimonial {
-    border-left: 4px solid #1a1a1a;
-    padding: 0 0 0 1.5rem;
+    background: var(--brand-white);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    border: 1px solid var(--surface-grey);
 }
 
 .testimonial .quote {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    color: #333;
+    color: var(--brand-black);
     line-height: 1.6;
     font-style: normal;
 }
@@ -639,38 +739,43 @@ body {
     font-size: 2rem;
     line-height: 0;
     vertical-align: -0.4em;
-    color: #ccc;
+    color: var(--brand-blue);
     margin-right: 0.25rem;
 }
 
 .testimonial .author {
     font-weight: 600;
-    color: #1a1a1a;
+    color: var(--brand-blue);
     font-size: 0.9rem;
 }
 
-/* Guarantee Section - Centered callout */
+
+/* ========================================
+   Guarantee Section
+   ======================================== */
 .guarantee {
     padding: 6rem 0;
-    background: #fff;
-    border-bottom: 1px dashed #ccc;
+    background: var(--brand-white);
+    border-top: 1px solid var(--surface-grey);
 }
 
 .guarantee h2 {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 2rem;
     text-align: center;
+    letter-spacing: -0.02em;
 }
 
 .guarantee-box {
     max-width: 650px;
     margin: 0 auto;
-    border: 1px solid #1a1a1a;
+    border: 2px solid var(--brand-blue);
     padding: 3rem;
-    border-radius: 12px;
+    border-radius: var(--radius-xl);
     text-align: center;
     position: relative;
+    background: linear-gradient(180deg, rgba(28, 100, 245, 0.03) 0%, transparent 100%);
 }
 
 .guarantee-box::before {
@@ -679,8 +784,8 @@ body {
     top: -1.25rem;
     left: 50%;
     transform: translateX(-50%);
-    background: #1a1a1a;
-    color: #fff;
+    background: var(--brand-blue);
+    color: var(--brand-white);
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
@@ -692,8 +797,9 @@ body {
 
 .guarantee-headline {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 1rem;
+    color: var(--brand-blue);
 }
 
 .guarantee-box > p:last-child {
@@ -702,47 +808,57 @@ body {
     line-height: 1.6;
 }
 
-/* Final CTA Section - Big finish */
+/* ========================================
+   Final CTA Section
+   ======================================== */
 .final-cta {
-    padding: 8rem 0;
-    background: #1a1a1a;
-    color: white;
+    padding: 6rem 0;
+    background: var(--brand-black);
+    color: var(--brand-white);
     text-align: center;
 }
 
 .final-cta h2 {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 600;
     margin-bottom: 1rem;
     line-height: 1.2;
+    letter-spacing: -0.02em;
 }
 
 .final-cta > .container > p {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     margin-bottom: 2.5rem;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .final-cta .gcal-btn-wrapper button {
-    background: #fff !important;
-    color: #1a1a1a !important;
+    background: var(--brand-blue) !important;
+    color: var(--brand-white) !important;
+    border-radius: var(--radius-sm) !important;
+    font-family: var(--font-primary) !important;
+    font-weight: 500 !important;
 }
 
 .final-cta .gcal-btn-wrapper button:hover {
-    background: #f0f0f0 !important;
+    background: #1555d4 !important;
 }
 
 .final-cta .gcal-btn-wrapper button * {
-    color: #1a1a1a !important;
+    color: var(--brand-white) !important;
+    font-family: var(--font-primary) !important;
 }
 
 .cta-note {
     margin-top: 1.5rem;
-    font-size: 0.9rem;
-    opacity: 0.6;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    opacity: 0.5;
 }
 
-/* Responsive */
+/* ========================================
+   Responsive Styles
+   ======================================== */
 @media (max-width: 900px) {
     .hero h1 {
         font-size: 2.5rem;
@@ -750,6 +866,10 @@ body {
 
     .comparison {
         grid-template-columns: 1fr;
+    }
+
+    .features-list {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .urgency-list {
@@ -768,10 +888,6 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .diff-item:nth-child(2) {
-        transform: none;
-    }
-
     .screenshots {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -785,6 +901,7 @@ body {
     .screenshot-placeholder {
         min-height: 150px;
     }
+
 
     .steps {
         grid-template-columns: 1fr 1fr;
@@ -806,20 +923,33 @@ body {
 
 @media (max-width: 600px) {
     .hero {
-        padding: 5rem 0 4rem;
+        padding: 4rem 0 3rem;
     }
 
     .hero h1 {
         font-size: 2rem;
     }
 
+    .hero-carousel {
+        padding: 0 3rem;
+    }
+
+    .carousel-nav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .features-list {
+        grid-template-columns: 1fr;
+    }
+
     .benefits-list li {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .urgency h2,
     .whats-new h2 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 
     .steps {
