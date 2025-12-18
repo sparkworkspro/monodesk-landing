@@ -15,11 +15,12 @@
 
 ```
 monodesk-landing/
-├── index.html          → css/styles.css
-├── vibes.html          → css/styles.css (legacy, can be split)
+├── index.html          → css/index.css
+├── vibes.html          → css/vibes.css
 ├── bundle.html         → css/bundle.css
 ├── css/
-│   ├── styles.css      # For index.html and vibes.html
+│   ├── index.css       # For index.html
+│   ├── vibes.css       # For vibes.html
 │   └── bundle.css      # For bundle.html
 └── assets/             # Shared assets
     └── logo-lockup.svg
@@ -31,4 +32,3 @@ monodesk-landing/
 2. Create a corresponding CSS file in `/css` with the same name
 3. Link only that CSS file in the HTML `<head>`
 4. Reuse assets from `/assets` as needed
-

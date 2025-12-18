@@ -14,7 +14,8 @@ monodesk-landing/
 ├── vibes.html          # Landing page (Option 2)
 ├── bundle.html         # Landing page (Bundle/Suite)
 ├── css/
-│   ├── styles.css      # Styles for index.html & vibes.html
+│   ├── index.css       # Styles for index.html
+│   ├── vibes.css       # Styles for vibes.html
 │   └── bundle.css      # Styles for bundle.html
 ├── assets/
 │   └── logo-lockup.svg # MonoDesk logo (shared)
@@ -27,8 +28,8 @@ monodesk-landing/
 
 | Page | CSS File |
 |------|----------|
-| `index.html` | `css/styles.css` |
-| `vibes.html` | `css/styles.css` |
+| `index.html` | `css/index.css` |
+| `vibes.html` | `css/vibes.css` |
 | `bundle.html` | `css/bundle.css` |
 
 Assets in `/assets` can be shared across all pages.
