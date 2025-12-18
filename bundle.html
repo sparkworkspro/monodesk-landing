@@ -385,6 +385,24 @@
         const slides = document.querySelectorAll('.carousel-slide');
         const totalSlides = slides.length;
         
+        // Check for ?vp= query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const vpParam = urlParams.get('vp');
+        
+        if (vpParam) {
+            const vpIndex = parseInt(vpParam) - 1; // Convert to 0-based index
+            if (vpIndex >= 0 && vpIndex < totalSlides) {
+                // Hide carousel controls
+                document.querySelectorAll('.carousel-nav').forEach(btn => btn.style.display = 'none');
+                document.querySelector('.carousel-counter').style.display = 'none';
+                
+                // Show the specified slide
+                slides[0].classList.remove('active');
+                slides[vpIndex].classList.add('active');
+                currentSlide = vpIndex;
+            }
+        }
+        
         function changeSlide(direction) {
             slides[currentSlide].classList.remove('active');
             currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
