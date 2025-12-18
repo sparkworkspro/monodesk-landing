@@ -5,16 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MonoDesk</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Calendar Scheduling -->
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
 </head>
 <body>
     <main>
         <header>
             <img src="assets/logo-lockup.svg" alt="MonoDesk Logo">
         </header>
-        <h1>MonoDesk landing page - Option 1 </h1>
-        <a href="https://calendar.app.google/JioVXnfiuotRdTNK9" target="_blank" rel="noopener noreferrer">
-            <button>Request early access</button>
-        </a>
+        <h1>Landing page - Option 1 </h1>
+
+        <!-- Google Calendar Appointment Scheduling -->
+        <div class="gcal-btn-wrapper">
+            <script>
+            (function() {
+              var target = document.currentScript;
+              window.addEventListener('load', function() {
+                calendar.schedulingButton.load({
+                  url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1YX_jGDkWa2ePQPVPP2q49tn6H-x6P1pOX7CcPC7pz4BkcyhCvnAusj1QwW8zKb5Q827SJW3UQ?gv=true',
+                  color: '#1a1a1a',
+                  label: "Request early access",
+                  target,
+                });
+              });
+            })();
+            </script>
+        </div>
     </main>
 </body>
 </html>

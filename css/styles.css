@@ -54,3 +54,28 @@ a {
     text-decoration: none;
 }
 
+/* Google Calendar Scheduling Button Override */
+.gcal-btn-wrapper {
+    margin-top: 1rem;
+}
+
+.gcal-btn-wrapper button {
+    background: #1a1a1a !important;
+    border-radius: 8px !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    padding: 1rem 2rem !important;
+    height: auto !important;
+}
+
+.gcal-btn-wrapper button:hover {
+    background: #333 !important;
+}
+
+.gcal-btn-wrapper button * {
+    font-family: inherit !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+}
+
