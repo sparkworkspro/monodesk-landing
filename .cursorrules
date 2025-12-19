@@ -26,13 +26,20 @@ monodesk-landing/
     └── logo-lockup.svg
 ```
 
+## Page Titles
+
+- Use the format `MonoDesk - [Page Name]` for all page titles
+- The page name should match the HTML filename (capitalized)
+- Example: `bundle.html` → `<title>MonoDesk - Bundle</title>`
+
 ## When Creating New Pages
 
 1. Create the HTML file in the root directory
 2. Create a corresponding CSS file in `/css` with the same name
-3. Link only that CSS file in the HTML `<head>`
-4. Reuse assets from `/assets` as needed
-5. Add the Hotjar tracking script to the `<head>` section
+3. Set the `<title>` tag to follow the format `MonoDesk - [Page Name]`
+4. Link only that CSS file in the HTML `<head>`
+5. Reuse assets from `/assets` as needed
+6. Add the Hotjar tracking script to the `<head>` section
 
 ## Analytics Tracking
 
