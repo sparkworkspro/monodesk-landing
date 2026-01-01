@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonoDesk - Make space for creativity</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@500&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-white': '#FFFFFF',
+                        'brand-orange': '#FF5B26',
+                        'brand-highlighter': '#D1FF6E',
+                        'brand-blue': '#1C64F5',
+                        'brand-grey': '#94959A',
+                        'brand-almost-black': '#272727',
+                        'brand-fun-green': '#026232',
+                        'surface-tint': '#EEF2F5',
+                        'background': '#DADEE1',
+                    },
+                    fontFamily: {
+                        'geist': ['Geist', 'system-ui', 'sans-serif'],
+                        'geist-mono': ['Geist Mono', 'monospace'],
+                        'jakarta': ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    spacing: {
+                        'lp-margin': '60px',
+                        'lp-spacing': '40px',
+                        'lp-spacing-small': '24px',
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            width: 100%;
+            min-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        body {
+            font-family: 'Geist', system-ui, sans-serif;
+            background: #DADEE1;
+        }
+
+        .btn-cta {
+            transition: all 0.2s ease;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            filter: brightness(0.95);
+        }
+
+        .btn-cta:active {
+            transform: translateY(0);
+        }
+
+        .play-button {
+            transition: all 0.3s ease;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-background overflow-x-hidden">
+    <div class="w-full min-w-full flex flex-col items-center">
+        
+        <!-- Header Section - Floating Nav -->
+        <div class="bg-brand-blue w-full flex items-center justify-center pt-[40px] px-[30px] pb-[40px]">
+            <nav class="bg-brand-orange rounded-[20px] w-full max-w-[1385px] px-8 py-5 flex items-center justify-between">
+                <!-- Logo -->
+                <div class="h-[31px] w-[169px]">
+                    <img src="assets/logo-lockup-header.svg" alt="MonoDesk" class="h-full w-auto">
+                </div>
+                
+                <!-- CTA Button -->
+                <button class="btn-cta bg-brand-highlighter text-[#161616] rounded-[10px] px-2 py-1 h-[40px] flex items-center justify-center font-medium text-[14px] min-w-[197px]" onclick="handleEarlyAccess()">
+                    Request early access
+                </button>
+            </nav>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="bg-brand-blue w-full h-[750px] flex items-center justify-center overflow-hidden py-[40px] relative">
+            <!-- Main Image Container - Positioned absolute -->
+            <div class="absolute left-1/2 top-0 w-[926px] h-[800px] flex items-center justify-center transform">
+                <img src="assets/hero-image.png" alt="MonoDesk Interface" class="w-full h-full object-cover transform rotate-180 scale-y-[-1]">
+            </div>
+            
+            <!-- Centered Content Container -->
+            <div class="w-full max-w-[1440px] px-[60px] flex items-end justify-start h-full relative z-10">
+                <!-- Main Text Container -->
+                <div class="flex flex-col gap-4 max-w-[436px]">
+                <!-- Badge -->
+                <div class="bg-white flex gap-1 items-center px-2 py-0 rounded-[12px] w-fit shadow-sm">
+                    <img src="assets/smile-icon.svg" alt="" class="w-[14px] h-[14px]">
+                    <p class="font-geist-mono font-medium text-[8px] text-[#161616] py-1">
+                        Join 10,000+ creators on the waitlist
+                    </p>
+                </div>
+                
+                <!-- Main Heading -->
+                <h1 class="font-geist font-bold text-[72px] text-surface-tint leading-none tracking-[-2.16px]">
+                    Make space<br>for creativity
+                </h1>
+                
+                <!-- Subheading -->
+                <p class="font-geist font-normal text-[32px] text-white leading-none tracking-[-0.96px]">
+                    Eliminate the mundane,<br>maximise your creativity.
+                </p>
+                
+                <!-- CTA Button -->
+                <button class="btn-cta bg-brand-highlighter text-[#161616] rounded-[10px] px-2 py-1 h-[40px] flex items-center justify-center font-medium text-[14px] w-[197px]" onclick="handleEarlyAccess()">
+                    Request early access
+                </button>
+            </div>
+            </div>
+        </div>
+
+        <!-- Intro Section -->
+        <div class="bg-white w-full flex items-center justify-center py-[80px]">
+            <div class="w-full max-w-[1440px] px-[60px] flex items-start justify-between">
+            <!-- Left Text -->
+            <div class="flex flex-col gap-[16px] w-[630px] items-end">
+                <h2 class="font-geist font-semibold text-[48px] text-[#161616] leading-[normal] tracking-[-1.44px] w-full">
+                    This might look like a project management tool
+                </h2>
+                <p class="font-geist font-semibold text-[36px] text-brand-orange leading-[normal] tracking-[-1.08px] w-full">
+                    But it isn't.
+                </p>
+            </div>
+            
+            <!-- Right Text -->
+            <div class="flex flex-col h-[187px] justify-between w-[627px] items-start">
+                <p class="font-geist font-normal text-[20px] text-[#161616] leading-[normal] tracking-[-0.6px]">
+                    MonoDesk is one calm workspace of connected apps for freelance creatives. Powered by client context, it removes the rework and eliminates the mundane, so proposals, projects, tasks and files flow smoothly from idea to delivery.
+                </p>
+                <button class="btn-cta bg-brand-highlighter text-[#161616] rounded-[10px] px-2 py-1 h-[40px] flex items-center justify-center font-medium text-[14px] w-[197px]" onclick="handleEarlyAccess()">
+                    Request early access
+                </button>
+            </div>
+            </div>
+        </div>
+
+        <!-- Before/After Reality Section -->
+        <div class="bg-background w-full flex items-center justify-center py-[73px]">
+            <div class="w-full max-w-[1440px] px-[60px] flex gap-[62px] items-center">
+            <!-- Before -->
+            <div class="relative w-[630px] h-[510px]">
+                <div class="absolute top-0 left-9 inline-flex items-center justify-center bg-background px-2 py-1 rounded-lg">
+                    <span class="font-geist font-bold text-[16px] text-[rgba(22,22,22,0.6)] tracking-[-0.48px]">BEFORE</span>
+                </div>
+                <!-- Tool icons scattered - simplified representation -->
+                <div class="w-full h-full border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
+                    <p class="text-gray-400 text-center font-geist-mono text-sm">
+                        Scattered tools:<br>
+                        Harvest • Calendar • Google Drive • Dropbox<br>
+                        Basecamp • Zoho • Trello • Loom • QuickBooks<br>
+                        Claude • ChatGPT • Todoist • ClickUp • Figma<br>
+                        Slack • Airtable • Miro • Asana • Notion<br>
+                        Monday.com • Stripe • Apple Notes • Calendly<br>
+                        Gemini • Things • Email Inbox
+                    </p>
+                </div>
+            </div>
+            
+            <!-- After -->
+            <div class="relative w-[630px] h-[510px]">
+                <div class="absolute top-0 left-9 inline-flex items-center justify-center bg-background px-2 py-1 rounded-lg">
+                    <span class="font-geist font-bold text-[16px] text-[#161616] tracking-[-0.48px]">AFTER</span>
+                </div>
+                <div class="w-full h-full border-2 border-brand-blue rounded-lg flex items-center justify-center">
+                    <img src="assets/logo-lockup.svg" alt="MonoDesk" class="w-[296px] h-auto opacity-80">
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Video Section -->
+        <div class="w-full flex items-center justify-center mb-[80px]">
+            <div class="w-full max-w-[1440px] flex items-center justify-center">
+            <div class="relative w-[1320px] h-[529px] flex-shrink-0">
+            <img src="assets/video-screenshot.png" alt="Product Demo" class="w-[1320px] h-[529px] object-cover rounded-[21px]">
+            <button class="play-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand-fun-green w-[69px] h-[69px] rounded-[10px] flex items-center justify-center">
+                <img src="assets/play-icon.svg" alt="Play" class="w-[42px] h-[42px]">
+            </button>
+            </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="bg-[#212121] border-t border-b border-[rgba(223,223,223,0.2)] w-full flex items-center justify-center py-[80px]">
+            <div class="w-full max-w-[1440px] px-[60px] flex flex-col gap-[40px] items-center">
+            <!-- Header -->
+            <div class="w-full max-w-[1320px] flex items-center justify-between">
+                <div class="flex-1">
+                    <h2 class="font-geist font-semibold text-[36px] text-[#e7e7e7] tracking-[-1.08px] leading-tight">
+                        Everything in one, uninterrupted workspace
+                    </h2>
+                    <p class="font-geist font-normal text-[20px] text-brand-grey tracking-[-0.6px] mt-4">
+                        Tools designed for creative professionals, all in one place, no integrations.
+                    </p>
+                </div>
+                <button class="btn-cta bg-brand-highlighter text-[#272727] rounded-[10px] px-2 py-1 h-[40px] flex items-center justify-center font-medium text-[14px] w-[197px]" onclick="handleEarlyAccess()">
+                    Request early access
+                </button>
+            </div>
+            
+            <!-- Feature Cards Row 1 -->
+            <div class="flex gap-6 justify-center w-full">
+                <div class="bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
+                    <div class="w-6 h-6">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2">
+                            <rect x="5" y="7" width="14" height="12" rx="2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-geist font-semibold text-[24px] text-[#e7e7e7] tracking-[-0.72px] mb-4">Proposal</h3>
+                        <p class="font-geist font-normal text-[16px] text-[rgba(223,223,223,0.6)] tracking-[-0.48px]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                    </div>
+                </div>
+                <div class="bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
+                    <div class="w-6 h-6">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2">
+                            <rect x="5" y="7" width="14" height="12" rx="2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-geist font-semibold text-[24px] text-[#e7e7e7] tracking-[-0.72px] mb-4">Kanban board</h3>
+                        <p class="font-geist font-normal text-[16px] text-[rgba(223,223,223,0.6)] tracking-[-0.48px]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                    </div>
+                </div>
+                <div class="bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
+                    <div class="w-6 h-6">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2">
+                            <rect x="5" y="7" width="14" height="12" rx="2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-geist font-semibold text-[24px] text-[#e7e7e7] tracking-[-0.72px] mb-4">Files</h3>
+                        <p class="font-geist font-normal text-[16px] text-[rgba(223,223,223,0.6)] tracking-[-0.48px]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                    </div>
+                </div>
+                <div class="bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
+                    <div class="w-6 h-6">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2">
+                            <rect x="5" y="7" width="14" height="12" rx="2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-geist font-semibold text-[24px] text-[#e7e7e7] tracking-[-0.72px] mb-4">Calendar</h3>
+                        <p class="font-geist font-normal text-[16px] text-[rgba(223,223,223,0.6)] tracking-[-0.48px]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                    </div>
+                </div>
+                <div class="bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
+                    <div class="w-6 h-6">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2">
+                            <rect x="5" y="7" width="14" height="12" rx="2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-geist font-semibold text-[24px] text-[#e7e7e7] tracking-[-0.72px] mb-4">Client Portal</h3>
+                        <p class="font-geist font-normal text-[16px] text-[rgba(223,223,223,0.6)] tracking-[-0.48px]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feature Cards Row 2 -->
+            <div class="flex gap-6 justify-center w-full max-w-[1320px]">
+                <div class="bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
+                    <div class="w-6 h-6">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2">
+                            <rect x="5" y="7" width="14" height="12" rx="2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-geist font-semibold text-[24px] text-[#e7e7e7] tracking-[-0.72px] mb-4">Project</h3>
+                        <p class="font-geist font-normal text-[16px] text-[rgba(223,223,223,0.6)] tracking-[-0.48px]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                    </div>
+                </div>
+                <div class="bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
+                    <div class="w-6 h-6">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2">
+                            <rect x="5" y="7" width="14" height="12" rx="2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-geist font-semibold text-[24px] text-[#e7e7e7] tracking-[-0.72px] mb-4">Inbox</h3>
+                        <p class="font-geist font-normal text-[16px] text-[rgba(223,223,223,0.6)] tracking-[-0.48px]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                    </div>
+                </div>
+                <div class="bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
+                    <div class="w-6 h-6">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2">
+                            <rect x="5" y="7" width="14" height="12" rx="2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-geist font-semibold text-[24px] text-[#e7e7e7] tracking-[-0.72px] mb-4">Storyboard</h3>
+                        <p class="font-geist font-normal text-[16px] text-[rgba(223,223,223,0.6)] tracking-[-0.48px]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                    </div>
+                </div>
+                <div class="bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
+                    <div class="w-6 h-6">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2">
+                            <rect x="5" y="7" width="14" height="12" rx="2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-geist font-semibold text-[24px] text-[#e7e7e7] tracking-[-0.72px] mb-4">IQ Maker</h3>
+                        <p class="font-geist font-normal text-[16px] text-[rgba(223,223,223,0.6)] tracking-[-0.48px]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                    </div>
+                </div>
+                <div class="bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
+                    <div class="w-6 h-6">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2">
+                            <rect x="5" y="7" width="14" height="12" rx="2"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-geist font-semibold text-[24px] text-[#e7e7e7] tracking-[-0.72px] mb-4">Bubbles</h3>
+                        <p class="font-geist font-normal text-[16px] text-[rgba(223,223,223,0.6)] tracking-[-0.48px]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Apps Section -->
+        <div class="bg-background border-t border-b border-[rgba(22,22,22,0.2)] w-full flex items-center justify-center py-[80px]">
+            <div class="w-full max-w-[1440px] px-[60px] flex gap-[119px] items-start">
+            <div class="flex flex-col gap-4 w-[420px]">
+                <h2 class="font-geist font-semibold text-[36px] text-[#161616] tracking-[-1.08px]">
+                    Plus all these apps
+                </h2>
+                <p class="font-geist font-normal text-[20px] text-brand-grey tracking-[-0.6px]">
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <button class="btn-cta bg-brand-highlighter text-[#161616] rounded-[10px] px-2 py-1 h-[40px] flex items-center justify-center font-medium text-[14px] w-[197px]" onclick="handleEarlyAccess()">
+                    Request early access
+                </button>
+            </div>
+            <div class="w-[783px] h-[415px]">
+                <img src="assets/apps-screenshot.png" alt="Apps Grid" class="w-full h-full object-cover">
+            </div>
+            </div>
+        </div>
+
+        <!-- Models Section -->
+        <div class="bg-background w-full flex items-center justify-center py-[80px]">
+            <div class="w-full max-w-[1440px] px-[60px] flex gap-[171px] items-center">
+            <div class="flex flex-col gap-4 w-[420px]">
+                <h2 class="font-geist font-semibold text-[36px] text-[#161616] tracking-[-1.08px]">
+                    And these models subscriptions included
+                </h2>
+                <p class="font-geist font-semibold text-[12px] text-[rgba(22,22,22,0.4)] tracking-[-0.36px] leading-tight">
+                    So you can save on your monthly subcriptions
+                </p>
+            </div>
+            <div class="flex gap-6 items-center">
+                <div class="text-[21px] font-semibold text-[#161616]">OpenAI</div>
+                <div class="text-[21px] font-semibold text-[#161616]">DALL·E</div>
+                <div class="text-[21px] font-semibold text-[#161616]">Google AI</div>
+                <div class="text-[21px] font-semibold text-[#161616]">ChatGPT</div>
+                <div class="text-[21px] font-semibold text-[#161616]">Stability</div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Benefits Section -->
+        <div class="w-full flex items-center justify-center">
+            <div class="w-full max-w-[1440px] px-[60px] flex items-center justify-center">
+            <div class="bg-white w-full max-w-[1384px] flex items-center justify-between px-[30px] py-[40px] rounded-[20px]">
+            <div class="flex flex-col w-[630px]">
+                <!-- Header -->
+                <div class="flex flex-col gap-4 mb-[40px]">
+                    <p class="font-geist-mono font-medium text-[10px] text-brand-orange">
+                        50 people on the beta list
+                    </p>
+                    <h2 class="font-jakarta font-bold text-[42px] text-[#161616] leading-[48px]">
+                        Imagine all your project<br>talking together
+                    </h2>
+                    <p class="font-geist font-normal text-[20px] text-[rgba(22,22,22,0.4)] tracking-[-0.6px] max-w-[390px]">
+                        Turn proposals into an organised workflow, so you can focus on your craft, not the admin.
+                    </p>
+                </div>
+                
+                <!-- Benefits List -->
+                <div class="flex flex-col">
+                    <div class="border-t border-brand-grey py-6 flex gap-10">
+                        <span class="font-geist font-bold text-[20px] text-brand-orange">01</span>
+                        <div class="flex-1">
+                            <h3 class="font-geist font-semibold text-[24px] text-[#161616] tracking-[-0.72px]">One calm workspace</h3>
+                            <p class="font-geist font-normal text-[16px] text-brand-grey tracking-[-0.48px]">Keep proposals, tasks, deadlines, and time tracking in one tab.</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-brand-grey py-6 flex gap-10">
+                        <span class="font-geist font-bold text-[20px] text-brand-orange">02</span>
+                        <div class="flex-1">
+                            <h3 class="font-geist font-semibold text-[24px] text-[#161616] tracking-[-0.72px]">Week-at-a-glance</h3>
+                            <p class="font-geist font-normal text-[16px] text-brand-grey tracking-[-0.48px]">See what's due, plan your week, and stay on track.</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-brand-grey py-6 flex gap-10">
+                        <span class="font-geist font-bold text-[20px] text-brand-orange">03</span>
+                        <div class="flex-1">
+                            <h3 class="font-geist font-semibold text-[24px] text-[#161616] tracking-[-0.72px]">Specifically for creatives</h3>
+                            <p class="font-geist font-normal text-[16px] text-brand-grey tracking-[-0.48px]">All the good stuff on tap, removing the need for multiple subscriptions.</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-brand-grey py-6 flex gap-10">
+                        <span class="font-geist font-bold text-[20px] text-brand-orange">04</span>
+                        <div class="flex-1">
+                            <h3 class="font-geist font-semibold text-[24px] text-[#161616] tracking-[-0.72px]">Project-aware agent</h3>
+                            <p class="font-geist font-normal text-[16px] text-brand-grey tracking-[-0.48px]">Chat with an agent to get ideas, tasks, reminders, and client-ready comms, powered by your client & project context.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn-cta bg-brand-highlighter text-[#161616] rounded-[10px] px-2 py-1 h-[40px] flex items-center justify-center font-medium text-[14px] w-[197px] mt-6" onclick="handleEarlyAccess()">
+                    Request early access
+                </button>
+            </div>
+            
+            <!-- Image -->
+            <div class="relative w-[625px] h-[470px]">
+                <img src="assets/benefits-image.png" alt="Benefits" class="w-full h-full object-cover">
+            </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Spacing -->
+        <div class="h-[40px]"></div>
+
+        <!-- Turn Briefs Section -->
+        <div class="bg-background w-full flex items-center justify-center py-[80px]">
+            <div class="w-full max-w-[1440px] px-[60px] flex items-start justify-between">
+            <div class="flex flex-col gap-4 w-[630px]">
+                <p class="font-geist-mono font-medium text-[10px] text-brand-orange">
+                    Why it's great
+                </p>
+                <h2 class="font-geist font-semibold text-[48px] text-[#161616] tracking-[-1.44px]">
+                    Turn briefs into projects. Instantly.
+                </h2>
+                <p class="font-geist font-normal text-[20px] text-[rgba(22,22,22,0.6)] tracking-[-0.6px]">
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+            </div>
+            <div class="flex flex-col h-[187px] justify-between w-[627px]">
+                <p class="font-geist font-normal text-[20px] text-[#161616] tracking-[-0.6px]">
+                    MonoDesk is one calm workspace of connected apps for freelance creatives. Powered by client context, it removes the rework and eliminates the mundane, so proposals, projects, tasks and files flow smoothly from idea to delivery.
+                </p>
+                <button class="btn-cta bg-brand-highlighter text-[#161616] rounded-[10px] px-2 py-1 h-[40px] flex items-center justify-center font-medium text-[14px] w-[197px]" onclick="handleEarlyAccess()">
+                    Request early access
+                </button>
+            </div>
+            </div>
+        </div>
+
+        <!-- Pricing Section -->
+        <div class="w-full flex items-center justify-center mb-8">
+            <div class="w-full max-w-[1440px] px-[60px] flex items-center justify-center">
+            <div class="relative w-full max-w-[1324px]">
+            <!-- Beta Price Badge -->
+            <div class="absolute -top-6 right-[262px] bg-[#161616] px-4 py-2 rounded-lg z-10">
+                <span class="font-geist-mono font-medium text-[7px] text-surface-tint">Legacy beta price</span>
+            </div>
+            
+            <div class="bg-[#161616] rounded-[14px] px-[90px] py-[40px] flex items-center justify-between">
+                <div class="flex gap-10 items-center">
+                    <div class="w-[245px]">
+                        <h3 class="font-geist font-semibold text-[36px] text-white tracking-[-1.08px] leading-tight">
+                            Everything talking together
+                        </h3>
+                    </div>
+                    
+                    <!-- Benefits Columns -->
+                    <div class="flex gap-4">
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center gap-2">
+                                <img src="assets/check-circle.svg" alt="" class="w-4 h-4">
+                                <span class="font-geist font-medium text-[16px] text-white">Benefit</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <img src="assets/check-circle.svg" alt="" class="w-4 h-4">
+                                <span class="font-geist font-medium text-[16px] text-white">Benefit</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <img src="assets/check-circle.svg" alt="" class="w-4 h-4">
+                                <span class="font-geist font-medium text-[16px] text-white">Benefit</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center gap-2">
+                                <img src="assets/check-circle.svg" alt="" class="w-4 h-4">
+                                <span class="font-geist font-medium text-[16px] text-white">Benefit</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <img src="assets/check-circle.svg" alt="" class="w-4 h-4">
+                                <span class="font-geist font-medium text-[16px] text-white">Benefit</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <img src="assets/check-circle.svg" alt="" class="w-4 h-4">
+                                <span class="font-geist font-medium text-[16px] text-white">Benefit</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center gap-2">
+                                <img src="assets/check-circle.svg" alt="" class="w-4 h-4">
+                                <span class="font-geist font-medium text-[16px] text-white">Benefit</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <img src="assets/check-circle.svg" alt="" class="w-4 h-4">
+                                <span class="font-geist font-medium text-[16px] text-white">Benefit</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <img src="assets/check-circle.svg" alt="" class="w-4 h-4">
+                                <span class="font-geist font-medium text-[16px] text-white">Benefit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="h-[100px] w-px bg-white opacity-20 rotate-[10deg]"></div>
+                
+                <div class="flex flex-col items-end gap-4">
+                    <div class="text-right">
+                        <span class="font-geist font-semibold text-[48px] text-white tracking-[-1.44px]">$99</span>
+                        <span class="font-geist font-medium text-[18px] text-white">/month</span>
+                    </div>
+                    <button class="btn-cta bg-brand-highlighter text-[#161616] rounded-[10px] px-2 py-1 h-[40px] flex items-center justify-center font-medium text-[14px] w-[197px]" onclick="handleEarlyAccess()">
+                        Request early access
+                    </button>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Spacing -->
+        <div class="h-[40px]"></div>
+
+        <!-- Final CTA Section -->
+        <div class="w-full flex items-center justify-center">
+            <div class="w-full max-w-[1440px] px-[60px] flex items-center justify-center">
+            <div class="bg-brand-orange w-full max-w-[1393px] h-[880px] rounded-[20px] p-[40px] flex items-end justify-between relative overflow-hidden">
+            <!-- Image -->
+            <div class="absolute left-[40px] bottom-[40px] w-[625px] h-[800px]">
+                <img src="assets/cta-image.png" alt="CTA" class="w-full h-full object-cover rounded-[16px] transform rotate-180 scale-y-[-1]">
+            </div>
+            
+            <!-- Content -->
+            <div class="relative z-10 ml-auto flex flex-col items-end justify-between h-full w-[625px]">
+                <img src="assets/smile-icon.svg" alt="" class="w-8 h-8 self-end">
+                
+                <div class="flex flex-col gap-4 w-full">
+                    <div class="flex gap-1 items-center w-fit">
+                        <img src="assets/smile-icon.svg" alt="" class="w-[14px] h-[14px]">
+                        <p class="font-geist-mono font-medium text-[8px] text-[#161616]">
+                            Join 10,000+ creators on the waitlist
+                        </p>
+                    </div>
+                    
+                    <h2 class="font-geist font-bold text-[60px] text-[#161616] leading-none tracking-[-1.8px]">
+                        Lorem ipsum dolor<br>sit amet consectetur.
+                    </h2>
+                    
+                    <!-- Email Input -->
+                    <div class="bg-white flex items-center justify-between pl-4 pr-1 py-1 rounded-[14px] w-full">
+                        <input type="email" placeholder="Pop in your email address" class="flex-1 font-geist font-normal text-[12px] text-brand-grey outline-none bg-transparent">
+                        <button class="btn-cta bg-brand-highlighter text-[#161616] rounded-[10px] px-2 py-1 h-[40px] flex items-center justify-center font-medium text-[14px] w-[197px]" onclick="handleEarlyAccess()">
+                            Request early access
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Footer Tagline -->
+        <div class="w-full flex items-center justify-center py-[40px]">
+            <div class="w-full max-w-[1440px] flex gap-4 items-center justify-center px-0">
+            <img src="assets/logo-lockup.svg" alt="MonoDesk" class="h-[31px] w-auto">
+            <p class="font-geist font-semibold text-[36px] text-[#161616] text-center tracking-[-1.08px] leading-normal">
+                Make space for creativity. <span class="text-[rgba(22,22,22,0.4)]">Eliminate the mundane, maximise your creativity.</span>
+            </p>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        // Interactive functionality
+        function handleEarlyAccess() {
+            // Integrate with Google Calendar or custom modal
+            console.log('Request early access clicked');
+            
+            // For Google Calendar scheduling integration:
+            // window.calendar.schedulingButton.load({...});
+            
+            // For now, open a simple modal or alert
+            alert('Thank you for your interest! We\'ll be in touch soon.');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all major sections
+        document.querySelectorAll('section, .bg-white, .bg-background, .bg-\\[\\#212121\\]').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Play button interaction
+        const playButtons = document.querySelectorAll('.play-button');
+        playButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Add your video player logic here
+                console.log('Play video');
+                alert('Video player would open here');
+            });
+        });
+
+        // Email form submission
+        document.querySelectorAll('input[type="email"]').forEach(input => {
+            input.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    handleEarlyAccess();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
