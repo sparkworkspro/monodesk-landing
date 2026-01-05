@@ -76,7 +76,7 @@
         }
 
         .play-button:hover {
-            transform: scale(1.1);
+            transform: translate(-50%, -50%) scale(1.1);
         }
     </style>
 </head>
@@ -226,8 +226,10 @@
             <div class="w-full max-w-[1440px] flex items-center justify-center">
             <div class="relative w-[1325px] h-[528px] flex-shrink-0">
             <img src="assets/video-screenshot.png" alt="Product Demo" class="w-full h-auto rounded-[21px]">
-            <button class="play-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand-fun-green w-[69px] h-[69px] rounded-[10px] flex items-center justify-center">
-                <img src="assets/play-icon.svg" alt="Play" class="w-[42px] h-[42px]">
+            <button class="play-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand-highlighter w-[69px] h-[69px] rounded-[10px] flex items-center justify-center" style="--stroke-0: #161616;">
+                <svg class="w-[24px] h-[24px]" viewBox="0 0 26.8557 33.7862" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.29947 1.29947L25.5562 16.8931L1.29947 32.4867V1.29947Z" stroke="var(--stroke-0, #161616)" stroke-width="2.59894" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
             </button>
             </div>
             </div>
