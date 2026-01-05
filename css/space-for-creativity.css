@@ -78,21 +78,44 @@ body {
 .header-content {
     width: 100%;
     max-width: 1440px;
-    padding: 24px 60px;
+    padding: 24px 60px 24px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+.folder-tab {
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: max-content;
+    grid-template-rows: max-content;
+    place-items: start;
+    line-height: 0;
+}
+
+.folder-tab-shape {
+    grid-area: 1 / 1;
+    width: 530.26px;
+    height: 106.01px;
+    display: block;
+    max-width: none;
+}
+
 .logo-wrapper {
-    height: 31px;
+    grid-area: 1 / 1;
+    width: 162.428px;
+    height: 29.794px;
+    margin-left: 57.67px;
+    margin-top: 35.6px;
+    position: relative;
     display: flex;
     align-items: center;
 }
 
 .logo {
-    height: 31px;
+    height: 29.794px;
     width: auto;
+    display: block;
 }
 
 /* ===================================
