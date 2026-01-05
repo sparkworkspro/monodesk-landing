@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonoDesk - Bundle</title>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/instrument-serif@5.0.13/index.min.css">
+    <link rel="stylesheet" href="css/bundle.css">
+    <!-- Google Calendar Scheduling -->
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+    <!-- Hotjar Tracking Code for Landing Pages -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:6605179,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <img src="assets/logo-lockup.svg" alt="MonoDesk Logo" class="hero-logo">
+            
+            <div class="hero-carousel">
+                <button class="carousel-nav carousel-prev" onclick="changeSlide(-1)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                
+                <div class="carousel-content">
+                    <div class="carousel-slide active">
+                        <h1>Ready to simplify your freelance life?</h1>
+                        <p class="hero-subhead">With MonoDesk, your suite of connected apps for freelance designers, developers & video creators</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h1>Stop juggling. Start creating.</h1>
+                        <p class="hero-subhead">One connected workspace for freelance designers, developers & video creators</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h1>10 tabs. 5 subscriptions. 0 sanity.</h1>
+                        <p class="hero-subhead">There's a better way to run your freelance business</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h1>Your business is scattered across 12 apps.</h1>
+                        <p class="hero-subhead">MonoDesk brings it all together</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h1>Run your freelance business from one place</h1>
+                        <p class="hero-subhead">Projects, proposals, clients, time tracking, AI—finally connected</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h1>Finally, a workspace that works like you do</h1>
+                        <p class="hero-subhead">Everything creative pros need. Nothing they don't.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h1>Less admin. More creative work.</h1>
+                        <p class="hero-subhead">The all-in-one suite for freelance designers, developers & video creators</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h1>Built for freelance creative pros who hate busywork</h1>
+                        <p class="hero-subhead">One app to replace the 10 you're juggling</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h1>You're a creative, not an admin</h1>
+                        <p class="hero-subhead">Let MonoDesk handle the boring stuff</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h1>For freelancers who'd rather be making things</h1>
+                        <p class="hero-subhead">All your business tools, finally in one place</p>
+                    </div>
+                </div>
+                
+                <button class="carousel-nav carousel-next" onclick="changeSlide(1)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+            
+            <div class="carousel-counter"><span id="currentSlide">1</span> / 10</div>
+            
+            <div class="gcal-btn-wrapper">
+                <script>
+                (function() {
+                  var target = document.currentScript;
+                  window.addEventListener('load', function() {
+                    calendar.schedulingButton.load({
+                      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1YX_jGDkWa2ePQPVPP2q49tn6H-x6P1pOX7CcPC7pz4BkcyhCvnAusj1QwW8zKb5Q827SJW3UQ?gv=true',
+                      color: '#1C64F5',
+                      label: "Request early access",
+                      target,
+                    });
+                  });
+                })();
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before / After Section -->
+    <section class="before-after">
+        <div class="container">
+            <div class="comparison">
+                <div class="before">
+                    <h2>Before</h2>
+                    <div class="tool-scatter">
+                        <span class="tool-logo" style="top: 10%; left: 15%;">Harvest</span>
+                        <span class="tool-logo" style="top: 25%; left: 60%;">Trello</span>
+                        <span class="tool-logo" style="top: 45%; left: 25%;">ChatGPT</span>
+                        <span class="tool-logo" style="top: 15%; left: 40%;">Zoho</span>
+                        <span class="tool-logo" style="top: 55%; left: 55%;">Slack</span>
+                        <span class="tool-logo" style="top: 70%; left: 20%;">Notion</span>
+                        <span class="tool-logo" style="top: 35%; left: 75%;">QuickBooks</span>
+                        <span class="tool-logo" style="top: 65%; left: 70%;">Asana</span>
+                        <span class="tool-logo" style="top: 80%; left: 45%;">Calendly</span>
+                        <span class="tool-logo" style="top: 5%; left: 80%;">Dropbox</span>
+                        <span class="tool-logo" style="top: 88%; left: 10%;">Gemini</span>
+                        <span class="tool-logo" style="top: 30%; left: 5%;">Claude</span>
+                        <span class="tool-logo" style="top: 85%; left: 75%;">Apple Notes</span>
+                        <span class="tool-logo" style="top: 50%; left: 85%;">ClickUp</span>
+                        <span class="tool-logo" style="top: 92%; left: 55%;">Email Inbox</span>
+                        <span class="tool-logo" style="top: 2%; left: 30%;">Calendar</span>
+                        <span class="tool-logo" style="top: 40%; left: 45%;">Todoist</span>
+                        <span class="tool-logo" style="top: 75%; left: 5%;">Monday.com</span>
+                        <span class="tool-logo" style="top: 20%; left: 85%;">Basecamp</span>
+                        <span class="tool-logo" style="top: 60%; left: 35%;">Airtable</span>
+                        <span class="tool-logo" style="top: 95%; left: 30%;">Things</span>
+                        <span class="tool-logo" style="top: 8%; left: 55%;">Google Drive</span>
+                        <span class="tool-logo" style="top: 48%; left: 8%;">Figma</span>
+                        <span class="tool-logo" style="top: 78%; left: 60%;">Stripe</span>
+                        <span class="tool-logo" style="top: 32%; left: 92%;">Loom</span>
+                        <span class="tool-logo" style="top: 58%; left: 78%;">Miro</span>
+                    </div>
+                </div>
+                <div class="after">
+                    <h2>After</h2>
+                    <div class="monodesk-logo">
+                        <img src="assets/logo-lockup.svg" alt="MonoDesk">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2>MonoDesk is for you if you want to</h2>
+            <ul class="benefits-list">
+                <li>
+                    <span class="checkbox">☑</span>
+                    Feel in control of the chaos with one source of truth
+                </li>
+                <li>
+                    <span class="checkbox">☑</span>
+                    Reduce anxiety with a companion that has your back
+                </li>
+                <li>
+                    <span class="checkbox">☑</span>
+                    Get your creative time back by automating the admin
+                </li>
+                <li>
+                    <span class="checkbox">☑</span>
+                    Eliminate the mundane by sending agents boring tasks
+                </li>
+                <li>
+                    <span class="checkbox">☑</span>
+                    Spend more of your time in your creative tool of choice
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Apps for all the things you need to improve your productivity</h2>
+            <ul class="features-list">
+                <li>
+                    <strong>AI Agent</strong>
+                    <span>Your personal assistant for creative business tasks.</span>
+                </li>
+                <li>
+                    <strong>Proposals</strong>
+                    <span>Create client proposals from files, text or voice notes.</span>
+                </li>
+                <li>
+                    <strong>Projects & Clients</strong>
+                    <span>Manage all your projects and client relationships.</span>
+                </li>
+                <li>
+                    <strong>Weekly Planner</strong>
+                    <span>Plan your week and stay on top of deadlines.</span>
+                </li>
+                <li>
+                    <strong>Client Portal</strong>
+                    <span>Share updates and collect feedback from clients.</span>
+                </li>
+                <li>
+                    <strong>Time Tracking</strong>
+                    <span>Track your time against tasks for easier management.</span>
+                </li>
+                <li>
+                    <strong>Inspiration</strong>
+                    <span>Explore real-world projects to spark your creativity.</span>
+                </li>
+                <li>
+                    <strong>Creative News</strong>
+                    <span>Industry news, personalised just for you.</span>
+                </li>
+                <li>
+                    <strong>Prompt Library</strong>
+                    <span>Explore, store and share your favourite prompts.</span>
+                </li>
+                <li>
+                    <strong>Files</strong>
+                    <span>Upload, preview and share your client files and assets.</span>
+                </li>
+                <li>
+                    <strong>Quick Feedback</strong>
+                    <span>Get interactive feedback on what you're working on.</span>
+                </li>
+                <li>
+                    <strong>Storyboard Assistant</strong>
+                    <span>Create detailed storyboards for your visual projects.</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section class="urgency">
+        <div class="container">
+            <h2>Why switch</h2>
+            <p class="urgency-text">You're already juggling 10+ tools. Every week you wait is another week of:</p>
+            <ul class="urgency-list">
+                <li>💸 Paying for subscriptions you barely use</li>
+                <li>⏰ Losing hours to context-switching between apps</li>
+                <li>😰 Missing deadlines because things slip through the cracks</li>
+                <li>🧠 Mental overhead from keeping track of everything</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Why This Solution Section -->
+    <section class="why-us">
+        <div class="container">
+            <h2>Why MonoDesk?</h2>
+            <div class="comparison-table">
+                <div class="compare-item">
+                    <h3>❌ Generic project tools</h3>
+                    <p>Built for teams, not solo creators. Bloated with features you'll never use.</p>
+                </div>
+                <div class="compare-item">
+                    <h3>❌ Stitching tools together</h3>
+                    <p>Zapier + Notion + Harvest + ChatGPT = $200/mo and a fragile mess.</p>
+                </div>
+                <div class="compare-item">
+                    <h3>❌ Spreadsheets & docs</h3>
+                    <p>Manual entry. No automation. Falls apart when you're busy.</p>
+                </div>
+                <div class="compare-item highlight">
+                    <h3>✅ MonoDesk</h3>
+                    <p>Purpose-built for freelance creative pros. One app. Everything connected. AI that actually helps.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's New Section -->
+    <section class="whats-new">
+        <div class="container">
+            <h2>What's Different?</h2>
+            <div class="diff-grid">
+                <div class="diff-item">
+                    <h3>🤖 AI that knows your business</h3>
+                    <p>Not just another ChatGPT wrapper. An agent trained on creative workflows that actually does the work.</p>
+                </div>
+                <div class="diff-item">
+                    <h3>🔗 Actually connected</h3>
+                    <p>Your proposals know your projects. Your time tracking knows your clients. Everything talks to everything.</p>
+                </div>
+                <div class="diff-item">
+                    <h3>🎨 Built by creative pros, for creative pros</h3>
+                    <p>We've freelanced. We know the pain. This isn't enterprise software dumbed down—it's purpose-built.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proof Section -->
+    <section class="proof">
+        <div class="container">
+            <h2>See It In Action</h2>
+            <div class="screenshots">
+                <div class="screenshot-placeholder">[Screenshot: Dashboard overview]</div>
+                <div class="screenshot-placeholder">[Screenshot: AI Agent in action]</div>
+                <div class="screenshot-placeholder">[Screenshot: Proposal builder]</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <h3>Request access</h3>
+                    <p>Book a quick call and we'll get you set up with early access.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <h3>Connect your stuff</h3>
+                    <p>Import existing clients, projects, and files. Takes 10 minutes.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <h3>Set your preferences</h3>
+                    <p>Tell the AI how you work. Your rates, your hours, your style.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">4</span>
+                    <h3>Let it handle the boring stuff</h3>
+                    <p>AI drafts proposals, tracks time, sends reminders, manages files.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">5</span>
+                    <h3>Focus on creative work</h3>
+                    <p>You do what you're great at. MonoDesk handles the rest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Creative Professionals Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="quote">"[Testimonial from designer about saving time]"</p>
+                    <p class="author">— Name, Freelance Designer</p>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">"[Testimonial from developer about organization]"</p>
+                    <p class="author">— Name, Indie Developer</p>
+                </div>
+                <div class="testimonial">
+                    <p class="quote">"[Testimonial from video creator about AI features]"</p>
+                    <p class="author">— Name, Video Creator</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee">
+        <div class="container">
+            <h2>No Risk</h2>
+            <div class="guarantee-box">
+                <p class="guarantee-headline">Try it free during early access</p>
+                <p>We'll personally help you get set up, and we expect MonoDesk to save you at least a couple of hours per week. There's low risk—you can walk away anytime if it's not for you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to simplify your freelance life?</h2>
+            <p>Book a 15-minute call. We'll show you around and get you set up.</p>
+            <div class="gcal-btn-wrapper">
+                <script>
+                (function() {
+                  var target = document.currentScript;
+                  window.addEventListener('load', function() {
+                    calendar.schedulingButton.load({
+                      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1YX_jGDkWa2ePQPVPP2q49tn6H-x6P1pOX7CcPC7pz4BkcyhCvnAusj1QwW8zKb5Q827SJW3UQ?gv=true',
+                      color: '#1C64F5',
+                      label: "Request early access",
+                      target,
+                    });
+                  });
+                })();
+                </script>
+            </div>
+            <p class="cta-note">Limited early access spots available</p>
+        </div>
+    </section>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+        
+        // Check for ?vp= query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const vpParam = urlParams.get('vp');
+        
+        if (vpParam) {
+            const vpIndex = parseInt(vpParam) - 1; // Convert to 0-based index
+            if (vpIndex >= 0 && vpIndex < totalSlides) {
+                // Hide carousel controls
+                document.querySelectorAll('.carousel-nav').forEach(btn => btn.style.display = 'none');
+                document.querySelector('.carousel-counter').style.display = 'none';
+                
+                // Show the specified slide
+                slides[0].classList.remove('active');
+                slides[vpIndex].classList.add('active');
+                currentSlide = vpIndex;
+            }
+        }
+        
+        function changeSlide(direction) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+        }
+    </script>
+</body>
+</html>
+

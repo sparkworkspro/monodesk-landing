@@ -10,14 +10,29 @@ Simple landing pages for MonoDesk with early access booking.
 
 ```
 monodesk-landing/
-├── index.html          # Landing page (Option 1)
-├── vibes.html          # Landing page (Option 2)
+├── example.html        # Example landing page
+├── vibes.html          # Landing page (Vibes)
+├── bundle.html         # Landing page (Bundle/Suite)
 ├── css/
-│   └── styles.css      # Shared styles
+│   ├── example.css     # Styles for example.html
+│   ├── vibes.css       # Styles for vibes.html
+│   └── bundle.css      # Styles for bundle.html
 ├── assets/
-│   └── logo-lockup.svg # MonoDesk logo
+│   └── logo-lockup.svg # MonoDesk logo (shared)
 └── README.md
 ```
+
+## CSS Architecture
+
+**Each page has its own CSS file** - stylesheets are not shared between pages. This keeps each landing page variant independent and easily customizable.
+
+| Page | CSS File |
+|------|----------|
+| `example.html` | `css/example.css` |
+| `vibes.html` | `css/vibes.css` |
+| `bundle.html` | `css/bundle.css` |
+
+Assets in `/assets` can be shared across all pages.
 
 ## Getting Started
 
@@ -30,7 +45,7 @@ monodesk-landing/
    ```
 
 2. Open in browser:
-   - Simply open `index.html` or `vibes.html` in your browser
+   - Simply open any `.html` file in your browser
 
 ### Deployment
 
