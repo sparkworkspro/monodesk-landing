@@ -78,7 +78,7 @@ body {
 .header-content {
     width: 100%;
     max-width: 1440px;
-    padding: 24px 60px 24px 0;
+    padding: 24px 60px 0 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -214,6 +214,24 @@ body {
     width: 31px;
     height: 31px;
     margin-bottom: 8px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.about-icon-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.about-icon-m {
+    position: absolute;
+    inset: 24.65% 16.08% 24.64% 16.1%;
+    width: auto;
+    height: auto;
+    display: block;
 }
 
 .about-title {
@@ -739,7 +757,6 @@ body {
    =================================== */
 
 @media (max-width: 1440px) {
-    .header-content,
     .hero-content,
     .about-content,
     .cards-header,
