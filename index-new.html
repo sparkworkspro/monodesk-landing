@@ -9,6 +9,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@500&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Calendar Scheduling -->
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+    <!-- Hotjar Tracking Code for Landing Pages -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:6605179,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
     
     <script>
         tailwind.config = {
@@ -78,6 +92,44 @@
         .play-button:hover {
             transform: translate(-50%, -50%) scale(1.1);
         }
+
+        /* Google Calendar Button Styling */
+        .gcal-btn-wrapper {
+            margin-top: 0;
+        }
+
+        .gcal-btn-wrapper button {
+            background: #D1FF6E !important;
+            color: #026232 !important;
+            border-radius: 10px !important;
+            font-family: 'Geist', system-ui, sans-serif !important;
+            font-size: 14px !important;
+            font-weight: 500 !important;
+            padding: 8px 16px !important;
+            height: 40px !important;
+            border: none !important;
+            cursor: pointer !important;
+            transition: all 0.2s ease !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 100% !important;
+        }
+
+        .gcal-btn-wrapper button:hover {
+            transform: translateY(-2px) !important;
+            filter: brightness(0.95) !important;
+        }
+
+        .gcal-btn-wrapper button:active {
+            transform: translateY(0) !important;
+        }
+
+        .gcal-btn-wrapper button * {
+            font-family: 'Geist', system-ui, sans-serif !important;
+            font-size: 14px !important;
+            font-weight: 500 !important;
+        }
     </style>
 </head>
 <body class="bg-background overflow-x-hidden">
@@ -92,12 +144,21 @@
                 </div>
                 
                 <!-- CTA Button -->
-                <button class="btn-cta bg-brand-highlighter text-brand-fun-green rounded-[10px] px-2 py-1 h-[40px] flex items-center justify-center gap-1 font-medium text-[14px] min-w-[197px]" onclick="handleEarlyAccess()">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 5V19M5 12H19" stroke="#026232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Request early access
-                </button>
+                <div class="gcal-btn-wrapper min-w-[197px]">
+                    <script>
+                    (function() {
+                      var target = document.currentScript;
+                      window.addEventListener('load', function() {
+                        calendar.schedulingButton.load({
+                          url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1YX_jGDkWa2ePQPVPP2q49tn6H-x6P1pOX7CcPC7pz4BkcyhCvnAusj1QwW8zKb5Q827SJW3UQ?gv=true',
+                          color: '#D1FF6E',
+                          label: "Request early access",
+                          target,
+                        });
+                      });
+                    })();
+                    </script>
+                </div>
             </nav>
         </section>
 
@@ -130,12 +191,21 @@
                     </h5>
                     
                     <!-- CTA Button -->
-                    <button class="btn-cta bg-brand-highlighter text-brand-fun-green rounded-[10px] px-2 py-1 h-[40px] flex items-center justify-center gap-1 font-medium text-[14px] w-[197px]" onclick="handleEarlyAccess()">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 5V19M5 12H19" stroke="#026232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Request early access
-                    </button>
+                    <div class="gcal-btn-wrapper w-[197px]">
+                        <script>
+                        (function() {
+                          var target = document.currentScript;
+                          window.addEventListener('load', function() {
+                            calendar.schedulingButton.load({
+                              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1YX_jGDkWa2ePQPVPP2q49tn6H-x6P1pOX7CcPC7pz4BkcyhCvnAusj1QwW8zKb5Q827SJW3UQ?gv=true',
+                              color: '#D1FF6E',
+                              label: "Request early access",
+                              target,
+                            });
+                          });
+                        })();
+                        </script>
+                    </div>
                 </div>
             </div>
         </section>
@@ -158,12 +228,21 @@
                     <p class="secondary-description font-geist font-normal text-[20px] text-[#161616] leading-[normal] tracking-[-0.03em]">
                         MonoDesk is one calm workspace of connected apps for freelance creatives. Powered by client context, it removes the rework and eliminates the mundane, so proposals, projects, tasks and files flow smoothly from idea to delivery.
                     </p>
-                    <button class="btn-cta bg-brand-highlighter text-brand-fun-green rounded-[10px] px-2 py-1 h-[40px] flex items-center justify-center gap-1 font-medium text-[14px] w-[197px]" onclick="handleEarlyAccess()">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 5V19M5 12H19" stroke="#026232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Request early access
-                    </button>
+                    <div class="gcal-btn-wrapper w-[197px]">
+                        <script>
+                        (function() {
+                          var target = document.currentScript;
+                          window.addEventListener('load', function() {
+                            calendar.schedulingButton.load({
+                              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1YX_jGDkWa2ePQPVPP2q49tn6H-x6P1pOX7CcPC7pz4BkcyhCvnAusj1QwW8zKb5Q827SJW3UQ?gv=true',
+                              color: '#D1FF6E',
+                              label: "Request early access",
+                              target,
+                            });
+                          });
+                        })();
+                        </script>
+                    </div>
                 </div>
             </div>
         </section>
@@ -247,12 +326,21 @@
                             Tools designed for creative professionals, all in one place, no integrations.
                         </p>
                     </div>
-                    <button class="btn-cta bg-brand-highlighter text-brand-fun-green rounded-[10px] px-2 py-1 h-[40px] flex items-center justify-center gap-1 font-medium text-[14px] w-[197px]" onclick="handleEarlyAccess()">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 5V19M5 12H19" stroke="#026232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Request early access
-                    </button>
+                    <div class="gcal-btn-wrapper w-[197px]">
+                        <script>
+                        (function() {
+                          var target = document.currentScript;
+                          window.addEventListener('load', function() {
+                            calendar.schedulingButton.load({
+                              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1YX_jGDkWa2ePQPVPP2q49tn6H-x6P1pOX7CcPC7pz4BkcyhCvnAusj1QwW8zKb5Q827SJW3UQ?gv=true',
+                              color: '#D1FF6E',
+                              label: "Request early access",
+                              target,
+                            });
+                          });
+                        })();
+                        </script>
+                    </div>
                 </div>
                 
                 <!-- Icon Content Container (Row 1) -->
@@ -386,12 +474,21 @@
                     <p class="additional-subtitle font-geist font-normal text-[20px] text-brand-grey tracking-[-0.03em]">
                         Lorem ipsum dolor sit amet consectetur.
                     </p>
-                    <button class="btn-cta bg-brand-highlighter text-brand-fun-green rounded-[10px] px-2 py-1 h-[40px] flex items-center justify-center gap-1 font-medium text-[14px] w-[197px]" onclick="handleEarlyAccess()">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 5V19M5 12H19" stroke="#026232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Request early access
-                    </button>
+                    <div class="gcal-btn-wrapper w-[197px]">
+                        <script>
+                        (function() {
+                          var target = document.currentScript;
+                          window.addEventListener('load', function() {
+                            calendar.schedulingButton.load({
+                              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1YX_jGDkWa2ePQPVPP2q49tn6H-x6P1pOX7CcPC7pz4BkcyhCvnAusj1QwW8zKb5Q827SJW3UQ?gv=true',
+                              color: '#D1FF6E',
+                              label: "Request early access",
+                              target,
+                            });
+                          });
+                        })();
+                        </script>
+                    </div>
                 </div>
                 <!-- Additional Text Container (Image) -->
                 <div class="additional-text-container w-[783px] h-[415px] rounded-[20px] shadow-[0_10px_40px_rgba(0,0,0,0.15)] flex items-center justify-center overflow-hidden">
@@ -527,12 +624,21 @@
                     <p class="secondary-description font-geist font-normal text-[20px] text-[#161616] tracking-[-0.03em]">
                         MonoDesk is one calm workspace of connected apps for freelance creatives. Powered by client context, it removes the rework and eliminates the mundane, so proposals, projects, tasks and files flow smoothly from idea to delivery.
                     </p>
-                    <button class="btn-cta bg-brand-highlighter text-brand-fun-green rounded-[10px] px-2 py-1 h-[40px] flex items-center justify-center gap-1 font-medium text-[14px] w-[197px]" onclick="handleEarlyAccess()">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 5V19M5 12H19" stroke="#026232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Request early access
-                    </button>
+                    <div class="gcal-btn-wrapper w-[197px]">
+                        <script>
+                        (function() {
+                          var target = document.currentScript;
+                          window.addEventListener('load', function() {
+                            calendar.schedulingButton.load({
+                              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1YX_jGDkWa2ePQPVPP2q49tn6H-x6P1pOX7CcPC7pz4BkcyhCvnAusj1QwW8zKb5Q827SJW3UQ?gv=true',
+                              color: '#D1FF6E',
+                              label: "Request early access",
+                              target,
+                            });
+                          });
+                        })();
+                        </script>
+                    </div>
                 </div>
             </div>
         </section>
@@ -618,12 +724,21 @@
                                 <span class="price-amount font-geist font-semibold text-[48px] text-white tracking-[-0.03em]">$99</span>
                                 <span class="price-unit font-geist font-medium text-[18px] text-white">/month</span>
                             </div>
-                            <button class="btn-cta bg-brand-highlighter text-brand-fun-green rounded-[10px] px-2 py-1 h-[40px] flex items-center justify-center gap-1 font-medium text-[14px] w-[197px]" onclick="handleEarlyAccess()">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 5V19M5 12H19" stroke="#026232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                Request early access
-                            </button>
+                            <div class="gcal-btn-wrapper w-[197px]">
+                                <script>
+                                (function() {
+                                  var target = document.currentScript;
+                                  window.addEventListener('load', function() {
+                                    calendar.schedulingButton.load({
+                                      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1YX_jGDkWa2ePQPVPP2q49tn6H-x6P1pOX7CcPC7pz4BkcyhCvnAusj1QwW8zKb5Q827SJW3UQ?gv=true',
+                                      color: '#D1FF6E',
+                                      label: "Request early access",
+                                      target,
+                                    });
+                                  });
+                                })();
+                                </script>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -689,18 +804,6 @@
     </div>
 
     <script>
-        // Interactive functionality
-        function handleEarlyAccess() {
-            // Integrate with Google Calendar or custom modal
-            console.log('Request early access clicked');
-            
-            // For Google Calendar scheduling integration:
-            // window.calendar.schedulingButton.load({...});
-            
-            // For now, open a simple modal or alert
-            alert('Thank you for your interest! We\'ll be in touch soon.');
-        }
-
         // Benefit image swapping functionality
         const benefitImages = {
             '01': 'assets/Features-01.png',      // One calm workspace
@@ -767,16 +870,6 @@
                 // Add your video player logic here
                 console.log('Play video');
                 alert('Video player would open here');
-            });
-        });
-
-        // Email form submission
-        document.querySelectorAll('input[type="email"]').forEach(input => {
-            input.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    e.preventDefault();
-                    handleEarlyAccess();
-                }
             });
         });
     </script>
