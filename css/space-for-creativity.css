@@ -72,12 +72,11 @@ body {
     border-top-left-radius: var(--radius-2xl);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .header-content {
     width: 100%;
-    max-width: 1440px;
     padding: 24px 60px 0 0;
     display: flex;
     align-items: center;
@@ -91,6 +90,7 @@ body {
     grid-template-rows: max-content;
     place-items: start;
     line-height: 0;
+    margin-left: 0;
 }
 
 .folder-tab-shape {
@@ -125,12 +125,12 @@ body {
 .hero-section {
     width: 100%;
     height: 750px;
-    background: url('../assets/hero-space-creativity.png') center center / cover no-repeat;
+    background: url('../assets/header-green-thinker.png') center center / cover no-repeat;
     border-bottom-left-radius: 19px;
     border-bottom-right-radius: 19px;
     padding: 0;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
@@ -138,10 +138,11 @@ body {
 
 .hero-content {
     width: 100%;
-    max-width: 1440px;
     padding: 80px 120px;
     display: flex;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     z-index: 1;
 }
 
@@ -149,7 +150,9 @@ body {
     max-width: 625px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: var(--spacing-sm);
+    text-align: center;
 }
 
 .hero-label {
@@ -159,6 +162,7 @@ body {
     color: var(--brand-white);
     letter-spacing: 0;
     line-height: 1;
+    text-align: center;
 }
 
 .hero-title {
@@ -169,6 +173,7 @@ body {
     line-height: 1;
     letter-spacing: -1.73px;
     margin: 0;
+    text-align: center;
 }
 
 .hero-subtitle {
@@ -179,6 +184,7 @@ body {
     letter-spacing: -0.6px;
     max-width: 420px;
     line-height: 1;
+    text-align: center;
 }
 
 /* ===================================
@@ -199,7 +205,7 @@ body {
     padding: 0 60px;
     display: flex;
     align-items: center;
-    gap: 70px;
+    justify-content: space-between;
 }
 
 .about-text-container {
@@ -211,34 +217,24 @@ body {
 }
 
 .about-icon {
-    width: 31px;
-    height: 31px;
+    width: 45px;
+    height: 30px;
     margin-bottom: 8px;
-    position: relative;
     flex-shrink: 0;
 }
 
-.about-icon-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
+.about-icon-img {
+    width: 45px;
+    height: 30px;
     display: block;
-}
-
-.about-icon-m {
-    position: absolute;
-    inset: 24.65% 16.08% 24.64% 16.1%;
-    width: auto;
-    height: auto;
-    display: block;
+    object-fit: contain;
 }
 
 .about-title {
     font-family: 'Geist', sans-serif;
     font-size: 32px;
     font-weight: 400;
-    color: var(--type-light);
+    color: var(--type-light-40);
     letter-spacing: -0.96px;
     line-height: normal;
     margin-top: 34px;
@@ -246,7 +242,7 @@ body {
 
 .about-subtitle {
     font-family: 'Geist', sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--type-light-60);
     letter-spacing: -0.36px;
@@ -444,13 +440,15 @@ body {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    overflow: hidden;
 }
 
 .feature-icon-img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: var(--radius-sm);
+    display: block;
 }
 
 .feature-content {
@@ -600,8 +598,10 @@ body {
     max-width: 1440px;
     padding: 80px 120px;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
     z-index: 1;
 }
 
@@ -609,7 +609,9 @@ body {
     max-width: 625px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 15px;
+    text-align: center;
 }
 
 .cta-title {
@@ -624,6 +626,7 @@ body {
 .cta-subtext {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: var(--spacing-sm);
 }
 
@@ -641,28 +644,11 @@ body {
 }
 
 .cta-email-wrapper {
-    background: var(--brand-white);
-    border-radius: var(--radius-md);
-    padding: 4px 4px 4px 16px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: center;
 }
 
-.cta-email-input {
-    flex: 1;
-    border: none;
-    outline: none;
-    font-family: 'Geist', sans-serif;
-    font-size: 12px;
-    color: var(--brand-grey);
-    background: transparent;
-}
-
-.cta-email-input::placeholder {
-    color: var(--brand-grey);
-}
 
 .cta-logo {
     width: 162px;
@@ -687,18 +673,26 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--spacing-sm);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
 }
 
 .footer-icon {
-    width: 31px;
-    height: 31px;
+    width: 45px;
+    height: 30px;
     flex-shrink: 0;
 }
 
 .footer-description {
     font-family: 'Geist', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     color: var(--type-light);
     letter-spacing: -0.72px;
