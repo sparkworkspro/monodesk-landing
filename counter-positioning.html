@@ -29,7 +29,7 @@
     <header class="header">
         <nav class="header-nav">
             <div class="logo">
-                <img src="assets/logo-lockup-header.svg" alt="MonoDesk" class="logo-img">
+                <img src="assets/logo-lockup-white.svg" alt="MonoDesk" class="logo-img">
             </div>
         </nav>
     </header>
@@ -41,13 +41,104 @@
                 <h1 class="hero-title">This might look<br>like a project management tool</h1>
             </div>
             <div class="hero-visual">
-                <div class="hero-illustration">
-                    <img src="assets/counter-positioning/hero-illustration.png" alt="Project management illustration" class="hero-img">
-                </div>
                 <p class="hero-tagline">But it isn't.</p>
             </div>
         </div>
     </section>
+
+    <!-- Timeline Section - Scroll Experience -->
+    <section class="timeline-section">
+        <div class="timeline-container">
+            <!-- Sticky Image Container -->
+            <div class="timeline-media">
+                <div class="timeline-media-sticky">
+                    <div class="timeline-image-wrapper">
+                        <img src="assets/counter-positioning/brand-img-01.jpg" alt="Proposal preview" class="timeline-preview-img active" data-step="1">
+                        <img src="assets/counter-positioning/brand-img-02.jpg" alt="Brief preview" class="timeline-preview-img" data-step="2">
+                        <img src="assets/counter-positioning/brand-img-03.jpg" alt="Kanban preview" class="timeline-preview-img" data-step="3">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scrolling Content -->
+            <div class="timeline-content">
+                <div class="timeline-header">
+                    <h2 class="section-title">It's where chaos starts<br>to make sense</h2>
+                    <p class="section-subtitle">Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+                
+                <div class="timeline-steps">
+                    <div class="timeline-step" data-step="1">
+                        <div class="timeline-number">
+                            <span>1</span>
+                            <div class="timeline-line"></div>
+                        </div>
+                        <div class="timeline-text">
+                            <h3 class="timeline-step-title">Proposal</h3>
+                            <p class="timeline-step-desc">Upload your proposal, brief, or even a voice note. MonoDesk extracts the key details and gets you started instantly.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step" data-step="2">
+                        <div class="timeline-number">
+                            <span>2</span>
+                            <div class="timeline-line"></div>
+                        </div>
+                        <div class="timeline-text">
+                            <h3 class="timeline-step-title">Brief</h3>
+                            <p class="timeline-step-desc">Your project brief is automatically generated with tasks, timeline, and client context—ready to go.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step" data-step="3">
+                        <div class="timeline-number">
+                            <span>3</span>
+                        </div>
+                        <div class="timeline-text">
+                            <h3 class="timeline-step-title">Kanban</h3>
+                            <p class="timeline-step-desc">Everything flows into a visual kanban board. Track progress, manage deadlines, and keep your creative work organised.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+    // Timeline scroll experience
+    document.addEventListener('DOMContentLoaded', function() {
+        const timelineSteps = document.querySelectorAll('.timeline-step[data-step]');
+        const previewImages = document.querySelectorAll('.timeline-preview-img');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '-30% 0px -50% 0px',
+            threshold: 0
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const step = entry.target.dataset.step;
+                    
+                    // Update active step styling
+                    timelineSteps.forEach(s => s.classList.remove('active'));
+                    entry.target.classList.add('active');
+                    
+                    // Update active image
+                    previewImages.forEach(img => {
+                        img.classList.remove('active');
+                        if (img.dataset.step === step) {
+                            img.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+        
+        timelineSteps.forEach(step => observer.observe(step));
+    });
+    </script>
 
     <!-- CTA Banner -->
     <section class="cta-banner">
@@ -57,57 +148,6 @@
             </svg>
             <span>Request early access</span>
         </button>
-    </section>
-
-    <!-- Video Section -->
-    <section class="video-section">
-        <div class="video-container">
-            <div class="video-thumbnail">
-                <img src="assets/counter-positioning/video-thumbnail.jpg" alt="Video preview" class="video-img">
-                <button class="play-btn">
-                    <svg class="icon-play" width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 4L20 12L6 20V4Z" stroke="#161616" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <div class="video-content">
-            <div class="video-header">
-                <h2 class="section-title">Where the chaos starts<br>to make sense</h2>
-                <p class="section-subtitle">Lorem ipsum dolor sit amet consectetur.</p>
-            </div>
-            <div class="steps-row">
-                <div class="step-item">
-                    <div class="step-number">
-                        <span>1</span>
-                        <div class="step-timeline"></div>
-                    </div>
-                    <div class="step-text">
-                        <h3 class="step-title">Proposal</h3>
-                        <p class="step-desc">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
-                    </div>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">
-                        <span>2</span>
-                        <div class="step-timeline"></div>
-                    </div>
-                    <div class="step-text">
-                        <h3 class="step-title">Brief</h3>
-                        <p class="step-desc">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
-                    </div>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">
-                        <span>3</span>
-                    </div>
-                    <div class="step-text">
-                        <h3 class="step-title">Kanban</h3>
-                        <p class="step-desc">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Selling Points Section -->
@@ -226,6 +266,146 @@
         </div>
     </section>
 
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="pricing-header">
+            <h2 class="section-title">Simple, transparent pricing</h2>
+            <p class="section-subtitle">Choose the plan that works for you</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-card-header">
+                    <span class="pricing-tier">Starter</span>
+                    <div class="pricing-amount">
+                        <span class="price">$0</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="pricing-desc">Perfect for trying things out</p>
+                </div>
+                <div class="pricing-card-body">
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Up to 3 projects</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Basic AI assistance</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Time tracking</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Community support</span>
+                        </li>
+                    </ul>
+                    <button class="pricing-btn pricing-btn-outline">Get started free</button>
+                </div>
+            </div>
+            <div class="pricing-card pricing-card-featured">
+                <div class="pricing-badge">Most popular</div>
+                <div class="pricing-card-header">
+                    <span class="pricing-tier">Pro</span>
+                    <div class="pricing-amount">
+                        <span class="price">$19</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="pricing-desc">For serious freelancers</p>
+                </div>
+                <div class="pricing-card-body">
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Unlimited projects</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Advanced AI agent</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Client portal</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Priority support</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>All creative apps</span>
+                        </li>
+                    </ul>
+                    <button class="pricing-btn pricing-btn-primary">Start free trial</button>
+                </div>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-card-header">
+                    <span class="pricing-tier">Studio</span>
+                    <div class="pricing-amount">
+                        <span class="price">$49</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <p class="pricing-desc">For teams & agencies</p>
+                </div>
+                <div class="pricing-card-body">
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Everything in Pro</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Up to 5 team members</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Team collaboration</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Custom branding</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Dedicated support</span>
+                        </li>
+                    </ul>
+                    <button class="pricing-btn pricing-btn-outline">Contact sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Who It's For Section -->
     <section class="who-its-for">
         <div class="who-its-for-content">
@@ -242,7 +422,23 @@
     <!-- Final CTA Section -->
     <section class="final-cta">
         <div class="final-cta-container">
-            <img src="assets/counter-positioning/cta-logo.svg" alt="MonoDesk Icon" class="cta-logo">
+            <div class="cta-logo-wrapper">
+                <img src="assets/counter-positioning/cta-logo.svg" alt="MonoDesk Icon" class="cta-logo">
+                <div class="confetti-container">
+                    <div class="confetti confetti-1"></div>
+                    <div class="confetti confetti-2"></div>
+                    <div class="confetti confetti-3"></div>
+                    <div class="confetti confetti-4"></div>
+                    <div class="confetti confetti-5"></div>
+                    <div class="confetti confetti-6"></div>
+                    <div class="confetti confetti-7"></div>
+                    <div class="confetti confetti-8"></div>
+                    <div class="confetti confetti-9"></div>
+                    <div class="confetti confetti-10"></div>
+                    <div class="confetti confetti-11"></div>
+                    <div class="confetti confetti-12"></div>
+                </div>
+            </div>
             <div class="cta-text">
                 <h2 class="cta-title">You made it this far.</h2>
                 <p class="cta-subtitle">Might as well <span>see what all the fuss is about</span></p>
