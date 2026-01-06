@@ -146,7 +146,7 @@ body {
 }
 
 .hero-text-container {
-    max-width: 625px;
+    max-width: 620px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,18 +159,18 @@ body {
     font-size: 12px;
     font-weight: 500;
     color: var(--brand-white);
-    letter-spacing: 0;
+    letter-spacing: -0.1rem;
     line-height: 1;
     text-align: center;
 }
 
 .hero-title {
     font-family: 'Geist', sans-serif;
-    font-size: 57.667px;
+    font-size: 60px;
     font-weight: 700;
     color: var(--brand-white);
     line-height: 1;
-    letter-spacing: -1.73px;
+    letter-spacing: -0.1rem;
     margin: 0;
     text-align: center;
 }
@@ -180,8 +180,8 @@ body {
     font-size: 20px;
     font-weight: 400;
     color: rgba(223, 223, 223, 0.6);
-    letter-spacing: -0.6px;
-    max-width: 420px;
+    letter-spacing: -0.1rem;
+    max-width: 520px;
     line-height: 1;
     text-align: center;
 }
@@ -244,7 +244,6 @@ body {
     font-size: 16px;
     font-weight: 600;
     color: var(--type-light-60);
-    letter-spacing: -0.36px;
     line-height: 1.2;
     margin-top: 26px;
 }
@@ -308,7 +307,7 @@ body {
     font-size: 20px;
     font-weight: 400;
     color: var(--brand-grey);
-    letter-spacing: -0.6px;
+    letter-spacing: -0.1rem;
     line-height: normal;
 }
 
@@ -358,7 +357,7 @@ body {
     font-size: 24px;
     font-weight: 600;
     color: var(--type-light-60);
-    letter-spacing: -0.72px;
+    letter-spacing: -0.1rem;
     line-height: normal;
 }
 
@@ -367,7 +366,6 @@ body {
     font-size: 16px;
     font-weight: 400;
     color: var(--type-light);
-    letter-spacing: -0.48px;
     line-height: normal;
 }
 
@@ -453,7 +451,6 @@ body {
 .feature-content {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xs);
     width: 100%;
 }
 
@@ -471,7 +468,6 @@ body {
     font-size: 14px;
     font-weight: 400;
     color: var(--type-light-60);
-    letter-spacing: -0.42px;
     line-height: normal;
 }
 
@@ -482,7 +478,7 @@ body {
 .steps-section {
     width: 100%;
     background: #212121;
-    padding: 40px 0;
+    padding: 80px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -524,6 +520,7 @@ body {
     flex-direction: column;
     box-shadow: 0 2px 4px 2px rgba(12, 12, 13, 0.05);
     flex-shrink: 0;
+    border-radius: var(--radius-xl);
 }
 
 .step-image {
@@ -563,7 +560,7 @@ body {
     font-size: 24px;
     font-weight: 600;
     color: var(--type-light);
-    letter-spacing: -0.72px;
+    letter-spacing: -0.1rem;
     line-height: normal;
 }
 
@@ -572,7 +569,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     color: var(--type-light-40);
-    letter-spacing: -0.48px;
+    letter-spacing: -0.1rem;
     line-height: normal;
 }
 
@@ -618,7 +615,7 @@ body {
     font-size: 48px;
     font-weight: 600;
     color: var(--background);
-    letter-spacing: -1.44px;
+    letter-spacing: -0.1rem;
     line-height: normal;
     text-align: center;
 }
@@ -635,7 +632,7 @@ body {
     font-size: 14px;
     font-weight: 400;
     color: var(--background);
-    letter-spacing: -0.42px;
+    letter-spacing: -0.1rem;
     line-height: normal;
     text-align: center;
 }
@@ -672,7 +669,7 @@ body {
 .footer-tagline {
     width: 100%;
     background: #212121;
-    padding: 40px 0;
+    padding: 80px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -699,7 +696,6 @@ body {
     font-size: 20px;
     font-weight: 600;
     color: var(--type-light);
-    letter-spacing: -0.72px;
     text-align: center;
     line-height: normal;
 }
