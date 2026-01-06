@@ -160,7 +160,7 @@ body {
     font-size: 12px;
     font-weight: 500;
     color: var(--brand-white);
-    letter-spacing: -0.1rem;
+    letter-spacing: -0.05rem;
     line-height: 1;
     text-align: center;
 }
@@ -171,7 +171,7 @@ body {
     font-weight: 700;
     color: var(--brand-white);
     line-height: 1;
-    letter-spacing: -0.1rem;
+    letter-spacing: -0.05rem;
     margin: 0;
     text-align: center;
 }
@@ -181,7 +181,7 @@ body {
     font-size: 20px;
     font-weight: 400;
     color: rgba(223, 223, 223, 0.6);
-    letter-spacing: -0.1rem;
+    letter-spacing: -0.05rem;
     max-width: 520px;
     line-height: 1;
     text-align: center;
@@ -308,7 +308,7 @@ body {
     font-size: 20px;
     font-weight: 400;
     color: var(--brand-grey);
-    letter-spacing: -0.1rem;
+    letter-spacing: -0.05rem;
     line-height: normal;
 }
 
@@ -358,7 +358,7 @@ body {
     font-size: 24px;
     font-weight: 600;
     color: var(--type-light-60);
-    letter-spacing: -0.1rem;
+    letter-spacing: -0.05rem;
     line-height: normal;
 }
 
@@ -561,7 +561,7 @@ body {
     font-size: 24px;
     font-weight: 600;
     color: var(--type-light);
-    letter-spacing: -0.1rem;
+    letter-spacing: -0.05rem;
     line-height: normal;
 }
 
@@ -570,7 +570,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     color: var(--type-light-40);
-    letter-spacing: -0.1rem;
+    letter-spacing: -0.05rem;
     line-height: normal;
 }
 
@@ -616,7 +616,7 @@ body {
     font-size: 48px;
     font-weight: 600;
     color: var(--background);
-    letter-spacing: -0.1rem;
+    letter-spacing: -0.05rem;
     line-height: normal;
     text-align: center;
 }
@@ -633,7 +633,7 @@ body {
     font-size: 14px;
     font-weight: 400;
     color: var(--background);
-    letter-spacing: -0.1rem;
+    letter-spacing: -0.05rem;
     line-height: normal;
     text-align: center;
 }
