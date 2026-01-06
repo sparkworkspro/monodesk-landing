@@ -69,7 +69,6 @@ body {
     min-height: 100px;
     padding: 0;
     background: linear-gradient(184deg, #C0FF01 0%, #0177C6 100%);
-    border-top-left-radius: var(--radius-2xl);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -587,7 +586,7 @@ body {
     background: url('../assets/cta-space-creativity.png') center center / cover no-repeat;
     padding: 0;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
@@ -621,6 +620,7 @@ body {
     color: var(--background);
     letter-spacing: -1.44px;
     line-height: normal;
+    text-align: center;
 }
 
 .cta-subtext {
@@ -637,6 +637,7 @@ body {
     color: var(--background);
     letter-spacing: -0.42px;
     line-height: normal;
+    text-align: center;
 }
 
 .cta-subtitle strong {
@@ -658,8 +659,8 @@ body {
 }
 
 .cta-logo-img {
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 25px;
     object-fit: contain;
     display: block;
 }
@@ -671,8 +672,9 @@ body {
 .footer-tagline {
     width: 100%;
     background: #212121;
-    padding: 40px 60px;
+    padding: 40px 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
