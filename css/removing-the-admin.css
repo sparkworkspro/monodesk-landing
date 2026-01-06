@@ -1,0 +1,531 @@
+/* ===================================
+   RESET & BASE STYLES
+   =================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Geist', system-ui, sans-serif;
+    background: #DADEE1;
+    color: #161616;
+    line-height: 1.5;
+}
+
+/* ===================================
+   DESIGN TOKENS
+   =================================== */
+
+:root {
+    /* Colors */
+    --brand-white: #FFFFFF;
+    --brand-blue: #1C64F5;
+    --brand-highlighter: #D1FF6E;
+    --brand-orange: #FF5B26;
+    --brand-fun-green: #026232;
+    --surface-tint: #EEF2F5;
+    --background: #DADEE1;
+    --type: #161616;
+    --type-light: #E7E7E7;
+    --type-60: rgba(22, 22, 22, 0.6);
+    --type-40: rgba(22, 22, 22, 0.4);
+    --type-light-60: rgba(223, 223, 223, 0.6);
+    
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 40px;
+    --spacing-xl: 60px;
+    --spacing-2xl: 80px;
+    
+    /* Border Radius */
+    --radius-sm: 10px;
+    --radius-md: 14px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+}
+
+/* ===================================
+   HERO SECTION
+   =================================== */
+
+.hero-section {
+    width: 100%;
+    background: var(--brand-blue);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.hero-logo {
+    width: 169px;
+    height: 31px;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hero-main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.hero-text-container {
+    max-width: 625px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.hero-title {
+    font-family: 'Geist', sans-serif;
+    font-size: 72px;
+    font-weight: 600;
+    color: var(--surface-tint);
+    line-height: 1;
+    letter-spacing: -2.16px;
+    margin: 0;
+}
+
+.hero-subtitle {
+    font-family: 'Geist', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--type-light-60);
+    letter-spacing: -0.6px;
+    line-height: normal;
+}
+
+.hero-image {
+    width: 569px;
+    height: 491px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.hero-person {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+/* ===================================
+   SELLING POINTS SECTION
+   =================================== */
+
+.selling-points-section {
+    width: 100%;
+    background: var(--background);
+    padding: var(--spacing-2xl) var(--spacing-xl);
+    display: flex;
+    justify-content: center;
+}
+
+.selling-points-content {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: flex-start;
+}
+
+.selling-points-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.selling-points-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    max-width: 625px;
+}
+
+.section-title {
+    font-family: 'Geist', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--type);
+    letter-spacing: -1.44px;
+    line-height: normal;
+}
+
+.section-subtitle {
+    font-family: 'Geist', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--type-60);
+    letter-spacing: -0.6px;
+    line-height: normal;
+}
+
+.selling-points-image {
+    width: 463px;
+    height: 349px;
+    position: relative;
+}
+
+.brand-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.selling-points-right {
+    width: 625px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feature-item {
+    display: flex;
+    gap: 23px;
+    align-items: flex-start;
+    padding: var(--spacing-sm) 20px;
+    border-radius: var(--radius-xl);
+}
+
+.feature-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.feature-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.feature-title {
+    font-family: 'Geist', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--type);
+    letter-spacing: -0.72px;
+    line-height: normal;
+}
+
+.feature-description {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--type-60);
+    letter-spacing: -0.48px;
+    line-height: normal;
+}
+
+/* ===================================
+   COMPELLING FEATURES SECTION
+   =================================== */
+
+.compelling-features-section {
+    width: 100%;
+    background: var(--background);
+    padding: 0 var(--spacing-xl) var(--spacing-lg);
+    display: flex;
+    justify-content: center;
+}
+
+.compelling-features-content {
+    width: 100%;
+    max-width: 1385px;
+    background: var(--surface-tint);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.compelling-features-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.compelling-features-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    max-width: 767px;
+}
+
+.feature-cards {
+    display: flex;
+    gap: 29px;
+    justify-content: space-between;
+}
+
+.feature-card {
+    width: 420px;
+    background: var(--brand-white);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    box-shadow: 0 2px 4px 2px rgba(12, 12, 13, 0.05);
+}
+
+.feature-card-image {
+    width: 372px;
+    height: 240px;
+    background: #e4e3f8;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.feature-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: 0 var(--spacing-md);
+}
+
+.card-title {
+    font-family: 'Geist', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--type);
+    letter-spacing: -1.08px;
+    line-height: normal;
+}
+
+.card-description {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--type-40);
+    letter-spacing: -0.48px;
+    line-height: normal;
+}
+
+/* ===================================
+   VIDEO SECTION
+   =================================== */
+
+.video-section {
+    width: 100%;
+    background: var(--background);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    display: flex;
+    justify-content: center;
+}
+
+.video-container {
+    width: 1380px;
+    height: 500px;
+    border-radius: 21px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play-button {
+    width: 72px;
+    height: 69px;
+    background: var(--brand-highlighter);
+    border: none;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.2s ease;
+}
+
+.play-button:hover {
+    transform: scale(1.05);
+}
+
+.play-icon {
+    width: 42px;
+    height: 42px;
+}
+
+/* ===================================
+   CTA FOOTER
+   =================================== */
+
+.cta-footer {
+    width: 100%;
+    background: var(--background);
+    padding: 0 var(--spacing-xl) var(--spacing-lg);
+    display: flex;
+    justify-content: center;
+}
+
+.cta-footer-content {
+    width: 100%;
+    max-width: 1380px;
+    background: var(--brand-fun-green);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg) 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 169px;
+    height: 31px;
+}
+
+/* ===================================
+   GOOGLE CALENDAR BUTTON STYLING
+   =================================== */
+
+.gcal-btn-wrapper {
+    margin-top: 0;
+}
+
+.gcal-btn-wrapper button {
+    background: #D1FF6E !important;
+    color: #026232 !important;
+    border-radius: 10px !important;
+    font-family: 'Geist', system-ui, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    padding: 8px 16px !important;
+    height: 40px !important;
+    min-width: 197px !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.gcal-btn-wrapper button:hover {
+    transform: translateY(-2px) !important;
+    filter: brightness(0.95) !important;
+}
+
+.gcal-btn-wrapper button:active {
+    transform: translateY(0) !important;
+}
+
+.gcal-btn-wrapper button * {
+    font-family: 'Geist', system-ui, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+
+@media (max-width: 1440px) {
+    .hero-section,
+    .selling-points-section,
+    .compelling-features-section,
+    .video-section,
+    .cta-footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-main {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-image {
+        width: 100%;
+        max-width: 569px;
+    }
+    
+    .selling-points-content {
+        flex-direction: column;
+    }
+    
+    .selling-points-right {
+        width: 100%;
+    }
+    
+    .feature-cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 48px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+    
+    .card-title {
+        font-size: 28px;
+    }
+    
+    .video-container {
+        width: 100%;
+        height: 500px;
+    }
+    
+    .cta-footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
