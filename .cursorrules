@@ -10,6 +10,8 @@
 
 - Assets in the `/assets` folder can be shared across all pages
 - Common assets include logos, icons, and images
+- Ensure all images are optimized for web performance
+- Ensure all images are webp format
 
 ## File Structure
 
