@@ -17,7 +17,6 @@ html, body {
 body {
     font-family: 'Geist', system-ui, sans-serif;
     background: #DADEE1;
-    color: #161616;
     line-height: 1.5;
 }
 
@@ -88,87 +87,312 @@ body {
 
 .hero {
     width: 100%;
-    height: 1200px;
-    background: var(--brand-almost-black);
-    padding: 0 var(--spacing-xl) var(--spacing-lg);
+    height: 80vh;
+    background: var(--brand-almost-black) url('../assets/counter-positioning/hero.webp') right center / auto 100% no-repeat;
+    padding: 0 var(--spacing-xl) var(--spacing-xl);
     color: var(--brand-almost-black);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero Confetti */
+.hero-confetti {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 12px;
+    height: auto;
+}
+
+/* Confetti positioned around the hero image - matching reference layout */
+/* Top area - pink */
+.confetti-1 {
+    top: 8%;
+    right: 32%;
+    width: 10px;
+    animation: float-1 12s ease-in-out infinite;
+}
+
+/* Top left of image - blue */
+.confetti-2 {
+    top: 18%;
+    right: 45%;
+    width: 14px;
+    animation: float-2 15s ease-in-out infinite;
+    animation-delay: -3s;
+}
+
+/* Upper right - cyan */
+.confetti-3 {
+    top: 12%;
+    right: 8%;
+    width: 11px;
+    animation: float-3 11s ease-in-out infinite;
+    animation-delay: -7s;
+}
+
+/* Right side - yellow */
+.confetti-4 {
+    top: 28%;
+    right: 3%;
+    width: 13px;
+    animation: float-4 14s ease-in-out infinite;
+    animation-delay: -2s;
+}
+
+/* Left of hero image - orange */
+.confetti-5 {
+    top: 45%;
+    right: 50%;
+    width: 12px;
+    animation: float-5 13s ease-in-out infinite;
+    animation-delay: -5s;
+}
+
+/* Lower left - pink */
+.confetti-6 {
+    top: 60%;
+    right: 52%;
+    width: 10px;
+    animation: float-6 16s ease-in-out infinite;
+    animation-delay: -8s;
+}
+
+/* Below image center - cyan */
+.confetti-7 {
+    top: 72%;
+    right: 35%;
+    width: 14px;
+    animation: float-7 12s ease-in-out infinite;
+    animation-delay: -4s;
+}
+
+/* Bottom center - yellow */
+.confetti-8 {
+    top: 78%;
+    right: 28%;
+    width: 11px;
+    animation: float-8 14s ease-in-out infinite;
+    animation-delay: -1s;
+}
+
+/* Bottom left - blue */
+.confetti-9 {
+    top: 82%;
+    right: 48%;
+    width: 13px;
+    animation: float-9 11s ease-in-out infinite;
+    animation-delay: -6s;
+}
+
+/* Lower right - orange */
+.confetti-10 {
+    top: 70%;
+    right: 6%;
+    width: 10px;
+    animation: float-10 15s ease-in-out infinite;
+    animation-delay: -9s;
+}
+
+/* Bottom right - cyan */
+.confetti-11 {
+    top: 88%;
+    right: 12%;
+    width: 12px;
+    animation: float-11 13s ease-in-out infinite;
+    animation-delay: -3s;
+}
+
+/* Very bottom - yellow */
+.confetti-12 {
+    top: 92%;
+    right: 22%;
+    width: 11px;
+    animation: float-12 12s ease-in-out infinite;
+    animation-delay: -10s;
+}
+
+/* Individual subtle floating animations with unique rotations */
+@keyframes float-1 {
+    0%, 100% { transform: rotate(-15deg) translateY(0) translateX(0); }
+    50% { transform: rotate(-12deg) translateY(-6px) translateX(2px); }
+}
+
+@keyframes float-2 {
+    0%, 100% { transform: rotate(25deg) translateY(0) translateX(0); }
+    33% { transform: rotate(22deg) translateY(-4px) translateX(-3px); }
+    66% { transform: rotate(28deg) translateY(-7px) translateX(2px); }
+}
+
+@keyframes float-3 {
+    0%, 100% { transform: rotate(-8deg) translateY(0) translateX(0); }
+    50% { transform: rotate(-5deg) translateY(-5px) translateX(3px); }
+}
+
+@keyframes float-4 {
+    0%, 100% { transform: rotate(18deg) translateY(0) translateX(0); }
+    50% { transform: rotate(21deg) translateY(-8px) translateX(-2px); }
+}
+
+@keyframes float-5 {
+    0%, 100% { transform: rotate(-22deg) translateY(0) translateX(0); }
+    33% { transform: rotate(-19deg) translateY(-5px) translateX(3px); }
+    66% { transform: rotate(-25deg) translateY(-3px) translateX(-2px); }
+}
+
+@keyframes float-6 {
+    0%, 100% { transform: rotate(12deg) translateY(0) translateX(0); }
+    50% { transform: rotate(15deg) translateY(-6px) translateX(-3px); }
+}
+
+@keyframes float-7 {
+    0%, 100% { transform: rotate(-5deg) translateY(0) translateX(0); }
+    50% { transform: rotate(-2deg) translateY(-7px) translateX(2px); }
+}
+
+@keyframes float-8 {
+    0%, 100% { transform: rotate(30deg) translateY(0) translateX(0); }
+    33% { transform: rotate(27deg) translateY(-4px) translateX(-2px); }
+    66% { transform: rotate(33deg) translateY(-6px) translateX(3px); }
+}
+
+@keyframes float-9 {
+    0%, 100% { transform: rotate(-18deg) translateY(0) translateX(0); }
+    50% { transform: rotate(-15deg) translateY(-5px) translateX(2px); }
+}
+
+@keyframes float-10 {
+    0%, 100% { transform: rotate(8deg) translateY(0) translateX(0); }
+    50% { transform: rotate(11deg) translateY(-7px) translateX(-3px); }
+}
+
+@keyframes float-11 {
+    0%, 100% { transform: rotate(-28deg) translateY(0) translateX(0); }
+    33% { transform: rotate(-25deg) translateY(-3px) translateX(2px); }
+    66% { transform: rotate(-31deg) translateY(-6px) translateX(-2px); }
+}
+
+@keyframes float-12 {
+    0%, 100% { transform: rotate(15deg) translateY(0) translateX(0); }
+    50% { transform: rotate(18deg) translateY(-5px) translateX(3px); }
 }
 
 .hero-content {
     max-width: 1320px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     gap: var(--spacing-lg);
     min-height: 607px;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-text {
-    flex: 1;
-    max-width: 625px;
-}
-
-.hero-title {
-    font-family: 'Geist', sans-serif;
-    font-size: 48px;
-    font-weight: 600;
-    color: var(--surface-tint);
-    line-height: 1;
-    letter-spacing: -1.44px;
-    width: 450px;
-}
-
-.hero-visual {
+    flex: 1;    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
-    flex: 1;
-    max-width: 625px;
+    gap: var(--spacing-sm);
+    text-wrap: balance;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: var(--surface-tint);
+    letter-spacing: -0.05rem;
+    line-height: 3.2rem;
 }
 
 .hero-tagline {
-    font-family: 'Geist', sans-serif;
-    font-size: 32px;
+    font-size: 1.8rem;
     font-weight: 400;
-    color: var(--brand-white);
-    letter-spacing: -0.96px;
+    color: var(--brand-highlighter);
+    letter-spacing: -0.05rem;
+    line-height: 1.2rem;
 }
 
 /* ===================================
-   CTA BANNER
+   CTA TOAST
    =================================== */
 
-.cta-banner {
-    width: 100%;
-    background: var(--brand-highlighter);
-    padding: var(--spacing-md) 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.cta-toast {
     position: fixed;
-    bottom: 0;
-    left: 0;
+    bottom: 24px;
+    right: 24px;
     z-index: 100;
+    animation: toast-slide-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.cta-banner-btn {
+@keyframes toast-slide-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.cta-toast-content {
     display: flex;
     align-items: center;
-    gap: 4px;
-    background: transparent;
+    gap: 16px;
+    background: var(--brand-almost-black);
+    padding: 12px 14px 12px 20px;
+    border-radius: 50px;
+    box-shadow: 
+        0 4px 24px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+.cta-toast-text {
+    font-family: 'Geist', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: -0.2px;
+}
+
+.cta-toast-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--brand-highlighter);
     border: none;
+    border-radius: 50px;
+    padding: 10px 18px;
     cursor: pointer;
     font-family: 'Geist', sans-serif;
     font-size: 14px;
     font-weight: 500;
     color: var(--brand-fun-green);
+    transition: all 0.2s ease;
 }
 
-.cta-banner-btn .icon-plus {
-    width: 24px;
-    height: 24px;
+.cta-toast-btn:hover {
+    transform: scale(1.02);
+    filter: brightness(1.05);
+}
+
+.cta-toast-btn:active {
+    transform: scale(0.98);
+}
+
+.cta-toast-btn .icon-plus {
+    width: 18px;
+    height: 18px;
 }
 
 /* ===================================
@@ -179,31 +403,25 @@ body {
     width: 100%;
     background: #212121;
     padding: var(--spacing-xl) var(--spacing-xl);
-    min-height: 100vh;
-    height: 1080px;
     color: var(--brand-almost-black);
 }
 
 .timeline-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: var(--spacing-lg);
-    align-items: center;
-    justify-content: space-between;
     max-width: 1320px;
     margin: 0 auto;
 }
 
 /* Sticky Media Container */
 .timeline-media {
-    flex: 1;
     max-width: 625px;
-    height: 100%;
 }
 
 .timeline-media-sticky {
     position: sticky;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 100px;
 }
 
 .timeline-image-wrapper {
@@ -934,9 +1152,8 @@ body {
 }
 
 .who-label {
-    font-family: 'Geist', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 500;
     color: var(--type-40);
     letter-spacing: -0.36px;
     line-height: 1.2;
@@ -949,7 +1166,6 @@ body {
 }
 
 .who-description {
-    font-family: 'Geist', sans-serif;
     font-size: 32px;
     font-weight: 300;
     color: var(--type-60);
@@ -1305,13 +1521,8 @@ body {
         max-width: 100%;
     }
     
-    .hero-visual {
-        width: 100%;
-        height: auto;
-    }
-    
     .timeline-container {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: var(--spacing-lg);
     }
     
@@ -1469,6 +1680,29 @@ body {
         flex-direction: column;
         gap: var(--spacing-md);
         text-align: center;
+    }
+    
+    /* Toast responsive */
+    .cta-toast {
+        bottom: 16px;
+        right: 16px;
+        left: 16px;
+    }
+    
+    .cta-toast-content {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+        border-radius: 16px;
+    }
+    
+    .cta-toast-text {
+        text-align: center;
+    }
+    
+    .cta-toast-btn {
+        width: 100%;
+        justify-content: center;
     }
 }
 
