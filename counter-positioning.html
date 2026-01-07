@@ -285,12 +285,21 @@
     <div class="cta-toast">
         <div class="cta-toast-content">
             <span class="cta-toast-text">Get early access to MonoDesk</span>
-            <button class="cta-toast-btn">
-                <svg class="icon-plus" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 5V19M5 12H19" stroke="#026232" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <span>Request access</span>
-            </button>
+            <div class="gcal-btn-wrapper">
+                <script>
+                (function() {
+                  var target = document.currentScript;
+                  window.addEventListener('load', function() {
+                    calendar.schedulingButton.load({
+                      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1YX_jGDkWa2ePQPVPP2q49tn6H-x6P1pOX7CcPC7pz4BkcyhCvnAusj1QwW8zKb5Q827SJW3UQ?gv=true',
+                      color: '#D1FF6E',
+                      label: "+ Request early access",
+                      target,
+                    });
+                  });
+                })();
+                </script>
+            </div>
         </div>
     </div>
 
