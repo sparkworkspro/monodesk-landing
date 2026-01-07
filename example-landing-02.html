@@ -229,6 +229,43 @@
             <p>© 2026 MonoDesk. Built for creative professionals.</p>
         </div>
     </footer>
+
+    <script>
+    // Parallax effect for feature images (90% scroll speed)
+    document.addEventListener('DOMContentLoaded', function() {
+        const parallaxImages = document.querySelectorAll('.feature-image img');
+        const parallaxSpeed = 0.8; // 80% parallax movement
+        
+        function updateParallax() {
+            parallaxImages.forEach(img => {
+                const container = img.parentElement;
+                const rect = container.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                
+                // Calculate progress through viewport (0 = entering bottom, 1 = exiting top)
+                const progress = 1 - (rect.bottom / (windowHeight + rect.height));
+                
+                // Base offset is -15% (from CSS), parallax adds movement based on scroll
+                // Range: when entering (progress=0) offset is more negative, when exiting (progress=1) offset is less negative
+                const baseOffset = -35; // Start higher up
+                const parallaxRange = 50; // Total range of movement in %
+                const offset = baseOffset + (progress * parallaxRange);
+                
+                // Clamp to prevent showing edges
+                const clampedOffset = Math.max(-40, Math.min(0, offset));
+                
+                img.style.transform = `translateY(${clampedOffset}%)`;
+            });
+        }
+        
+        // Run on scroll and resize
+        window.addEventListener('scroll', updateParallax, { passive: true });
+        window.addEventListener('resize', updateParallax);
+        
+        // Initial call
+        updateParallax();
+    });
+    </script>
 </body>
 </html>
 
