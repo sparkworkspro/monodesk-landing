@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MonoDesk - Make space for creativity</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@500&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index-new.css">
     <!-- Google Calendar Scheduling -->
     <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
     <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
@@ -24,128 +23,20 @@
             a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-white': '#FFFFFF',
-                        'brand-orange': '#FF5B26',
-                        'brand-highlighter': '#D1FF6E',
-                        'brand-blue': '#1C64F5',
-                        'brand-grey': '#94959A',
-                        'brand-almost-black': '#272727',
-                        'brand-fun-green': '#026232',
-                        'surface-tint': '#EEF2F5',
-                        'background': '#DADEE1',
-                    },
-                    fontFamily: {
-                        'geist': ['Geist', 'system-ui', 'sans-serif'],
-                        'geist-mono': ['Geist Mono', 'monospace'],
-                        'jakarta': ['Plus Jakarta Sans', 'sans-serif'],
-                    },
-                    spacing: {
-                        'lp-margin': '60px',
-                        'lp-spacing': '40px',
-                        'lp-spacing-small': '24px',
-                    },
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html, body {
-            width: 100%;
-            min-width: 100%;
-            overflow-x: hidden;
-        }
-        
-        body {
-            font-family: 'Geist', system-ui, sans-serif;
-            background: #DADEE1;
-        }
-
-        .btn-cta {
-            transition: all 0.2s ease;
-        }
-
-        .btn-cta:hover {
-            transform: translateY(-2px);
-            filter: brightness(0.95);
-        }
-
-        .btn-cta:active {
-            transform: translateY(0);
-        }
-
-        .play-button {
-            transition: all 0.3s ease;
-        }
-
-        .play-button:hover {
-            transform: translate(-50%, -50%) scale(1.1);
-        }
-
-        /* Google Calendar Button Styling */
-        .gcal-btn-wrapper {
-            margin-top: 0;
-        }
-
-        .gcal-btn-wrapper button {
-            background: #D1FF6E !important;
-            color: #026232 !important;
-            border-radius: 10px !important;
-            font-family: 'Geist', system-ui, sans-serif !important;
-            font-size: 14px !important;
-            font-weight: 500 !important;
-            padding: 8px 16px !important;
-            height: 40px !important;
-            border: none !important;
-            cursor: pointer !important;
-            transition: all 0.2s ease !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            width: 100% !important;
-        }
-
-        .gcal-btn-wrapper button:hover {
-            transform: translateY(-2px) !important;
-            filter: brightness(0.95) !important;
-        }
-
-        .gcal-btn-wrapper button:active {
-            transform: translateY(0) !important;
-        }
-
-        .gcal-btn-wrapper button * {
-            font-family: 'Geist', system-ui, sans-serif !important;
-            font-size: 14px !important;
-            font-weight: 500 !important;
-        }
-    </style>
 </head>
-<body class="bg-background overflow-x-hidden">
-    <div class="page-container w-full min-w-full flex flex-col items-center">
+<body>
+    <div class="page-container">
         
         <!-- Content-Header-Floating -->
-        <section class="content-header-floating bg-brand-blue w-full flex items-center justify-center pt-[40px] px-[30px] pb-0">
-            <nav class="menu-floating bg-brand-orange rounded-[20px] w-full max-w-[1385px] px-8 py-5 flex items-center justify-between">
+        <section class="content-header-floating">
+            <nav class="menu-floating">
                 <!-- Logo -->
-                <div class="logo-container h-[31px] w-[169px]">
-                    <img src="assets/logo-lockup-header.svg" alt="MonoDesk" class="h-full w-auto">
+                <div class="logo-container">
+                    <img src="assets/logo-lockup-header.svg" alt="MonoDesk">
                 </div>
                 
                 <!-- CTA Button -->
-                <div class="gcal-btn-wrapper min-w-[197px]">
+                <div class="gcal-btn-wrapper min-width">
                     <script>
                     (function() {
                       var target = document.currentScript;
@@ -164,35 +55,33 @@
         </section>
 
         <!-- Content-Header-Bottom -->
-        <section class="content-header-bottom bg-brand-blue w-full h-[750px] flex items-center justify-center overflow-hidden py-[40px] relative">
+        <section class="content-header-bottom">
             <!-- Main Image Container -->
-            <div class="main-image-container absolute left-1/2 top-0 w-[926px] h-[800px] flex items-center justify-center transform">
-                <img src="assets/hero-image.webp" alt="MonoDesk Interface" class="w-full h-auto">
+            <div class="main-image-container">
+                <img src="assets/hero-image.webp" alt="MonoDesk Interface">
             </div>
             
             <!-- Main Text Container -->
-            <div class="w-full max-w-[1440px] px-[60px] flex items-end justify-start h-full relative z-10">
-                <div class="main-text-container flex flex-col gap-4 max-w-[436px]">
+            <div class="hero-content">
+                <div class="main-text-container">
                     <!-- Label -->
-                    <div class="label bg-white/20 flex gap-1 items-center px-2 py-0 rounded-[12px] w-fit shadow-sm">
-                        <img src="assets/smile-icon.svg" alt="" class="icon w-[14px] h-[14px] brightness-0 invert">
-                        <p class="font-geist-mono font-medium text-[8px] text-white py-1">
-                            Join 10,000+ creators on the waitlist
-                        </p>
+                    <div class="label">
+                        <img src="assets/smile-icon.svg" alt="" class="icon">
+                        <p>Join 10,000+ creators on the waitlist</p>
                     </div>
                     
                     <!-- Title -->
-                    <h1 class="title font-geist font-bold text-[72px] text-surface-tint leading-none tracking-[-0.03em]">
+                    <h1 class="hero-title">
                         Make space<br>for creativity
                     </h1>
                     
                     <!-- Description -->
-                    <h5 class="description font-geist font-normal text-[32px] text-white leading-none tracking-[-0.03em]">
+                    <h5 class="hero-description">
                         Eliminate the mundane,<br>maximise your creativity.
                     </h5>
                     
                     <!-- CTA Button -->
-                    <div class="gcal-btn-wrapper w-[197px]">
+                    <div class="gcal-btn-wrapper">
                         <script>
                         (function() {
                           var target = document.currentScript;
@@ -212,24 +101,24 @@
         </section>
 
         <!-- Content-Intro -->
-        <section class="content-intro bg-white w-full flex items-center justify-center py-[80px]">
-            <div class="w-full max-w-[1440px] px-[60px] flex items-start justify-between">
+        <section class="content-intro">
+            <div class="inner">
                 <!-- Secondary Text Container -->
-                <div class="secondary-text-container flex flex-col gap-[16px] w-[630px] items-end">
-                    <h2 class="secondary-title font-geist font-semibold text-[48px] text-[#161616] leading-[normal] tracking-[-0.03em] w-full">
+                <div class="secondary-text-container left">
+                    <h2 class="secondary-title">
                         This might look like a project management tool
                     </h2>
-                    <h5 class="secondary-subtitle font-geist font-semibold text-[36px] text-brand-orange leading-[normal] tracking-[-0.03em] w-full">
+                    <h5 class="secondary-subtitle">
                         But it isn't.
                     </h5>
                 </div>
                 
                 <!-- Secondary Text Container -->
-                <div class="secondary-text-container flex flex-col h-[187px] justify-between w-[627px] items-start">
-                    <p class="secondary-description font-geist font-normal text-[20px] text-[#161616] leading-[normal] tracking-[-0.03em]">
+                <div class="secondary-text-container right">
+                    <p class="secondary-description">
                         MonoDesk is one calm workspace of connected apps for freelance creatives. Powered by client context, it removes the rework and eliminates the mundane, so proposals, projects, tasks and files flow smoothly from idea to delivery.
                     </p>
-                    <div class="gcal-btn-wrapper w-[197px]">
+                    <div class="gcal-btn-wrapper">
                         <script>
                         (function() {
                           var target = document.currentScript;
@@ -249,64 +138,64 @@
         </section>
 
         <!-- Content-Reality -->
-        <section class="content-reality bg-background w-full flex items-center justify-center py-[80px]">
-            <div class="w-full max-w-[1440px] px-[60px] flex items-center justify-between gap-[119px]">
+        <section class="content-reality">
+            <div class="inner">
                 <!-- Background+Border (Before) -->
-                <div class="background-border-before relative w-[625px] h-[510px] flex-shrink-0">
-                    <div class="heading absolute top-[-10px] left-[45px] bg-background border border-brand-grey border-dashed px-4 py-1 rounded-[12px] z-10">
-                        <span class="font-geist-mono font-medium text-[14px] text-brand-blue">Before</span>
+                <div class="background-border-before">
+                    <div class="reality-heading before">
+                        <span>Before</span>
                     </div>
-                    <div class="w-full h-full border-2 border-dashed border-brand-grey rounded-lg flex items-center justify-center overflow-hidden relative">
+                    <div class="reality-box dashed">
                         <!-- Scattered App Names -->
-                        <div class="background-border-shadow absolute top-[80px] left-[54px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[-4deg]">Harvest</div>
-                        <div class="background-border-shadow absolute top-[53px] left-[175px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[2deg]">Calendar</div>
-                        <div class="background-border-shadow absolute top-[62px] left-[305px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[-2deg]">Google Drive</div>
-                        <div class="background-border-shadow absolute top-[58px] left-[441px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[3deg]">Dropbox</div>
-                        <div class="background-border-shadow absolute top-[116px] left-[470px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[-3deg]">Basecamp</div>
-                        <div class="background-border-shadow absolute top-[103px] left-[228px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[5deg]">Zoho</div>
-                        <div class="background-border-shadow absolute top-[139px] left-[332px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[-2deg]">Trello</div>
-                        <div class="background-border-shadow absolute top-[162px] left-[510px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[4deg]">Loom</div>
-                        <div class="background-border-shadow absolute top-[179px] left-[417px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[-3deg]">QuickBooks</div>
-                        <div class="background-border-shadow absolute top-[161px] left-[36px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px]">Claude</div>
-                        <div class="background-border-shadow absolute top-[218px] left-[148px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[1deg]">ChatGPT</div>
-                        <div class="background-border-shadow absolute top-[197px] left-[254px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[-5deg]">Todoist</div>
-                        <div class="background-border-shadow absolute top-[235px] left-[466px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[3deg]">ClickUp</div>
-                        <div class="background-border-shadow absolute top-[230px] left-[60px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[-3deg]">Figma</div>
-                        <div class="background-border-shadow absolute top-[263px] left-[314px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[-2deg]">Slack</div>
-                        <div class="background-border-shadow absolute top-[281px] left-[196px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[2deg]">Airtable</div>
-                        <div class="background-border-shadow absolute top-[274px] left-[430px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px]">Miro</div>
-                        <div class="background-border-shadow absolute top-[298px] left-[390px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[-4deg]">Asana</div>
-                        <div class="background-border-shadow absolute top-[326px] left-[119px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[3deg]">Notion</div>
-                        <div class="background-border-shadow absolute top-[344px] left-[39px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[-2deg]">Monday.com</div>
-                        <div class="background-border-shadow absolute top-[351px] left-[332px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[1deg]">Stripe</div>
-                        <div class="background-border-shadow absolute top-[381px] left-[426px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[-2deg]">Apple Notes</div>
-                        <div class="background-border-shadow absolute top-[364px] left-[246px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[-1deg]">Calendly</div>
-                        <div class="background-border-shadow absolute top-[399px] left-[71px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[3deg]">Gemini</div>
-                        <div class="background-border-shadow absolute top-[425px] left-[177px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[-4deg]">Things</div>
-                        <div class="background-border-shadow absolute top-[417px] left-[311px] bg-surface-tint border border-background px-3 py-2 rounded-lg text-brand-grey font-geist-mono font-medium text-[12px] transform rotate-[1deg]">Email Inbox</div>
+                        <div class="app-tag" style="top: 80px; left: 54px; transform: rotate(-4deg);">Harvest</div>
+                        <div class="app-tag" style="top: 53px; left: 175px; transform: rotate(2deg);">Calendar</div>
+                        <div class="app-tag" style="top: 62px; left: 305px; transform: rotate(-2deg);">Google Drive</div>
+                        <div class="app-tag" style="top: 58px; left: 441px; transform: rotate(3deg);">Dropbox</div>
+                        <div class="app-tag" style="top: 116px; left: 470px; transform: rotate(-3deg);">Basecamp</div>
+                        <div class="app-tag" style="top: 103px; left: 228px; transform: rotate(5deg);">Zoho</div>
+                        <div class="app-tag" style="top: 139px; left: 332px; transform: rotate(-2deg);">Trello</div>
+                        <div class="app-tag" style="top: 162px; left: 510px; transform: rotate(4deg);">Loom</div>
+                        <div class="app-tag" style="top: 179px; left: 417px; transform: rotate(-3deg);">QuickBooks</div>
+                        <div class="app-tag" style="top: 161px; left: 36px;">Claude</div>
+                        <div class="app-tag" style="top: 218px; left: 148px; transform: rotate(1deg);">ChatGPT</div>
+                        <div class="app-tag" style="top: 197px; left: 254px; transform: rotate(-5deg);">Todoist</div>
+                        <div class="app-tag" style="top: 235px; left: 466px; transform: rotate(3deg);">ClickUp</div>
+                        <div class="app-tag" style="top: 230px; left: 60px; transform: rotate(-3deg);">Figma</div>
+                        <div class="app-tag" style="top: 263px; left: 314px; transform: rotate(-2deg);">Slack</div>
+                        <div class="app-tag" style="top: 281px; left: 196px; transform: rotate(2deg);">Airtable</div>
+                        <div class="app-tag" style="top: 274px; left: 430px;">Miro</div>
+                        <div class="app-tag" style="top: 298px; left: 390px; transform: rotate(-4deg);">Asana</div>
+                        <div class="app-tag" style="top: 326px; left: 119px; transform: rotate(3deg);">Notion</div>
+                        <div class="app-tag" style="top: 344px; left: 39px; transform: rotate(-2deg);">Monday.com</div>
+                        <div class="app-tag" style="top: 351px; left: 332px; transform: rotate(1deg);">Stripe</div>
+                        <div class="app-tag" style="top: 381px; left: 426px; transform: rotate(-2deg);">Apple Notes</div>
+                        <div class="app-tag" style="top: 364px; left: 246px; transform: rotate(-1deg);">Calendly</div>
+                        <div class="app-tag" style="top: 399px; left: 71px; transform: rotate(3deg);">Gemini</div>
+                        <div class="app-tag" style="top: 425px; left: 177px; transform: rotate(-4deg);">Things</div>
+                        <div class="app-tag" style="top: 417px; left: 311px; transform: rotate(1deg);">Email Inbox</div>
                     </div>
                 </div>
                 
                 <!-- Background+Border (After) -->
-                <div class="background-border-after relative w-[420px] h-[510px] flex-shrink-0">
-                    <div class="heading absolute top-[-10px] left-[29px] bg-background border border-brand-grey px-4 py-1 rounded-[12px] z-10">
-                        <span class="font-geist-mono font-medium text-[14px] text-brand-blue">After</span>
+                <div class="background-border-after">
+                    <div class="reality-heading after">
+                        <span>After</span>
                     </div>
-                    <div class="w-full h-full border-2 border-solid border-brand-grey rounded-lg flex flex-col items-center justify-center gap-8">
-                        <img src="assets/logo-lockup.svg" alt="MonoDesk" class="w-[169px] h-[31px]">
-                        <p class="font-geist font-normal text-[16px] text-[#161616] text-center tracking-[-0.03em] max-w-[362px]">The 1 app which replaces all the others</p>
+                    <div class="reality-box solid">
+                        <img src="assets/logo-lockup.svg" alt="MonoDesk" class="logo">
+                        <p class="text">The 1 app which replaces all the others</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Content-Video -->
-        <section class="content-video w-full flex items-center justify-center mb-[80px]">
-            <div class="w-full max-w-[1440px] flex items-center justify-center">
-                <div class="video-container relative w-[1325px] h-[528px] flex-shrink-0">
-                    <img src="assets/video-screenshot.webp" alt="Product Demo" class="w-full h-auto rounded-[21px]">
-                    <button class="play-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brand-highlighter w-[69px] h-[69px] rounded-[10px] flex items-center justify-center" style="--stroke-0: #161616;">
-                        <svg class="w-[24px] h-[24px]" viewBox="0 0 26.8557 33.7862" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <section class="content-video">
+            <div class="inner">
+                <div class="video-container">
+                    <img src="assets/video-screenshot.webp" alt="Product Demo">
+                    <button class="play-button" style="--stroke-0: #161616;">
+                        <svg viewBox="0 0 26.8557 33.7862" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1.29947 1.29947L25.5562 16.8931L1.29947 32.4867V1.29947Z" stroke="var(--stroke-0, #161616)" stroke-width="2.59894" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
@@ -315,19 +204,19 @@
         </section>
 
         <!-- Content-Features -->
-        <section class="content-features bg-[#212121] border-t border-b border-[rgba(223,223,223,0.2)] w-full flex items-center justify-center py-[80px]">
-            <div class="w-full max-w-[1440px] px-[60px] flex flex-col gap-[40px] items-center">
+        <section class="content-features">
+            <div class="inner">
                 <!-- Quaternary Content Container -->
-                <div class="quaternary-content-container w-full max-w-[1320px] flex items-center justify-between">
-                    <div class="quaternary-text-container flex-1">
-                        <h2 class="quaternary-title font-geist font-semibold text-[36px] text-[#e7e7e7] tracking-[-0.03em] leading-tight">
+                <div class="quaternary-content-container">
+                    <div class="quaternary-text-container">
+                        <h2 class="quaternary-title">
                             Everything in one, uninterrupted workspace
                         </h2>
-                        <p class="quaternary-subtitle font-geist font-normal text-[20px] text-brand-grey tracking-[-0.03em] mt-4">
+                        <p class="quaternary-subtitle">
                             Tools designed for creative professionals, all in one place, no integrations.
                         </p>
                     </div>
-                    <div class="gcal-btn-wrapper w-[197px]">
+                    <div class="gcal-btn-wrapper">
                         <script>
                         (function() {
                           var target = document.currentScript;
@@ -345,119 +234,119 @@
                 </div>
                 
                 <!-- Icon Content Container (Row 1) -->
-                <div class="icon-content-container flex gap-6 justify-center w-full">
-                    <div class="column-3-icon bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
-                        <div class="icon w-6 h-6">
+                <div class="icon-content-container">
+                    <div class="column-3-icon">
+                        <div class="icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
                         </div>
                         <div class="text-container">
-                            <h3 class="icon-title font-geist font-semibold text-[20px] text-[#e7e7e7] tracking-[-0.03em] mb-4">Proposal</h3>
-                            <p class="icon-description font-geist font-normal text-[14px] text-[rgba(223,223,223,0.6)] tracking-[-0.03em]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                            <h3 class="icon-title">Proposal</h3>
+                            <p class="icon-description">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
                         </div>
                     </div>
-                    <div class="column-3-icon bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
-                        <div class="icon w-6 h-6">
+                    <div class="column-3-icon">
+                        <div class="icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
                         </div>
                         <div class="text-container">
-                            <h3 class="icon-title font-geist font-semibold text-[20px] text-[#e7e7e7] tracking-[-0.03em] mb-4">Kanban board</h3>
-                            <p class="icon-description font-geist font-normal text-[14px] text-[rgba(223,223,223,0.6)] tracking-[-0.03em]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                            <h3 class="icon-title">Kanban board</h3>
+                            <p class="icon-description">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
                         </div>
                     </div>
-                    <div class="column-3-icon bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
-                        <div class="icon w-6 h-6">
+                    <div class="column-3-icon">
+                        <div class="icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
                         </div>
                         <div class="text-container">
-                            <h3 class="icon-title font-geist font-semibold text-[20px] text-[#e7e7e7] tracking-[-0.03em] mb-4">Files</h3>
-                            <p class="icon-description font-geist font-normal text-[14px] text-[rgba(223,223,223,0.6)] tracking-[-0.03em]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                            <h3 class="icon-title">Files</h3>
+                            <p class="icon-description">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
                         </div>
                     </div>
-                    <div class="column-3-icon bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
-                        <div class="icon w-6 h-6">
+                    <div class="column-3-icon">
+                        <div class="icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
                         </div>
                         <div class="text-container">
-                            <h3 class="icon-title font-geist font-semibold text-[20px] text-[#e7e7e7] tracking-[-0.03em] mb-4">Calendar</h3>
-                            <p class="icon-description font-geist font-normal text-[14px] text-[rgba(223,223,223,0.6)] tracking-[-0.03em]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                            <h3 class="icon-title">Calendar</h3>
+                            <p class="icon-description">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
                         </div>
                     </div>
-                    <div class="column-3-icon bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
-                        <div class="icon w-6 h-6">
+                    <div class="column-3-icon">
+                        <div class="icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
                         </div>
                         <div class="text-container">
-                            <h3 class="icon-title font-geist font-semibold text-[20px] text-[#e7e7e7] tracking-[-0.03em] mb-4">Client Portal</h3>
-                            <p class="icon-description font-geist font-normal text-[14px] text-[rgba(223,223,223,0.6)] tracking-[-0.03em]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                            <h3 class="icon-title">Client Portal</h3>
+                            <p class="icon-description">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Icon Content Container (Row 2) -->
-                <div class="icon-content-container flex gap-6 justify-center w-full max-w-[1320px]">
-                    <div class="column-3-icon bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
-                        <div class="icon w-6 h-6">
+                <div class="icon-content-container narrow">
+                    <div class="column-3-icon">
+                        <div class="icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
                         </div>
                         <div class="text-container">
-                            <h3 class="icon-title font-geist font-semibold text-[20px] text-[#e7e7e7] tracking-[-0.03em] mb-4">Project</h3>
-                            <p class="icon-description font-geist font-normal text-[14px] text-[rgba(223,223,223,0.6)] tracking-[-0.03em]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                            <h3 class="icon-title">Project</h3>
+                            <p class="icon-description">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
                         </div>
                     </div>
-                    <div class="column-3-icon bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
-                        <div class="icon w-6 h-6">
+                    <div class="column-3-icon">
+                        <div class="icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
                         </div>
                         <div class="text-container">
-                            <h3 class="icon-title font-geist font-semibold text-[20px] text-[#e7e7e7] tracking-[-0.03em] mb-4">Inbox</h3>
-                            <p class="icon-description font-geist font-normal text-[14px] text-[rgba(223,223,223,0.6)] tracking-[-0.03em]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                            <h3 class="icon-title">Inbox</h3>
+                            <p class="icon-description">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
                         </div>
                     </div>
-                    <div class="column-3-icon bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
-                        <div class="icon w-6 h-6">
+                    <div class="column-3-icon">
+                        <div class="icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
                         </div>
                         <div class="text-container">
-                            <h3 class="icon-title font-geist font-semibold text-[20px] text-[#e7e7e7] tracking-[-0.03em] mb-4">Storyboard</h3>
-                            <p class="icon-description font-geist font-normal text-[14px] text-[rgba(223,223,223,0.6)] tracking-[-0.03em]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                            <h3 class="icon-title">Storyboard</h3>
+                            <p class="icon-description">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
                         </div>
                     </div>
-                    <div class="column-3-icon bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
-                        <div class="icon w-6 h-6">
+                    <div class="column-3-icon">
+                        <div class="icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
                         </div>
                         <div class="text-container">
-                            <h3 class="icon-title font-geist font-semibold text-[20px] text-[#e7e7e7] tracking-[-0.03em] mb-4">IQ Maker</h3>
-                            <p class="icon-description font-geist font-normal text-[14px] text-[rgba(223,223,223,0.6)] tracking-[-0.03em]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                            <h3 class="icon-title">IQ Maker</h3>
+                            <p class="icon-description">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
                         </div>
                     </div>
-                    <div class="column-3-icon bg-brand-almost-black rounded-[16px] p-[24px] pt-[40px] w-[245px] h-[196px] flex flex-col gap-6">
-                        <div class="icon w-6 h-6">
+                    <div class="column-3-icon">
+                        <div class="icon">
                             <svg viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
                         </div>
                         <div class="text-container">
-                            <h3 class="icon-title font-geist font-semibold text-[20px] text-[#e7e7e7] tracking-[-0.03em] mb-4">Bubbles</h3>
-                            <p class="icon-description font-geist font-normal text-[14px] text-[rgba(223,223,223,0.6)] tracking-[-0.03em]">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
+                            <h3 class="icon-title">Bubbles</h3>
+                            <p class="icon-description">Lorem ipsum dolor sit amet consectetur. Id facilisis.</p>
                         </div>
                     </div>
                 </div>
@@ -465,17 +354,17 @@
         </section>
 
         <!-- Content-Apps -->
-        <section class="content-apps bg-background border-t border-b border-[rgba(22,22,22,0.2)] w-full flex items-center justify-center py-[80px]">
-            <div class="w-full max-w-[1440px] px-[60px] flex gap-[119px] items-start">
+        <section class="content-apps">
+            <div class="inner">
                 <!-- Additional Text Container -->
-                <div class="additional-text-container flex flex-col gap-4 w-[420px]">
-                    <h2 class="additional-title font-geist font-semibold text-[36px] text-[#161616] tracking-[-0.03em]">
+                <div class="additional-text-container">
+                    <h2 class="additional-title">
                         Plus all these apps
                     </h2>
-                    <p class="additional-subtitle font-geist font-normal text-[20px] text-brand-grey tracking-[-0.03em]">
+                    <p class="additional-subtitle">
                         Lorem ipsum dolor sit amet consectetur.
                     </p>
-                    <div class="gcal-btn-wrapper w-[197px]">
+                    <div class="gcal-btn-wrapper">
                         <script>
                         (function() {
                           var target = document.currentScript;
@@ -492,101 +381,97 @@
                     </div>
                 </div>
                 <!-- Additional Text Container (Image) -->
-                <div class="additional-text-container w-[783px] h-[415px] rounded-[20px] shadow-[0_10px_40px_rgba(0,0,0,0.15)] flex items-center justify-center overflow-hidden">
-                    <img src="assets/apps-screenshot.webp" alt="Apps Grid" class="w-full h-auto rounded-[20px]">
+                <div class="apps-image-container">
+                    <img src="assets/apps-screenshot.webp" alt="Apps Grid">
                 </div>
             </div>
         </section>
 
         <!-- Content-Models -->
-        <section class="content-models bg-background w-full flex items-center justify-center py-[80px] rounded-bl-[20px] rounded-br-[20px]">
-            <div class="w-[1320px] flex gap-[171px] items-center">
+        <section class="content-models">
+            <div class="inner">
                 <!-- Models Text Container -->
-                <div class="models-text-container flex flex-col gap-[16px] w-[420px]">
-                    <h2 class="models-title font-geist font-semibold text-[36px] text-[#161616] tracking-[-1.08px] leading-[normal]">
+                <div class="models-text-container">
+                    <h2 class="models-title">
                         And these models subscriptions included
                     </h2>
-                    <p class="models-subtitle font-geist font-semibold text-[12px] text-[rgba(22,22,22,0.4)] tracking-[-0.36px] leading-[1.2]">
+                    <p class="models-subtitle">
                         So you can save on your monthly subcriptions
                     </p>
                 </div>
                 <!-- Models Container -->
-                <div class="models-container flex gap-[24px] items-center">
-                    <div class="icon-container w-[114px] h-[27px] flex items-center justify-center flex-shrink-0">
-                        <img src="assets/openai-logo.svg" alt="OpenAI" class="max-w-full max-h-full object-contain">
+                <div class="models-container">
+                    <div class="model-icon">
+                        <img src="assets/openai-logo.svg" alt="OpenAI">
                     </div>
-                    <div class="icon-container w-[114px] h-[27px] flex items-center justify-center flex-shrink-0">
-                        <img src="assets/dalle-logo.svg" alt="DALL·E" class="max-w-full max-h-full object-contain">
+                    <div class="model-icon">
+                        <img src="assets/dalle-logo.svg" alt="DALL·E">
                     </div>
-                    <div class="icon-container w-[114px] h-[27px] flex items-center justify-center flex-shrink-0">
-                        <img src="assets/googleai-logo.svg" alt="Google AI" class="max-w-full max-h-full object-contain">
+                    <div class="model-icon">
+                        <img src="assets/googleai-logo.svg" alt="Google AI">
                     </div>
-                    <div class="icon-container w-[114px] h-[27px] flex items-center justify-center flex-shrink-0">
-                        <img src="assets/chatgpt-logo.svg" alt="ChatGPT" class="max-w-full max-h-full object-contain">
+                    <div class="model-icon">
+                        <img src="assets/chatgpt-logo.svg" alt="ChatGPT">
                     </div>
-                    <div class="icon-container w-[114px] h-[27px] flex items-center justify-center flex-shrink-0">
-                        <img src="assets/stability-logo.svg" alt="Stability" class="max-w-full max-h-full object-contain">
+                    <div class="model-icon">
+                        <img src="assets/stability-logo.svg" alt="Stability">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Content-Benefits -->
-        <section class="content-benefits w-full flex items-center justify-center">
-            <div class="w-full max-w-[1440px] px-[60px] flex items-center justify-center">
-                <div class="bg-white w-full max-w-[1384px] flex items-center justify-between px-[30px] py-[40px] rounded-[20px] shadow-[0_10px_40px_rgba(0,0,0,0.15)]">
+        <section class="content-benefits">
+            <div class="outer">
+                <div class="benefits-card">
                     <!-- Footer Text Container -->
-                    <div class="footer-text-container flex flex-col w-[630px]">
+                    <div class="benefits-text-container">
                         <!-- Header -->
-                        <div class="flex flex-col gap-4 mb-[40px]">
-                            <div class="label bg-[rgba(255,91,38,0.2)] flex items-center px-[8px] py-0 rounded-[12px] shadow-[0_1px_4px_0_rgba(12,12,13,0.05)] w-fit">
-                                <div class="flex items-center pl-[4px] pr-[8px] py-[4px]">
-                                    <p class="font-geist-mono font-medium text-[8px] text-brand-orange">
-                                        50 people on the beta list
-                                    </p>
-                                </div>
+                        <div class="benefits-header">
+                            <div class="label-orange">
+                                <p>50 people on the beta list</p>
                             </div>
-                            <h2 class="footer-title font-jakarta font-bold text-[42px] text-[#161616] leading-[48px]">
+                            <h2 class="benefits-title">
                                 Imagine all your project<br>talking together
                             </h2>
-                            <p class="footer-subtitle font-geist font-normal text-[20px] text-[rgba(22,22,22,0.4)] tracking-[-0.03em] max-w-[390px]">
+                            <p class="benefits-subtitle">
                                 Turn proposals into an organised workflow, so you can focus on your craft, not the admin.
                             </p>
                         </div>
                         
                         <!-- Footer Content Container -->
-                        <div class="footer-content-container flex flex-col">
-                            <div class="footer-text-container border-t border-brand-grey py-6 flex gap-10 cursor-pointer transition-all hover:bg-gray-50" data-benefit="01" onmouseenter="changeBenefitImage('01')">
-                                <span class="step-number font-geist font-bold text-[20px] text-brand-orange">01</span>
-                                <div class="step-text-container flex-1">
-                                    <h3 class="step-title font-geist font-semibold text-[24px] text-[#161616] tracking-[-0.03em]">One calm workspace</h3>
-                                    <p class="step-description font-geist font-normal text-[16px] text-brand-grey tracking-[-0.03em]">Keep proposals, tasks, deadlines, and time tracking in one tab.</p>
+                        <div class="benefits-list">
+                            <div class="benefit-item" data-benefit="01" onmouseenter="changeBenefitImage('01')">
+                                <span class="step-number">01</span>
+                                <div class="step-text-container">
+                                    <h3 class="step-title">One calm workspace</h3>
+                                    <p class="step-description">Keep proposals, tasks, deadlines, and time tracking in one tab.</p>
                                 </div>
                             </div>
-                            <div class="footer-text-container border-t border-brand-grey py-6 flex gap-10 cursor-pointer transition-all hover:bg-gray-50" data-benefit="02" onmouseenter="changeBenefitImage('02')">
-                                <span class="step-number font-geist font-bold text-[20px] text-brand-orange">02</span>
-                                <div class="step-text-container flex-1">
-                                    <h3 class="step-title font-geist font-semibold text-[24px] text-[#161616] tracking-[-0.03em]">Week-at-a-glance</h3>
-                                    <p class="step-description font-geist font-normal text-[16px] text-brand-grey tracking-[-0.03em]">See what's due, plan your week, and stay on track.</p>
+                            <div class="benefit-item" data-benefit="02" onmouseenter="changeBenefitImage('02')">
+                                <span class="step-number">02</span>
+                                <div class="step-text-container">
+                                    <h3 class="step-title">Week-at-a-glance</h3>
+                                    <p class="step-description">See what's due, plan your week, and stay on track.</p>
                                 </div>
                             </div>
-                            <div class="footer-text-container border-t border-brand-grey py-6 flex gap-10 cursor-pointer transition-all hover:bg-gray-50" data-benefit="03" onmouseenter="changeBenefitImage('03')">
-                                <span class="step-number font-geist font-bold text-[20px] text-brand-orange">03</span>
-                                <div class="step-text-container flex-1">
-                                    <h3 class="step-title font-geist font-semibold text-[24px] text-[#161616] tracking-[-0.03em]">Specifically for creatives</h3>
-                                    <p class="step-description font-geist font-normal text-[16px] text-brand-grey tracking-[-0.03em]">All the good stuff on tap, removing the need for multiple subscriptions.</p>
+                            <div class="benefit-item" data-benefit="03" onmouseenter="changeBenefitImage('03')">
+                                <span class="step-number">03</span>
+                                <div class="step-text-container">
+                                    <h3 class="step-title">Specifically for creatives</h3>
+                                    <p class="step-description">All the good stuff on tap, removing the need for multiple subscriptions.</p>
                                 </div>
                             </div>
-                            <div class="footer-text-container border-t border-brand-grey py-6 flex gap-10 cursor-pointer transition-all hover:bg-gray-50" data-benefit="04" onmouseenter="changeBenefitImage('04')">
-                                <span class="step-number font-geist font-bold text-[20px] text-brand-orange">04</span>
-                                <div class="step-text-container flex-1">
-                                    <h3 class="step-title font-geist font-semibold text-[24px] text-[#161616] tracking-[-0.03em]">Project-aware agent</h3>
-                                    <p class="step-description font-geist font-normal text-[16px] text-brand-grey tracking-[-0.03em]">Chat with an agent to get ideas, tasks, reminders, and client-ready comms, powered by your client & project context.</p>
+                            <div class="benefit-item" data-benefit="04" onmouseenter="changeBenefitImage('04')">
+                                <span class="step-number">04</span>
+                                <div class="step-text-container">
+                                    <h3 class="step-title">Project-aware agent</h3>
+                                    <p class="step-description">Chat with an agent to get ideas, tasks, reminders, and client-ready comms, powered by your client & project context.</p>
                                 </div>
                             </div>
                         </div>
                         
-                        <button class="btn-cta bg-brand-highlighter text-brand-fun-green rounded-[10px] px-2 py-1 h-[40px] flex items-center justify-center gap-1 font-medium text-[14px] w-[197px] mt-6" onclick="handleEarlyAccess()">
+                        <button class="btn-cta" onclick="handleEarlyAccess()">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 5V19M5 12H19" stroke="#026232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -595,37 +480,37 @@
                     </div>
                     
                     <!-- Image -->
-                    <div class="relative w-[625px] h-[470px] flex items-center justify-center overflow-hidden">
-                        <img id="benefits-image" src="assets/Features-01.webp" alt="Benefits" class="w-full h-auto transition-opacity duration-300">
+                    <div class="benefits-image-container">
+                        <img id="benefits-image" src="assets/Features-01.webp" alt="Benefits">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Spacing -->
-        <div class="spacing h-[40px]"></div>
+        <div class="spacing"></div>
 
         <!-- Content-Intro (Turn Briefs) -->
-        <section class="content-intro bg-background w-full flex items-center justify-center py-[80px]">
-            <div class="w-full max-w-[1440px] px-[60px] flex items-start justify-between">
+        <section class="content-intro bg-background">
+            <div class="inner">
                 <!-- Secondary Text Container -->
-                <div class="secondary-text-container flex flex-col gap-4 w-[630px]">
-                    <p class="font-geist-mono font-medium text-[10px] text-brand-orange">
+                <div class="secondary-text-container gap-sm">
+                    <p class="label-small">
                         Why it's great
                     </p>
-                    <h2 class="secondary-title font-geist font-semibold text-[48px] text-[#161616] tracking-[-0.03em]">
+                    <h2 class="secondary-title">
                         Turn briefs into projects. Instantly.
                     </h2>
-                    <p class="secondary-description font-geist font-normal text-[20px] text-[rgba(22,22,22,0.6)] tracking-[-0.03em]">
+                    <p class="secondary-description muted">
                         Lorem ipsum dolor sit amet consectetur.
                     </p>
                 </div>
                 <!-- Secondary Text Container -->
-                <div class="secondary-text-container flex flex-col h-[187px] justify-between w-[627px]">
-                    <p class="secondary-description font-geist font-normal text-[20px] text-[#161616] tracking-[-0.03em]">
+                <div class="secondary-text-container right">
+                    <p class="secondary-description">
                         MonoDesk is one calm workspace of connected apps for freelance creatives. Powered by client context, it removes the rework and eliminates the mundane, so proposals, projects, tasks and files flow smoothly from idea to delivery.
                     </p>
-                    <div class="gcal-btn-wrapper w-[197px]">
+                    <div class="gcal-btn-wrapper">
                         <script>
                         (function() {
                           var target = document.currentScript;
@@ -645,87 +530,87 @@
         </section>
 
         <!-- Content-Price -->
-        <section class="content-price w-full flex items-center justify-center mb-8">
-            <div class="w-full max-w-[1440px] flex items-center justify-center">
-                <div class="price-container relative w-full max-w-[1380px]">
+        <section class="content-price">
+            <div class="inner">
+                <div class="price-container">
                     <!-- Footer Icon Container (Legacy Beta Price Badge) -->
-                    <div class="footer-icon-container absolute -top-6 right-[232px] w-[155px] h-[25px] z-10" style="--fill-0: #161616;">
-                        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 154.926 25.1938" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="price-badge" style="--fill-0: #161616;">
+                        <svg viewBox="0 0 154.926 25.1938" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M154.926 25.1938C139.218 22.3716 133.777 1.75117 117.781 0.692805C112.415 0.340018 95.2626 -0.0304078 77.4566 0.00487084C59.6506 -0.0480472 42.4981 0.340018 37.145 0.692805C21.1485 1.7688 15.7075 22.3716 0 25.1938H154.926Z" fill="var(--fill-0, #161616)"/>
                         </svg>
-                        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
-                            <p class="footer-icon-title font-geist-mono font-medium text-[7.26px] text-white text-center leading-none">Legacy beta price</p>
+                        <div class="price-badge-text">
+                            <p>Legacy beta price</p>
                         </div>
                     </div>
                     
                     <!-- Price Container -->
-                    <div class="bg-[#161616] rounded-[14px] px-[90px] py-[40px] flex items-center justify-between">
+                    <div class="price-card">
                         <!-- Price Details -->
-                        <div class="price-details flex gap-10 items-center">
+                        <div class="price-details">
                             <!-- Price Breakdown -->
-                            <div class="price-breakdown w-[245px]">
-                                <h5 class="price-title font-geist font-semibold text-[36px] text-white tracking-[-0.03em] leading-tight">
+                            <div class="price-breakdown">
+                                <h5 class="price-breakdown-title">
                                     Everything talking together
                                 </h5>
                             </div>
                             
                             <!-- Benefits Columns -->
-                            <div class="benefits-columns flex gap-4">
-                                <div class="benefits-column flex flex-col gap-2">
-                                    <div class="benefit flex items-center gap-2">
-                                        <img src="assets/check-circle.svg" alt="" class="w-4 h-4">
-                                        <span class="font-geist font-medium text-[14px] text-brand-grey">Benefit</span>
+                            <div class="benefits-columns">
+                                <div class="benefits-column">
+                                    <div class="benefit-check">
+                                        <img src="assets/check-circle.svg" alt="">
+                                        <span>Benefit</span>
                                     </div>
-                                    <div class="benefit flex items-center gap-2">
-                                        <img src="assets/check-circle.svg" alt="" class="w-4 h-4">
-                                        <span class="font-geist font-medium text-[14px] text-brand-grey">Benefit</span>
+                                    <div class="benefit-check">
+                                        <img src="assets/check-circle.svg" alt="">
+                                        <span>Benefit</span>
                                     </div>
-                                    <div class="benefit flex items-center gap-2">
-                                        <img src="assets/check-circle.svg" alt="" class="w-4 h-4">
-                                        <span class="font-geist font-medium text-[14px] text-brand-grey">Benefit</span>
-                                    </div>
-                                </div>
-                                <div class="benefits-column flex flex-col gap-2">
-                                    <div class="benefit flex items-center gap-2">
-                                        <img src="assets/check-circle.svg" alt="" class="w-4 h-4">
-                                        <span class="font-geist font-medium text-[14px] text-brand-grey">Benefit</span>
-                                    </div>
-                                    <div class="benefit flex items-center gap-2">
-                                        <img src="assets/check-circle.svg" alt="" class="w-4 h-4">
-                                        <span class="font-geist font-medium text-[14px] text-brand-grey">Benefit</span>
-                                    </div>
-                                    <div class="benefit flex items-center gap-2">
-                                        <img src="assets/check-circle.svg" alt="" class="w-4 h-4">
-                                        <span class="font-geist font-medium text-[14px] text-brand-grey">Benefit</span>
+                                    <div class="benefit-check">
+                                        <img src="assets/check-circle.svg" alt="">
+                                        <span>Benefit</span>
                                     </div>
                                 </div>
-                                <div class="benefits-column flex flex-col gap-2">
-                                    <div class="benefit flex items-center gap-2">
-                                        <img src="assets/check-circle.svg" alt="" class="w-4 h-4">
-                                        <span class="font-geist font-medium text-[14px] text-brand-grey">Benefit</span>
+                                <div class="benefits-column">
+                                    <div class="benefit-check">
+                                        <img src="assets/check-circle.svg" alt="">
+                                        <span>Benefit</span>
                                     </div>
-                                    <div class="benefit flex items-center gap-2">
-                                        <img src="assets/check-circle.svg" alt="" class="w-4 h-4">
-                                        <span class="font-geist font-medium text-[14px] text-brand-grey">Benefit</span>
+                                    <div class="benefit-check">
+                                        <img src="assets/check-circle.svg" alt="">
+                                        <span>Benefit</span>
                                     </div>
-                                    <div class="benefit flex items-center gap-2">
-                                        <img src="assets/check-circle.svg" alt="" class="w-4 h-4">
-                                        <span class="font-geist font-medium text-[14px] text-brand-grey">Benefit</span>
+                                    <div class="benefit-check">
+                                        <img src="assets/check-circle.svg" alt="">
+                                        <span>Benefit</span>
+                                    </div>
+                                </div>
+                                <div class="benefits-column">
+                                    <div class="benefit-check">
+                                        <img src="assets/check-circle.svg" alt="">
+                                        <span>Benefit</span>
+                                    </div>
+                                    <div class="benefit-check">
+                                        <img src="assets/check-circle.svg" alt="">
+                                        <span>Benefit</span>
+                                    </div>
+                                    <div class="benefit-check">
+                                        <img src="assets/check-circle.svg" alt="">
+                                        <span>Benefit</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="h-[100px] w-px bg-white opacity-20 rotate-[-100.28deg]"></div>
+                        <div class="price-divider"></div>
                         
                         <!-- Price Button Container -->
-                        <div class="price-button-container flex flex-col items-center gap-4">
+                        <div class="price-button-container">
                             <!-- Price -->
-                            <div class="price text-center">
-                                <span class="price-amount font-geist font-semibold text-[48px] text-white tracking-[-0.03em]">$99</span>
-                                <span class="price-unit font-geist font-medium text-[18px] text-white">/month</span>
+                            <div class="price-display">
+                                <span class="price-amount">$99</span>
+                                <span class="price-unit">/month</span>
                             </div>
-                            <div class="gcal-btn-wrapper w-[197px]">
+                            <div class="gcal-btn-wrapper">
                                 <script>
                                 (function() {
                                   var target = document.currentScript;
@@ -747,39 +632,37 @@
         </section>
 
         <!-- Spacing -->
-        <div class="spacing h-[40px]"></div>
+        <div class="spacing"></div>
 
         <!-- Content-CTA -->
-        <section class="content-cta w-full flex items-center justify-center">
-            <div class="w-full max-w-[1440px] flex items-center justify-center">
-                <div class="bg-brand-orange w-full max-w-[1380px] h-[880px] rounded-[20px] p-[40px] flex items-end relative overflow-hidden">
+        <section class="content-cta">
+            <div class="inner">
+                <div class="cta-card">
                     <!-- Image -->
-                    <div class="w-[625px] h-[800px] flex-shrink-0 flex items-center justify-center overflow-hidden">
-                        <img src="assets/cta-image.webp" alt="CTA" class="w-full h-auto rounded-[16px] transform rotate-180 scale-y-[-1]">
+                    <div class="cta-image-container">
+                        <img src="assets/cta-image.webp" alt="CTA">
                     </div>
                     
                     <!-- Text Container -->
-                    <div class="text-container flex flex-col items-end justify-between h-full flex-1 ml-[50px]">
-                        <img src="assets/smile-icon.svg" alt="" class="icon w-8 h-8 self-end">
+                    <div class="cta-text-container">
+                        <img src="assets/smile-icon.svg" alt="" class="icon-top">
                         
-                        <div class="flex flex-col gap-4 w-full">
+                        <div class="cta-content">
                             <!-- Label -->
-                            <div class="label flex gap-1 items-center w-fit">
-                                <img src="assets/smile-icon.svg" alt="" class="icon w-[14px] h-[14px]">
-                                <p class="font-geist-mono font-medium text-[8px] text-[#161616]">
-                                    Label with icon
-                                </p>
+                            <div class="cta-label">
+                                <img src="assets/smile-icon.svg" alt="" class="icon">
+                                <p>Label with icon</p>
                             </div>
                             
                             <!-- Title -->
-                            <h2 class="title font-geist font-bold text-[48px] text-[#161616] leading-none tracking-[-0.03em]">
+                            <h2 class="cta-title">
                                 Lorem ipsum dolor<br>sit amet consectetur.
                             </h2>
                             
                             <!-- Footer Content Container (Email Input) -->
-                            <div class="footer-content-container bg-white flex items-center justify-between pl-4 pr-1 py-1 rounded-[14px] w-full">
-                                <input type="email" placeholder="Pop in your email address" class="flex-1 font-geist font-normal text-[12px] text-brand-grey outline-none bg-transparent">
-                                <button class="btn-cta bg-brand-highlighter text-brand-fun-green rounded-[10px] px-2 py-1 h-[40px] flex items-center justify-center gap-1 font-medium text-[14px] w-[197px]" onclick="handleEarlyAccess()">
+                            <div class="email-form">
+                                <input type="email" placeholder="Pop in your email address">
+                                <button class="btn-cta" onclick="handleEarlyAccess()">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 5V19M5 12H19" stroke="#026232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
@@ -793,11 +676,11 @@
         </section>
 
         <!-- Content-Tagline -->
-        <section class="content-tagline w-full flex items-center justify-center py-[40px]">
-            <div class="w-full max-w-[1440px] flex gap-3 items-center justify-center px-[60px]">
-                <img src="assets/logo-lockup.svg" alt="MonoDesk" class="icon h-[31px] w-auto flex-shrink-0">
-                <p class="footer-description font-geist font-semibold text-[16px] text-[#161616] tracking-[-0.03em] leading-normal">
-                    Make space for creativity. <span class="font-normal text-[rgba(22,22,22,0.4)]">Eliminate the mundane, maximise your creativity.</span>
+        <section class="content-tagline">
+            <div class="inner">
+                <img src="assets/logo-lockup.svg" alt="MonoDesk" class="logo">
+                <p class="tagline-text">
+                    Make space for creativity. <span class="muted">Eliminate the mundane, maximise your creativity.</span>
                 </p>
             </div>
         </section>
@@ -850,17 +733,14 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('is-visible');
                 }
             });
         }, observerOptions);
 
         // Observe all major sections
-        document.querySelectorAll('section, .bg-white, .bg-background, .bg-\\[\\#212121\\]').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        document.querySelectorAll('section').forEach(el => {
+            el.classList.add('animate-on-scroll');
             observer.observe(el);
         });
 
