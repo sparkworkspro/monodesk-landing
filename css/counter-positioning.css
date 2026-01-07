@@ -256,18 +256,15 @@ body {
     gap: var(--spacing-lg);
     max-width: 1320px;
     margin: 0 auto;
-    align-items: start;
+    align-items: stretch;
 }
 
-/* Sticky Media Container */
+/* Media Container */
 .timeline-media {
     max-width: 625px;
-    height: fit-content;
-}
-
-.timeline-media-sticky {
-    position: sticky;
-    top: 80px;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .timeline-image-wrapper {
@@ -330,8 +327,8 @@ body {
     display: flex;
     gap: 16px;
     padding: 40px 20px;
-    min-height: 280px;
-    opacity: 0.4;
+    min-height: 260px;
+    opacity: 0.8;
     transition: opacity 0.4s ease;
 }
 
@@ -346,38 +343,44 @@ body {
 
 .timeline-number {
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background: var(--brand-blue);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background 0.5s ease;
 }
 
 .timeline-step.active .timeline-number {
-    transform: scale(1.1);
     background: var(--brand-orange);
 }
 
 .timeline-number span {
-    font-family: 'Geist', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
+    font-family: 'Geist', monospace;
+    font-size: 16px;
+    font-weight: 500;
     color: #e7e7e7;
-    letter-spacing: -0.72px;
 }
 
 .timeline-line {
     position: absolute;
-    top: 40px;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    width: 2px;
+    width: 1px;
     height: 220px;
-    background: linear-gradient(to bottom, #e7e7e7 0%, rgba(231, 231, 231, 0.2) 100%);
+    background: #e7e7e7;
+    dot-dash: 2px 2px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #e7e7e7 1px,
+        #e7e7e7 1px,
+        transparent 4px,
+        transparent 4px
+    );
 }
 
 .timeline-text {
@@ -1181,11 +1184,6 @@ body {
     .timeline-media {
         width: 100%;
         max-width: 100%;
-    }
-    
-    .timeline-media-sticky {
-        position: relative;
-        top: 0;
     }
     
     .timeline-content {
