@@ -30,7 +30,7 @@
     <header class="header-container">
         <div class="header-content">
             <div class="folder-tab">
-                <img src="assets/folder-tab-vector.svg" alt="" class="folder-tab-shape">
+                <img src="assets/folder-tab-vector-blue.svg" alt="" class="folder-tab-shape">
                 <div class="logo-wrapper">
                     <img src="assets/logo-lockup-white.svg" alt="MonoDesk" class="logo">
                 </div>
@@ -357,11 +357,58 @@
 
     <!-- Footer Tagline -->
     <footer class="footer-tagline">
-        <img src="assets/logo-m.svg" alt="MonoDesk" class="footer-icon">
-        <div class="footer-content">
+        <img src="assets/logo-m.svg" alt="MonoDesk" class="footer-icon fade-in">
+        <div class="footer-content fade-in">
             <p class="footer-description">Make space for creativity. <span class="footer-description-muted">Eliminate the mundane, maximise your creativity.</span></p>
         </div>
     </footer>
+
+    <!-- Scroll Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add fade-in classes to elements
+            const animatedSelectors = [
+                '.about-text-container',
+                '.about-image',
+                '.cards-header-text',
+                '.card',
+                '.features-header-text',
+                '.feature-card',
+                '.steps-header-text',
+                '.step-card',
+                '.cta-text-container'
+            ];
+
+            animatedSelectors.forEach(selector => {
+                document.querySelectorAll(selector).forEach(el => {
+                    el.classList.add('fade-in');
+                    // Add stagger class for grid items
+                    if (['.card', '.feature-card', '.step-card'].includes(selector)) {
+                        el.classList.add('fade-in-stagger');
+                    }
+                });
+            });
+
+            // Intersection Observer for scroll animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -60px 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>
 
