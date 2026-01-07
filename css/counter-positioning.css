@@ -215,8 +215,8 @@ body {
 }
 
 .cta-toast .gcal-btn-wrapper button {
-    background: var(--brand-highlighter) !important;
-    color: var(--brand-fun-green) !important;
+    background: #D1FF6E !important;
+    color: #026232 !important;
     border-radius: 50px !important;
     font-family: 'Geist', sans-serif !important;
     font-size: 14px !important;
@@ -226,24 +226,39 @@ body {
     min-width: auto !important;
     border: none !important;
     cursor: pointer !important;
-    transition: all 0.2s ease !important;
+    transition: box-shadow 0.3s ease !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-}
-
-.cta-toast .gcal-btn-wrapper button:hover {
-    transform: scale(1.02) !important;
-    filter: brightness(1.05) !important;
-    box-shadow: none !important;
-}
-
-.cta-toast .gcal-btn-wrapper button:active {
-    transform: scale(0.98) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    z-index: 1 !important;
 }
 
 .cta-toast .gcal-btn-wrapper button::before {
-    display: none !important;
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: #026232 !important;
+    transition: left 0.4s ease !important;
+    z-index: -1 !important;
+    border-radius: 50px !important;
+}
+
+.cta-toast .gcal-btn-wrapper button:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    color: #D1FF6E !important;
+}
+
+.cta-toast .gcal-btn-wrapper button:hover::before {
+    left: 0 !important;
+}
+
+.cta-toast .gcal-btn-wrapper button:active {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* ===================================
@@ -934,7 +949,10 @@ body {
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: box-shadow 0.3s ease, color 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .pricing-btn-outline {
@@ -959,13 +977,35 @@ body {
 }
 
 .pricing-btn-primary {
-    background: var(--brand-highlighter);
+    background: #D1FF6E;
     border: none;
-    color: var(--brand-fun-green);
+    color: #026232;
+}
+
+.pricing-btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #026232;
+    transition: left 0.4s ease;
+    z-index: -1;
+    border-radius: var(--radius-sm);
 }
 
 .pricing-btn-primary:hover {
-    background: #c8f55e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    color: #D1FF6E;
+}
+
+.pricing-btn-primary:hover::before {
+    left: 0;
+}
+
+.pricing-btn-primary:active {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* ===================================
@@ -1122,9 +1162,9 @@ body {
 }
 
 .gcal-btn-wrapper button {
-    background: var(--brand-highlighter) !important;
-    color: var(--brand-fun-green) !important;
-    border-radius: var(--radius-sm) !important;
+    background: #D1FF6E !important;
+    color: #026232 !important;
+    border-radius: 10px !important;
     font-family: 'Geist', system-ui, sans-serif !important;
     font-size: 14px !important;
     font-weight: 500 !important;
@@ -1133,19 +1173,42 @@ body {
     min-width: 197px !important;
     border: none !important;
     cursor: pointer !important;
-    transition: all 0.2s ease !important;
+    transition: box-shadow 0.3s ease !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    position: relative !important;
+    overflow: hidden !important;
+    z-index: 1 !important;
+}
+
+.gcal-btn-wrapper button::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: #026232 !important;
+    transition: left 0.4s ease !important;
+    z-index: -1 !important;
+    border-radius: 10px !important;
 }
 
 .gcal-btn-wrapper button:hover {
-    transform: translateY(-2px) !important;
-    filter: brightness(0.95) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.gcal-btn-wrapper button:hover::before {
+    left: 0 !important;
+}
+
+.gcal-btn-wrapper button:hover {
+    color: #D1FF6E !important;
 }
 
 .gcal-btn-wrapper button:active {
-    transform: translateY(0) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
 .gcal-btn-wrapper button * {
