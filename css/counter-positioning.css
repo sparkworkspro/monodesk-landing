@@ -62,8 +62,10 @@ body {
 
 .header {
     width: 100%;
-    background: var(--brand-almost-black);
+    background: transparent;
     padding: var(--spacing-lg) 30px 0;
+    position: relative;
+    z-index: 2;
 }
 
 .header-nav {
@@ -87,43 +89,61 @@ body {
 
 .hero {
     width: 100%;
-    height: 80vh;
-    background: var(--brand-almost-black) url('../assets/counter-positioning/hero.webp') right center / auto 100% no-repeat;
+    height: 100vh;
+    background: var(--brand-almost-black) url('../assets/counter-positioning/hero.webp') right center / auto 80% no-repeat;
     padding: 0 var(--spacing-xl) var(--spacing-xl);
     color: var(--brand-almost-black);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#confetti-back,
+#confetti-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#confetti-back {
+    z-index: 0;
+}
+
+#confetti-front {
+    z-index: 3;
 }
 
 .hero-content {
     max-width: 1320px;
     width: 100%;
-    margin: 0 auto;
+    margin: auto;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-start;
     gap: var(--spacing-lg);
-    min-height: 607px;
     position: relative;
     z-index: 2;
 }
 
 .hero-text {
-    flex: 1;    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-end;
     gap: var(--spacing-sm);
     text-wrap: balance;
 }
 
 .hero-title {
     font-size: 3.2rem;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--surface-tint);
     letter-spacing: -0.05rem;
     line-height: 3.2rem;
+    max-width: 440px;
 }
 
 .hero-tagline {
@@ -240,7 +260,7 @@ body {
 .timeline-image-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 1/1;
     border-radius: 20px;
     overflow: hidden;
     background: #333;
@@ -326,7 +346,7 @@ body {
 
 .timeline-step.active .timeline-number {
     transform: scale(1.1);
-    box-shadow: 0 0 0 8px rgba(28, 100, 245, 0.2);
+    background: var(--brand-orange);
 }
 
 .timeline-number span {
