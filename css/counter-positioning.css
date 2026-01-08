@@ -640,15 +640,15 @@ body {
 
 .feature-title {
     font-family: 'Geist', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     color: var(--type);
-    letter-spacing: -0.72px;
+    letter-spacing: -0.3px;
 }
 
 .feature-desc {
     font-family: 'Geist', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     color: var(--type-60);
     letter-spacing: -0.48px;
