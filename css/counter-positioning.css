@@ -83,6 +83,10 @@ body {
     width: auto;
 }
 
+img {
+    color: var(--brand-grey);
+}
+
 /* ===================================
    HERO SECTION
    =================================== */
@@ -490,6 +494,7 @@ body {
     font-weight: 600;
     letter-spacing: -0.1rem;
     line-height: 1;
+    color: var(--type);
 }
 
 .section-subtitle {
@@ -1009,6 +1014,162 @@ body {
 }
 
 /* ===================================
+   LEGACY BETA PRICE CARD SECTION
+   =================================== */
+
+.content-price {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-2xl) var(--spacing-xl);
+    background: var(--background);
+}
+
+.content-price .inner {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-container {
+    position: relative;
+    width: 100%;
+    max-width: 1380px;
+}
+
+.price-badge {
+    position: absolute;
+    top: -24px;
+    right: 112px;
+    width: 155px;
+    height: 25px;
+}
+
+.price-badge svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.price-badge-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.price-badge-text p {
+    font-family: 'Geist Mono', monospace;
+    font-weight: 500;
+    font-size: 7.26px;
+    color: var(--brand-white);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: 100px;
+}
+
+.price-card {
+    background: var(--type);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl) 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-xl);
+}
+
+.price-details {
+    display: flex;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.price-breakdown {
+    width: 245px;
+}
+
+.price-breakdown-title {
+    font-family: 'Geist', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--brand-white);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+.benefits-columns {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.benefits-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.benefit-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.benefit-check img {
+    width: 16px;
+    height: 16px;
+}
+
+.benefit-check span {
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--brand-grey);
+}
+
+.price-divider {
+    height: 100px;
+    width: 1px;
+    background: var(--brand-white);
+    opacity: 0.2;
+    transform: rotate(-10deg);
+}
+
+.price-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.price-display {
+    text-align: center;
+}
+
+.price-amount {
+    font-family: 'Geist', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    color: var(--brand-white);
+    letter-spacing: -0.03em;
+}
+
+.price-unit {
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--brand-white);
+}
+
+/* ===================================
    WHO IT'S FOR SECTION
    =================================== */
 
@@ -1036,8 +1197,8 @@ body {
 
 .who-label {
     font-size: 16px;
-    font-weight: 500;
-    color: var(--type-40);
+    font-weight: 400;
+    color: var(--type-60);
     letter-spacing: -0.36px;
     line-height: 1.2;
     margin-top: 8px;
@@ -1053,6 +1214,7 @@ body {
     font-weight: 300;
     letter-spacing: -0.1rem;
     line-height: 38px;
+    color: var(--type-60);
 }
 
 /* ===================================
@@ -1427,6 +1589,44 @@ body {
     .cta-toast .gcal-btn-wrapper button {
         width: 100% !important;
         justify-content: center !important;
+    }
+    
+    /* Price Card responsive */
+    .content-price {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .price-card {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        padding: var(--spacing-xl) var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .price-details {
+        flex-direction: column;
+    }
+    
+    .price-breakdown {
+        width: 100%;
+    }
+    
+    .price-breakdown-title {
+        font-size: 28px;
+    }
+    
+    .benefits-columns {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .price-divider {
+        display: none;
+    }
+    
+    .price-badge {
+        right: 50%;
+        transform: translateX(50%);
     }
 }
 

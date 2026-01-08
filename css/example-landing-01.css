@@ -946,7 +946,7 @@ img {
 .benefits-image-container {
     position: relative;
     width: 625px;
-    height: 470px;
+    height: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -955,7 +955,8 @@ img {
 
 .benefits-image-container img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     transition: opacity 0.3s ease;
 }
 
@@ -987,7 +988,7 @@ img {
 .price-badge {
     position: absolute;
     top: -24px;
-    right: 232px;
+    right: 112px;
     width: 155px;
     height: 25px;
     z-index: 10;
@@ -1017,6 +1018,7 @@ img {
     color: var(--color-white);
     text-align: center;
     line-height: 1;
+    width: 100px;
 }
 
 .price-card {
@@ -1064,9 +1066,11 @@ img {
     gap: 8px;
 }
 
-.benefit-check img {
+.benefit-check svg {
     width: 16px;
     height: 16px;
+    stroke: var(--color-brand-grey);
+    flex-shrink: 0;
 }
 
 .benefit-check span {
@@ -1081,7 +1085,7 @@ img {
     width: 1px;
     background: var(--color-white);
     opacity: 0.2;
-    transform: rotate(-100.28deg);
+    transform: rotate(-94deg);
 }
 
 .price-button-container {
@@ -1153,7 +1157,8 @@ img {
 
 .cta-image-container img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     border-radius: var(--radius-2xl);
     transform: rotate(180deg) scaleY(-1);
 }

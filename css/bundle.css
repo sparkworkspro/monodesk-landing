@@ -158,8 +158,6 @@ img:not([src$=".svg"]) {
     color: var(--brand-white);
     position: relative;
     overflow: hidden;
-    border-bottom-left-radius: 19px;
-    border-bottom-right-radius: 19px;
 }
 
 /* Removed hero::before overlay to match folder tab blue exactly */
@@ -187,10 +185,16 @@ img:not([src$=".svg"]) {
     color: var(--brand-white);
 }
 
+.hero-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
 .hero-logo {
-    max-width: 180px;
-    margin-bottom: 3rem;
-    filter: brightness(0) invert(1);
+    width: 163px;
+    height: 30px;
 }
 
 .hero h1 {
@@ -200,6 +204,7 @@ img:not([src$=".svg"]) {
     margin: 0 auto 1rem;
     line-height: 1.1;
     letter-spacing: -0.03em;
+    color: var(--surface-grey);
 }
 
 .hero-subhead {
@@ -273,7 +278,7 @@ img:not([src$=".svg"]) {
 
 .carousel-counter {
     font-family: var(--font-mono);
-    font-size: 0.85rem;
+    font-size: 10px;
     color: rgba(255,255,255,0.6);
     margin-bottom: 2rem;
 }
