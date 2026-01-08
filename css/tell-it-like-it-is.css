@@ -162,10 +162,11 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     position: relative;
     z-index: 1;
+    text-align: left;
 }
 
 .hero-badge {
@@ -196,7 +197,7 @@ body {
 
 .hero-description {
     font-family: 'Geist', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.8);
     letter-spacing: -0.3px;
@@ -284,8 +285,15 @@ body {
     color: white;
 }
 
+.feature-text h3 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    color: white;
+}
+
 .feature-text p {
-    font-size: 18px;
+    font-size: 16px;
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.6;
 }
@@ -407,7 +415,7 @@ body {
 
 .why-subtitle {
     font-family: 'Geist', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     color: rgba(223, 223, 223, 0.6);
     letter-spacing: -0.6px;
@@ -431,7 +439,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    height: 180px;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -451,7 +459,7 @@ body {
 
 .feature-desc {
     font-family: 'Geist', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     color: rgba(223, 223, 223, 0.6);
     letter-spacing: -0.3px;
@@ -583,7 +591,7 @@ body {
 
 .folder-title {
     font-family: 'Geist', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     color: var(--type);
     letter-spacing: -0.72px;
@@ -1399,7 +1407,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     color: var(--background);
-    letter-spacing: -0.05rem;
+    letter-spacing: -0.3px;
     line-height: normal;
     text-align: center;
 }

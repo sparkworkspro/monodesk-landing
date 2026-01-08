@@ -630,7 +630,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     color: var(--background);
-    letter-spacing: -0.05rem;
+    letter-spacing: -0.3px;
     line-height: normal;
     text-align: center;
 }
