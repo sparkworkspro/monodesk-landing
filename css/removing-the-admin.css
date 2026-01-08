@@ -205,10 +205,10 @@ body {
 
 .hero-subtitle {
     font-family: 'Geist', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     color: var(--type-light-60);
-    letter-spacing: -0.6px;
+    letter-spacing: -0.3px;
     line-height: normal;
     opacity: 0;
     animation: fadeSlideUp 0.7s ease-out forwards;
@@ -305,7 +305,7 @@ body {
 .feature-item {
     display: flex;
     gap: 23px;
-    align-items: flex-start;
+    align-items: center;
     padding: var(--spacing-sm) 20px;
     border-radius: var(--radius-xl);
 }
@@ -334,7 +334,7 @@ body {
 
 .feature-description {
     font-family: 'Geist', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     color: var(--type-60);
     letter-spacing: -0.48px;
@@ -416,7 +416,7 @@ body {
 
 .card-title {
     font-family: 'Geist', sans-serif;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 500;
     color: var(--type);
     letter-spacing: -0.08rem;
@@ -424,7 +424,7 @@ body {
 
 .card-description {
     font-family: 'Geist', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     color: var(--type-40);
     letter-spacing: -0.48px;
@@ -550,19 +550,42 @@ body {
     min-width: 197px !important;
     border: none !important;
     cursor: pointer !important;
-    transition: all 0.2s ease !important;
+    transition: box-shadow 0.3s ease !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    position: relative !important;
+    overflow: hidden !important;
+    z-index: 1 !important;
+}
+
+.gcal-btn-wrapper button::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: #026232 !important;
+    transition: left 0.4s ease !important;
+    z-index: -1 !important;
+    border-radius: 10px !important;
 }
 
 .gcal-btn-wrapper button:hover {
-    transform: translateY(-2px) !important;
-    filter: brightness(0.95) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.gcal-btn-wrapper button:hover::before {
+    left: 0 !important;
+}
+
+.gcal-btn-wrapper button:hover {
+    color: #D1FF6E !important;
 }
 
 .gcal-btn-wrapper button:active {
-    transform: translateY(0) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
 .gcal-btn-wrapper button * {
