@@ -24,6 +24,12 @@
             a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-kG2tEPEBQrI6Eqsznrbzm.js"></script>
+    <script>
+        window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+        plausible.init()
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -406,6 +412,19 @@
 
             document.querySelectorAll('.fade-in').forEach(el => {
                 observer.observe(el);
+            });
+        });
+    </script>
+
+    <!-- Plausible Custom Event Tracking -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track clicks on all Early Access CTA buttons
+            var ctaWrappers = document.querySelectorAll('.gcal-btn-wrapper');
+            ctaWrappers.forEach(function(wrapper) {
+                wrapper.addEventListener('click', function() {
+                    plausible('Early Access CTA Click');
+                });
             });
         });
     </script>
