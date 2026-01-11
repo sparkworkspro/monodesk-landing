@@ -24,6 +24,12 @@
             a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-kG2tEPEBQrI6Eqsznrbzm.js"></script>
+    <script>
+        window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+        plausible.init()
+    </script>
 </head>
 <body>
     <!-- Hero Section -->
@@ -91,9 +97,21 @@
             
             <div class="carousel-counter"><span id="currentSlide">1</span> / 10</div>
             
-            <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1YX_jGDkWa2ePQPVPP2q49tn6H-x6P1pOX7CcPC7pz4BkcyhCvnAusj1QwW8zKb5Q827SJW3UQ?gv=true" class="btn-primary hero-cta-btn" target="_blank">
-                + Request early access
-            </a>
+            <div class="gcal-btn-wrapper">
+                <script>
+                (function() {
+                  var target = document.currentScript;
+                  window.addEventListener('load', function() {
+                    calendar.schedulingButton.load({
+                      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1YX_jGDkWa2ePQPVPP2q49tn6H-x6P1pOX7CcPC7pz4BkcyhCvnAusj1QwW8zKb5Q827SJW3UQ?gv=true',
+                      color: '#D1FF6E',
+                      label: "+ Request early access",
+                      target,
+                    });
+                  });
+                })();
+                </script>
+            </div>
         </div>
     </section>
 
@@ -742,6 +760,19 @@
                         urgencyImage.style.opacity = '1';
                     }, 150);
                 }
+            });
+        });
+    </script>
+
+    <!-- Plausible Custom Event Tracking -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track clicks on all Early Access CTA buttons
+            var ctaWrappers = document.querySelectorAll('.gcal-btn-wrapper');
+            ctaWrappers.forEach(function(wrapper) {
+                wrapper.addEventListener('click', function() {
+                    plausible('Early Access CTA Click');
+                });
             });
         });
     </script>
