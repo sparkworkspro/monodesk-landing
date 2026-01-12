@@ -157,10 +157,11 @@ body {
 
 .hero-label {
     font-family: 'Geist Mono', monospace;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
-    color: var(--brand-white);
+    color: rgba(255, 255, 255, 1);
     line-height: 1;
+    letter-spacing: 2px;
     text-align: center;
 }
 
@@ -179,8 +180,8 @@ body {
     font-family: 'Geist', sans-serif;
     font-size: 20px;
     font-weight: 400;
-    color: rgba(223, 223, 223, 0.6);
-    letter-spacing: -0.05rem;
+    color: rgba(223, 223, 223, 0.8);
+    letter-spacing: -0.3px;
     max-width: 520px;
     line-height: 1;
     text-align: center;
@@ -203,16 +204,20 @@ body {
     max-width: 1440px;
     padding: 0 60px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    gap: 40px;
 }
 
 .about-text-container {
-    flex: 1;
+    flex: 1 1 auto;
     max-width: 625px;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
+    order: 1;
 }
 
 .about-icon {
@@ -231,8 +236,8 @@ body {
 
 .about-title {
     font-family: 'Geist', sans-serif;
-    font-size: 32px;
-    font-weight: 400;
+    font-size: 36px;
+    font-weight: 600;
     color: var(--type-light);
     letter-spacing: -0.05rem;
     line-height: normal;
@@ -255,6 +260,7 @@ body {
     border-radius: var(--radius-xl);
     overflow: hidden;
     flex-shrink: 0;
+    order: 2;
 }
 
 .about-img {
@@ -308,7 +314,7 @@ body {
     font-size: 20px;
     font-weight: 400;
     color: var(--brand-grey);
-    letter-spacing: -0.05rem;
+    letter-spacing: -0.3px;
     line-height: normal;
 }
 
@@ -407,7 +413,7 @@ body {
     padding: 0 60px;
     margin-bottom: 24px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
 }
 
@@ -423,9 +429,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: var(--spacing-xs);
+    gap: 16px;
     text-align: center;
-    aspect-ratio: 1;
+    height: 250px;
+    font-weight: 600;
 }
 
 .feature-icon {
@@ -458,7 +465,7 @@ body {
     font-size: 20px;
     font-weight: 400;
     color: var(--type-light);
-    letter-spacing: -0.6px;
+    letter-spacing: 0px;
     line-height: normal;
 }
 
@@ -470,107 +477,6 @@ body {
     line-height: normal;
 }
 
-/* ===================================
-   STEPS SECTION
-   =================================== */
-
-.steps-section {
-    width: 100%;
-    background: #343434;
-    padding: 120px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.steps-header {
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 60px;
-    margin-bottom: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.steps-header-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xs);
-    max-width: 767px;
-}
-
-.steps-grid {
-    width: 100%;
-    max-width: 1438px;
-    padding: 0 60px;
-    display: flex;
-    gap: 29px;
-    justify-content: flex-start;
-}
-
-.step-card {
-    background: #212121;
-    border-radius: var(--radius-xl);
-    width: 420px;
-    height: 520px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 2px 4px 2px rgba(12, 12, 13, 0.05);
-    flex-shrink: 0;
-    overflow: hidden;
-}
-
-.step-image {
-    width: 100%;
-    height: 320px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.step-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.step-content {
-    padding: var(--spacing-md);
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    flex: 1;
-}
-
-.step-number {
-    font-family: 'Geist Mono', monospace;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--brand-orange);
-    line-height: normal;
-}
-
-.step-title {
-    font-family: 'Geist', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--type-light);
-    letter-spacing: -0.05rem;
-    line-height: normal;
-}
-
-.step-description {
-    font-family: 'Geist', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--type-light);
-    opacity: 0.4;
-    line-height: normal;
-}
 
 /* ===================================
    CTA SECTION
@@ -631,7 +537,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     color: var(--background);
-    letter-spacing: -0.3px;
+    letter-spacing: 0px;
     line-height: normal;
     text-align: center;
 }
@@ -831,13 +737,18 @@ body {
     }
     
     .about-content {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .about-text-container {
+        max-width: 400px;
     }
     
     .about-image {
-        width: 100%;
-        max-width: 420px;
+        width: 300px;
+        height: auto;
     }
 }
 
@@ -862,6 +773,18 @@ body {
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    
+    .about-image {
+        width: 100%;
+        max-width: 420px;
+        order: 2;
     }
 }
 
