@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MonoDesk - Bundle</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="https://monodesk.com/favicon.ico" />
+    <link rel="icon" type="image/png" href="https://monodesk.com/favicon.png" />
+    <link rel="apple-touch-icon" href="https://monodesk.com/logo192.png" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +32,14 @@
         window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
         plausible.init()
     </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17859687023"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17859687023');
+    </script>
 </head>
 <body>
     <!-- Hero Section -->
@@ -39,7 +49,7 @@
         </div>
         <div class="container">
             <div class="hero-badge">
-                <span>✦ Now in Early Access</span>
+                <span>+ Now in Private Beta</span>
             </div>
             
             <div class="hero-carousel">
@@ -50,7 +60,9 @@
                 <div class="carousel-content">
                     <div class="carousel-slide active">
                         <h1>Ready to simplify your freelance life?</h1>
-                        <p class="hero-subhead">With MonoDesk, your suite of connected apps for freelance designers, developers & video creators</p>
+                        <div class="hero-subhead-wrapper">
+                            <p class="hero-subhead">With MonoDesk, your suite of connected apps for freelance designers, developers & video creators</p>
+                        </div>
                     </div>
                     <div class="carousel-slide">
                         <h1>Stop juggling. Start creating.</h1>
@@ -527,18 +539,6 @@
         </div>
     </section>
 
-    <!-- Proof Section -->
-    <section class="proof">
-        <div class="container">
-            <h2>See It In Action</h2>
-            <div class="screenshots">
-                <div class="screenshot-placeholder">[Screenshot: Dashboard overview]</div>
-                <div class="screenshot-placeholder">[Screenshot: AI Agent in action]</div>
-                <div class="screenshot-placeholder">[Screenshot: Proposal builder]</div>
-            </div>
-        </div>
-    </section>
-
     <!-- How It Works Section -->
     <section class="how-it-works">
         <div class="container">
@@ -582,36 +582,30 @@
             <div class="testimonials-wonky-grid">
                 <div class="testimonial-card wonky-1">
                     <div class="testimonial-quote">
-                        <p>"Finally, a tool that understands how creatives actually work. I've cut my admin time in half."</p>
+                        <p>"For project management this tool is very very helpful."</p>
                     </div>
                     <div class="testimonial-author">
-                        <div class="author-avatar"></div>
                         <div class="author-info">
-                            <span class="author-name">Sarah Chen</span>
                             <span class="author-role">Freelance Designer</span>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card wonky-2">
                     <div class="testimonial-quote">
-                        <p>"The AI actually gets context. It knows my projects, my clients, my rates. Game changer."</p>
+                        <p>"Onboarding very simple."</p>
                     </div>
                     <div class="testimonial-author">
-                        <div class="author-avatar"></div>
                         <div class="author-info">
-                            <span class="author-name">Marcus Rivera</span>
                             <span class="author-role">Indie Developer</span>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card wonky-3">
                     <div class="testimonial-quote">
-                        <p>"No more juggling 10 apps. Everything I need is finally in one place."</p>
+                        <p>"Very simple, very easy. Works for me."</p>
                     </div>
                     <div class="testimonial-author">
-                        <div class="author-avatar"></div>
                         <div class="author-info">
-                            <span class="author-name">Emma Thompson</span>
                             <span class="author-role">Video Creator</span>
                         </div>
                     </div>
@@ -623,14 +617,13 @@
     <!-- Guarantee Section -->
     <section class="final-cta guarantee-cta">
         <div class="final-cta-container">
-            <h2 class="cta-title">No Risk</h2>
             <div class="guarantee-card">
                 <div class="guarantee-badge">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                 </div>
-                <h3 class="guarantee-heading">Try it free during early access</h3>
+                <h3 class="guarantee-heading">Try it free while we're in private beta</h3>
                 <p class="guarantee-text">We'll personally help you get set up, and we expect MonoDesk to save you at least a couple of hours per week. There's low risk—you can walk away anytime if it's not for you.</p>
             </div>
         </div>
