@@ -347,6 +347,7 @@ path {
     flex-direction: column;
     gap: var(--spacing-xs);
     padding-bottom: var(--spacing-md);
+    max-width: 400px;
 }
 
 .timeline-header .section-title {
@@ -1554,14 +1555,6 @@ path {
     }
 }
 
-/* Scale down hero image at 1000px */
-@media (max-width: 1000px) {
-    .hero-image {
-        background-size: auto 20%;
-        background-position: right center;
-    }
-}
-
 /* Timeline image shrinking at 1000px */
 @media (max-width: 1000px) {
     .timeline-container {
@@ -1579,7 +1572,7 @@ path {
 }
 
 /* Tablet landscape - start stacking some elements */
-@media (max-width: 980px) {
+@media (max-width: 1250px) {
     .hero {
         justify-content: flex-start;
         padding-top: 120px; /* Space for header */
@@ -1592,7 +1585,7 @@ path {
     }
     
     .hero-image {
-        background-size: auto 18%;
+        background-size: auto 25%;
         background-position: 96% center;
     }
     

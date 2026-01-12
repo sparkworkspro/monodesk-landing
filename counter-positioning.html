@@ -88,8 +88,8 @@
             }
             
             reset() {
-                // Weight confetti towards the right side (40-100% of width mostly)
-                this.x = this.canvas.width * 0.4 + Math.pow(Math.random(), 0.7) * this.canvas.width * 0.6;
+                // Weight confetti towards the right side (image area)
+                this.x = this.canvas.width * 0.5 + Math.random() * this.canvas.width * 0.5;
                 this.y = Math.random() * this.canvas.height - this.canvas.height;
                 this.width = Math.random() * 12 + 24;
                 this.height = Math.random() * 40 + 70;
@@ -203,16 +203,16 @@
             <!-- Image Container -->
             <div class="timeline-media">
                 <div class="timeline-image-wrapper">
-                    <img src="assets/counter-positioning/brand-img-01.webp" alt="Proposal preview" class="timeline-preview-img active" data-step="1">
-                    <img src="assets/counter-positioning/brand-img-02.webp" alt="Brief preview" class="timeline-preview-img" data-step="2">
-                    <img src="assets/counter-positioning/brand-img-03.webp" alt="Kanban preview" class="timeline-preview-img" data-step="3">
+                    <img src="assets/counter-positioning/Steps-01-Proposal.webp" alt="Proposal preview" class="timeline-preview-img active" data-step="1">
+                    <img src="assets/counter-positioning/Steps-02-Brief.webp" alt="Brief preview" class="timeline-preview-img" data-step="2">
+                    <img src="assets/counter-positioning/Steps-03-Kanban.webp" alt="Kanban preview" class="timeline-preview-img" data-step="3">
                 </div>
             </div>
             
             <!-- Scrolling Content -->
             <div class="timeline-content">
                 <div class="timeline-header">
-                    <h2 class="section-title">Where chaos starts<br>to make sense</h2>
+                    <h2 class="section-title">Where chaos starts to make sense</h2>
                     <p class="section-subtitle">Turn a proposal and scattered notes into a clear project plan in minutes.
                     </p>
                 </div>
@@ -381,7 +381,7 @@
         <div class="cards-grid">
             <div class="card">
                 <div class="card-image card-bg-purple">
-                    <img src="assets/counter-positioning/brand-img-01.webp" alt="Upload brief" class="card-img">
+                    <img src="assets/counter-positioning/Steps-01-Proposal.webp" alt="Upload brief" class="card-img">
                 </div>
                 <div class="card-content">
                     <span class="card-number">01</span>
@@ -391,7 +391,7 @@
             </div>
             <div class="card">
                 <div class="card-image card-bg-blue">
-                    <img src="assets/counter-positioning/brand-img-02.webp" alt="Feed context" class="card-img">
+                    <img src="assets/counter-positioning/Steps-02-Brief.webp" alt="Feed context" class="card-img">
                 </div>
                 <div class="card-content">
                     <span class="card-number">02</span>
@@ -401,7 +401,7 @@
             </div>
             <div class="card">
                 <div class="card-image card-bg-pink">
-                    <img src="assets/counter-positioning/brand-img-03.webp" alt="Run the work" class="card-img">
+                    <img src="assets/counter-positioning/Steps-03-Kanban.webp" alt="Run the work" class="card-img">
                 </div>
                 <div class="card-content">
                     <span class="card-number">03</span>
