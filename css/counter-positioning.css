@@ -1121,17 +1121,24 @@ path {
     align-items: center;
     justify-content: space-between;
     gap: var(--spacing-xl);
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .price-details {
     display: flex;
     gap: 20px;
     align-items: center;
-    width: 780px;
+    width: auto;
+    max-width: 780px;
+    flex-shrink: 1;
+    min-width: 0;
 }
 
 .price-breakdown {
     width: 200px;
+    flex-shrink: 1;
+    min-width: 140px;
 }
 
 .price-breakdown-title {
@@ -1146,13 +1153,17 @@ path {
 .benefits-columns {
     display: flex;
     gap: var(--spacing-md);
+    flex-shrink: 1;
+    min-width: 0;
 }
 
 .benefits-column {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    width: 160px;
+    width: 132px;
+    flex-shrink: 1;
+    min-width: 100px;
 }
 
 .benefit-check {
@@ -1173,7 +1184,7 @@ path {
 .benefit-check span {
     font-family: 'Geist', sans-serif;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     color: var(--brand-grey);
     min-width: 90px;
 }
@@ -1191,6 +1202,8 @@ path {
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-md);
+    flex-shrink: 0;
+    min-width: 200px;
 }
 
 .price-display {
@@ -1579,7 +1592,7 @@ path {
 }
 
 /* Tablet landscape - start stacking some elements */
-@media (max-width: 1250px) {
+@media (max-width: 1300px) {
     .hero {
         justify-content: flex-start;
         padding-top: 120px; /* Space for header */
@@ -1698,6 +1711,80 @@ path {
     
     .who-label {
         margin-top: var(--spacing-sm);
+    }
+}
+
+/* Price card scaling for medium screens */
+@media (max-width: 1200px) {
+    .price-card {
+        padding: var(--spacing-xl) 60px;
+        gap: var(--spacing-lg);
+    }
+    
+    .price-breakdown {
+        width: 160px;
+        min-width: 120px;
+    }
+    
+    .price-breakdown-title {
+        font-size: 28px;
+    }
+    
+    .benefits-columns {
+        gap: 16px;
+    }
+    
+    .benefits-column {
+        width: 110px;
+        min-width: 90px;
+    }
+    
+    .benefit-check span {
+        font-size: 11px;
+    }
+    
+    .price-amount {
+        font-size: 40px;
+    }
+    
+    .price-unit {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 950px) {
+    .price-card {
+        padding: var(--spacing-lg) var(--spacing-lg);
+        gap: var(--spacing-md);
+    }
+    
+    .price-breakdown-title {
+        font-size: 24px;
+    }
+    
+    .benefits-columns {
+        gap: 12px;
+    }
+    
+    .benefits-column {
+        width: 100px;
+        min-width: 80px;
+    }
+    
+    .benefit-check span {
+        font-size: 10px;
+    }
+    
+    .price-amount {
+        font-size: 36px;
+    }
+    
+    .price-unit {
+        font-size: 14px;
+    }
+    
+    .price-button-container {
+        min-width: 180px;
     }
 }
 
