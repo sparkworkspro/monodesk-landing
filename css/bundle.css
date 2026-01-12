@@ -211,9 +211,22 @@ img:not([src$=".svg"]) {
     font-size: 1.25rem;
     font-weight: 400;
     color: rgba(255,255,255,0.85);
-    max-width: 600px;
+    max-width: 540px;
     margin: 0 auto 0;
     line-height: 1.5;
+    -webkit-text-stroke: 2px #0047ec;
+    paint-order: stroke fill;
+}
+
+.hero-subhead-wrapper {
+    width: 100%;
+}
+
+@media (min-width: 1000px) {
+    .hero-subhead-wrapper {
+        max-width: calc(100% - 50px);
+        margin: 0 auto;
+    }
 }
 
 /* Hero Carousel */
