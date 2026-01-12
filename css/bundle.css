@@ -1047,7 +1047,7 @@ img:not([src$=".svg"]) {
     display: flex;
     flex-direction: column;
     box-shadow: 0 2px 4px 2px rgba(12, 12, 13, 0.05);
-    overflow: hidden;
+    overflow: visible;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -1058,18 +1058,20 @@ img:not([src$=".svg"]) {
 
 .diff-card-image {
     width: 100%;
-    height: 200px;
+    height: auto;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    padding: 12px 12px 0 12px;
 }
 
 .diff-card-img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
 }
 
 .diff-card-content {
