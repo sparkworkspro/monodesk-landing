@@ -1385,6 +1385,7 @@ img:not([src$=".svg"]) {
     height: 25px;
     object-fit: contain;
     display: block;
+    opacity: 0.6;
 }
 
 /* ========================================
