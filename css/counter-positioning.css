@@ -63,8 +63,10 @@ body {
 .header {
     width: 100%;
     background: transparent;
-    padding: var(--spacing-lg) 30px 0;
-    position: relative;
+    padding: 0 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: 2;
 }
 
@@ -73,7 +75,7 @@ body {
     margin: 0 auto;
     padding: 20px 32px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     border-radius: var(--radius-lg);
 }
@@ -85,6 +87,10 @@ body {
 
 img {
     color: var(--brand-grey);
+}
+
+path {
+    background: unset;
 }
 
 /* ===================================
@@ -101,6 +107,8 @@ img {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 #confetti-back,
@@ -277,6 +285,7 @@ img {
     width: 100%;
     background: #212121;
     padding: var(--spacing-xl) var(--spacing-xl);
+    padding-top: 120px;
     color: var(--brand-almost-black);
 }
 
@@ -345,7 +354,7 @@ img {
 }
 
 .timeline-header .section-subtitle {
-    color: rgba(223, 223, 223, 0.6);
+    color: rgba(223, 223, 223, 1);
 }
 
 .timeline-steps {
@@ -426,7 +435,7 @@ img {
     font-size: 24px;
     font-weight: 700;
     color: #e7e7e7;
-    letter-spacing: -0.6px;
+    letter-spacing: -0.3px;
     transition: color 0.3s ease;
 }
 
@@ -439,7 +448,7 @@ img {
     font-size: 16px;
     font-weight: 400;
     color: rgba(223, 223, 223, 0.6);
-    letter-spacing: -0.48px;
+    letter-spacing: -0.3px;
     line-height: 1.5;
     max-width: 320px;
 }
@@ -504,7 +513,7 @@ img {
 .section-subtitle {
     font-size: 20px;
     font-weight: 400;
-    letter-spacing: -0.05rem;
+    letter-spacing: -0.3px;
     opacity: 0.4;
 }
 
@@ -665,7 +674,7 @@ img {
     font-size: 14px;
     font-weight: 400;
     color: var(--type-60);
-    letter-spacing: -0.48px;
+    letter-spacing: -0.3px;
 }
 
 .selling-points-image {
@@ -687,6 +696,7 @@ img {
    =================================== */
 
 .how-it-works {
+    display: none;
     width: 100%;
     background: var(--background);
     padding: var(--spacing-2xl);
@@ -815,6 +825,7 @@ img {
    =================================== */
 
 .pricing {
+    display: none;
     width: 100%;
     background: var(--surface-white);
     padding: var(--spacing-2xl) var(--spacing-xl);
@@ -864,6 +875,10 @@ img {
 .pricing-card-featured .period,
 .pricing-card-featured .pricing-desc,
 .pricing-card-featured .pricing-features span {
+    color: var(--brand-white);
+}
+
+.pricing-card-featured .pricing-features li i {
     color: var(--brand-white);
 }
 
@@ -951,7 +966,7 @@ img {
 .pricing-features li i {
     width: 16px;
     height: 16px;
-    color: var(--brand-grey);
+    color: #000000;
     flex-shrink: 0;
 }
 
@@ -1094,7 +1109,7 @@ img {
 }
 
 .price-card {
-    background: var(--type);
+    background: var(--brand-almost-black);
     border-radius: var(--radius-xl);
     padding: var(--spacing-xl) 90px;
     display: flex;
@@ -1105,7 +1120,7 @@ img {
 
 .price-details {
     display: flex;
-    gap: var(--spacing-xl);
+    gap: 20px;
     align-items: center;
 }
 
@@ -1118,7 +1133,7 @@ img {
     font-weight: 600;
     font-size: 36px;
     color: var(--brand-white);
-    letter-spacing: -0.03em;
+    letter-spacing: -0.3px;
     line-height: 1.1;
 }
 
@@ -1140,7 +1155,8 @@ img {
 }
 
 .benefit-check img,
-.benefit-check i {
+.benefit-check i,
+.benefit-check svg {
     width: 16px;
     height: 16px;
     color: var(--brand-grey);
@@ -1183,9 +1199,11 @@ img {
 
 .price-unit {
     font-family: 'Geist', sans-serif;
-    font-weight: 500;
+    font-weight: 300;
     font-size: 18px;
     color: var(--brand-white);
+    text-align: left;
+    line-height: 20px;
 }
 
 /* ===================================
@@ -1214,7 +1232,19 @@ img {
     gap: 0px;
 }
 
+.who-logo-wrapper {
+    margin-bottom: 12px;
+}
+
+.who-logo {
+    width: 36px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
 .who-label {
+    display: none;
     font-size: 16px;
     font-weight: 400;
     color: var(--type-60);
@@ -1229,11 +1259,12 @@ img {
 }
 
 .who-description {
-    font-size: 32px;
-    font-weight: 300;
-    letter-spacing: -0.1rem;
-    line-height: 38px;
+    font-size: 22px;
+    font-weight: 200;
+    letter-spacing: -0.3px;
+    line-height: 32px;
     color: var(--type-60);
+    margin-top: 20px;
 }
 
 /* ===================================
@@ -1242,11 +1273,32 @@ img {
 
 .final-cta {
     width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: var(--brand-almost-black);
+}
+
+#cta-confetti-back,
+#cta-confetti-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#cta-confetti-back {
+    z-index: 1;
+}
+
+#cta-confetti-front {
+    z-index: 3;
 }
 
 .final-cta-container {
     width: 100%;
-    background: var(--brand-almost-black);
+    background: transparent;
     border-radius: 0;
     padding: var(--spacing-lg) 30px;
     height: 900px;
@@ -1256,6 +1308,8 @@ img {
     justify-content: center;
     gap: var(--spacing-sm);
     color: white;
+    position: relative;
+    z-index: 2;
 }
 
 .cta-logo-wrapper {
@@ -1282,6 +1336,8 @@ img {
     flex-direction: column;
     gap: 7px;
     max-width: 770px;
+    position: relative;
+    z-index: 4;
 }
 
 .cta-title {
@@ -1299,6 +1355,11 @@ img {
     font-weight: 400;
     color: var(--background);
     letter-spacing: -0.6px;
+}
+
+.final-cta-container .gcal-btn-wrapper {
+    position: relative;
+    z-index: 4;
 }
 
 /* ===================================
@@ -1345,7 +1406,7 @@ img {
 .gcal-btn-wrapper button {
     background: #D1FF6E !important;
     color: #026232 !important;
-    border-radius: 10px !important;
+    border-radius: 999px !important;
     font-family: 'Geist', system-ui, sans-serif !important;
     font-size: 14px !important;
     font-weight: 500 !important;
@@ -1493,15 +1554,46 @@ img {
     }
 }
 
+/* Scale down hero image at 1000px */
+@media (max-width: 1000px) {
+    .hero-image {
+        background-size: auto 20%;
+        background-position: right center;
+    }
+}
+
+/* Timeline image shrinking at 1000px */
+@media (max-width: 1000px) {
+    .timeline-container {
+        grid-template-columns: minmax(200px, 35%) 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .timeline-media {
+        max-width: 400px;
+    }
+    
+    .timeline-content {
+        max-width: 600px;
+    }
+}
+
 /* Tablet landscape - start stacking some elements */
+@media (max-width: 980px) {
+    .hero {
+        justify-content: flex-start;
+        padding-top: 120px; /* Space for header */
+    }
+}
+
 @media (max-width: 950px) {
     .hero {
         background: linear-gradient(to top, #2f73f9, #1C64F5);
     }
     
     .hero-image {
-        background-size: auto 30%;
-        background-position: 95% center;
+        background-size: auto 18%;
+        background-position: 96% center;
     }
     
     .hero-content {
@@ -1527,13 +1619,13 @@ img {
     }
     
     .timeline-container {
-        grid-template-columns: minmax(80px, 40%) 1fr;
+        grid-template-columns: minmax(80px, 32%) 1fr;
         gap: var(--spacing-sm);
     }
     
     .timeline-media {
         width: 100%;
-        max-width: 100%;
+        max-width: 350px;
     }
     
     .timeline-content {
@@ -1615,7 +1707,7 @@ img {
     }
     
     .hero-image {
-        background-size: auto 25%;
+        background-size: auto 15%;
         background-position: 98% center;
     }
     
@@ -1777,7 +1869,7 @@ img {
     }
     
     .hero-image {
-        background-size: auto 20%;
+        background-size: auto 12%;
         background-position: 100% center;
     }
     
@@ -1842,7 +1934,7 @@ img {
     }
     
     .hero-image {
-        background-size: auto 15%;
+        background-size: auto 8%;
         background-position: 100% center;
     }
     
@@ -1868,8 +1960,16 @@ img {
     }
     
     .timeline-container {
-        grid-template-columns: minmax(40px, 30%) 1fr;
-        gap: 4px;
+        grid-template-columns: minmax(25px, 28%) 1fr;
+        gap: 2px;
+    }
+    
+    .timeline-media {
+        max-width: 100%;
+    }
+    
+    .timeline-image-wrapper {
+        border-radius: 4px;
     }
     
     .timeline-step {
