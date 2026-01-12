@@ -235,7 +235,7 @@ body {
     color: rgba(255, 255, 255, 0.8);
     letter-spacing: -0.3px;
     line-height: 1.4;
-    width: 550px;
+    width: 380px;
     text-align: center;
 }
 
@@ -248,7 +248,7 @@ body {
 
 .hero-image {
     position: absolute;
-    right: -160px;
+    right: -220px;
     top: 0;
 }
 
@@ -319,10 +319,11 @@ body {
 }
 
 .feature-text h3 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     letter-spacing: -0.5px;
     color: white;
+    margin-bottom: 8px;
 }
 
 .feature-text p {
@@ -442,7 +443,7 @@ body {
     font-size: 36px;
     font-weight: 600;
     color: var(--surface-white);
-    letter-spacing: -1.44px;
+    letter-spacing: -0.34px;
     line-height: 1;
     height: 36px;
 }
@@ -874,6 +875,7 @@ body {
 
 .testimonials {
     width: 100%;
+    height: 500px;
     position: relative;
     padding: var(--spacing-2xl) var(--spacing-xl);
     overflow: hidden;
@@ -936,7 +938,7 @@ body {
 .testimonial-card:nth-child(1) {
     background: #1a1a1a;
     top: 0;
-    left: 5%;
+    left: 2%;
     transform: rotate(-4deg);
 }
 .testimonial-card:nth-child(1) .testimonial-quote {
@@ -947,7 +949,7 @@ body {
 .testimonial-card:nth-child(2) {
     background: linear-gradient(135deg, #026232 0%, #04a154 100%);
     top: 20px;
-    left: 30%;
+    left: 38%;
     transform: rotate(2deg);
     z-index: 2;
 }
@@ -972,7 +974,7 @@ body {
 .testimonial-card:nth-child(3) {
     background: #fff;
     top: 60px;
-    right: 10%;
+    right: 2%;
     transform: rotate(5deg);
 }
 .testimonial-card:nth-child(3) .testimonial-quote {
@@ -988,6 +990,10 @@ body {
 }
 .testimonial-card:nth-child(4) .testimonial-quote {
     color: #fff;
+}
+.testimonial-card:nth-child(4) .testimonial-name,
+.testimonial-card:nth-child(4) .testimonial-role {
+    color: #000;
 }
 
 /* Card 5 - Middle center, dark */
@@ -1077,7 +1083,17 @@ body {
 
 /* Small text variant for longer quotes */
 .testimonial-card--small-text .testimonial-quote {
-    font-size: 18px;
+    font-size: 24px;
+}
+
+/* Override for light cards with small text - make text white */
+.testimonial-card--light.testimonial-card--small-text .testimonial-quote,
+.testimonial-card--light.testimonial-card--small-text .testimonial-name {
+    color: #fff;
+}
+
+.testimonial-card--light.testimonial-card--small-text .testimonial-role {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* Star Ratings */
@@ -1235,8 +1251,8 @@ body {
     font-size: 36px;
     font-weight: 700;
     color: var(--type);
-    letter-spacing: 0px;
-    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+    margin-bottom: 20px;
     text-align: center;
 }
 

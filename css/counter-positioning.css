@@ -352,6 +352,7 @@ path {
 
 .timeline-header .section-title {
     color: #e7e7e7;
+    letter-spacing: -0.6px;
 }
 
 .timeline-header .section-subtitle {
@@ -506,7 +507,7 @@ path {
 .section-title {
     font-size: 36px;
     font-weight: 600;
-    letter-spacing: -0.1rem;
+    letter-spacing: -0.6px;
     line-height: 1;
     color: var(--type);
 }
@@ -630,6 +631,10 @@ path {
 .selling-header .section-subtitle {
     color: var(--type-60);
     opacity: 1;
+}
+
+.selling-header .section-title {
+    width: 380px;
 }
 
 .features-list {
