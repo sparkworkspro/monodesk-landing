@@ -1178,6 +1178,7 @@ path {
     width: 16px;
     height: 16px;
     color: var(--brand-grey);
+    stroke: var(--brand-grey);
     flex-shrink: 0;
 }
 

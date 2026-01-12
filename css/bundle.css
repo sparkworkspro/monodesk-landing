@@ -251,7 +251,7 @@ img:not([src$=".svg"]) {
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.2s ease;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     color: var(--brand-white);
@@ -281,6 +281,7 @@ img:not([src$=".svg"]) {
     font-size: 10px;
     color: rgba(255,255,255,0.6);
     margin-bottom: 2rem;
+    display: none;
 }
 
 .hero .gcal-btn-wrapper {
@@ -635,7 +636,7 @@ img:not([src$=".svg"]) {
     justify-content: center;
     gap: 0.75rem;
     text-align: center;
-    height: 220px;
+    height: 180px;
     transition: background 0.2s ease, transform 0.2s ease;
 }
 
