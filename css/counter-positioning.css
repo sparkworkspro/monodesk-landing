@@ -371,6 +371,7 @@ path {
     min-height: 260px;
     opacity: 0.8;
     transition: opacity 0.4s ease;
+    cursor: pointer;
 }
 
 .timeline-step.active {
@@ -393,6 +394,7 @@ path {
     justify-content: center;
     flex-shrink: 0;
     transition: background 0.5s ease;
+    cursor: pointer;
 }
 
 .timeline-step.active .timeline-number {
@@ -439,10 +441,15 @@ path {
     color: #e7e7e7;
     letter-spacing: -0.3px;
     transition: color 0.3s ease;
+    cursor: pointer;
 }
 
 .timeline-step.active .timeline-step-title {
     color: #ffffff;
+}
+
+.timeline-step-title:hover {
+    color: #FC4B00;
 }
 
 .timeline-step-desc {
@@ -1234,7 +1241,7 @@ path {
     font-family: 'Geist', sans-serif;
     font-weight: 300;
     font-size: 16px;
-    color: var(--brand-white);
+    color: rgba(255, 255, 255, 0.6);
     text-align: left;
     line-height: 20px;
     margin-top: 8px;

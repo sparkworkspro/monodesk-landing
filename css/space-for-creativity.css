@@ -542,6 +542,14 @@ body {
     text-align: center;
 }
 
+h2.cta-subtitle {
+    font-size: 42px;
+}
+
+h3.cta-subtitle {
+    font-size: 24px;
+}
+
 .cta-subtitle strong {
     font-weight: 700;
 }
