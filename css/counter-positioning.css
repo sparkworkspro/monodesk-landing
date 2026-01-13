@@ -177,7 +177,7 @@ path {
     font-size: 1.8rem;
     font-weight: 400;
     color: var(--brand-highlighter);
-    letter-spacing: -0.05rem;
+    letter-spacing: -0.3px;
     line-height: 1.2rem;
 }
 
@@ -1084,10 +1084,11 @@ path {
 
 .price-badge {
     position: absolute;
-    top: -54px;
-    right: 112px;
-    width: 104.7px;
-    height: 16.8px;
+    top: -49.4px;
+    left: calc(6 / 8 * 100%);
+    transform: translateX(-50%);
+    width: 314.1px;
+    height: 50.4px;
 }
 
 .price-badge svg {
@@ -1105,18 +1106,18 @@ path {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.2px;
+    gap: 1.8px;
 }
 
 .price-badge-text p {
     font-family: 'Geist Mono', monospace;
     font-weight: 500;
-    font-size: 2.18px;
+    font-size: 10px;
     color: var(--brand-white);
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.15px;
-    width: 30px;
+    letter-spacing: 0.3px;
+    width: 200px;
 }
 
 .price-card {
@@ -1150,7 +1151,7 @@ path {
 .price-breakdown-title {
     font-family: 'Geist', sans-serif;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 28px;
     color: var(--brand-white);
     letter-spacing: -0.3px;
     line-height: 1.1;
@@ -1217,24 +1218,30 @@ path {
 .price-display {
     text-align: center;
     padding: 8px;
+    width: 300px;
 }
 
 .price-amount {
     font-family: 'Geist', sans-serif;
     font-weight: 600;
-    font-size: 26px;
+    font-size: 24px;
     color: var(--brand-white);
     letter-spacing: -0.03em;
-    width: 280px;
+    width: 320px;
 }
 
 .price-unit {
     font-family: 'Geist', sans-serif;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--brand-white);
     text-align: left;
     line-height: 20px;
+    margin-top: 8px;
+}
+
+.price-unit strong {
+    font-weight: 600;
 }
 
 /* ===================================
@@ -1385,7 +1392,7 @@ path {
     font-size: 20px;
     font-weight: 400;
     color: var(--background);
-    letter-spacing: -0.6px;
+    letter-spacing: -0.3px;
 }
 
 .final-cta-container .gcal-btn-wrapper {
@@ -1953,8 +1960,8 @@ path {
     }
     
     .price-badge {
-        right: 50%;
-        transform: translateX(50%);
+        left: calc(6 / 8 * 100%);
+        transform: translateX(-50%);
     }
 }
 

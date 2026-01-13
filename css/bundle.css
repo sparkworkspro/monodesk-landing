@@ -200,7 +200,7 @@ img:not([src$=".svg"]) {
 .hero h1 {
     font-size: 3.5rem;
     font-weight: 600;
-    max-width: 650px;
+    max-width: 550px;
     margin: 0 auto 1rem;
     line-height: 1.1;
     letter-spacing: -0.03em;
@@ -897,7 +897,7 @@ img:not([src$=".svg"]) {
 }
 
 .why-us-title {
-    font-size: 2.75rem;
+    font-size: 2rem;
     font-weight: 600;
     color: var(--brand-white);
     letter-spacing: -0.03em;
@@ -1530,7 +1530,7 @@ img:not([src$=".svg"]) {
 
 /* Guarantee Card Layout */
 .guarantee-card {
-    background: var(--brand-blue);
+    background: var(--brand-black);
     border: none;
     border-radius: var(--radius-lg);
     padding: 3.9rem 3.25rem 3.25rem;
