@@ -1086,8 +1086,8 @@ path {
     position: absolute;
     top: -54px;
     right: 112px;
-    width: 349px;
-    height: 56px;
+    width: 104.7px;
+    height: 16.8px;
 }
 
 .price-badge svg {
@@ -1105,18 +1105,18 @@ path {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 1.2px;
 }
 
 .price-badge-text p {
     font-family: 'Geist Mono', monospace;
     font-weight: 500;
-    font-size: 7.26px;
+    font-size: 2.18px;
     color: var(--brand-white);
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    width: 100px;
+    letter-spacing: 0.15px;
+    width: 30px;
 }
 
 .price-card {
@@ -1216,6 +1216,7 @@ path {
 
 .price-display {
     text-align: center;
+    padding: 8px;
 }
 
 .price-amount {
