@@ -88,8 +88,8 @@
             }
             
             reset() {
-                // Weight confetti towards the right side (image area)
-                this.x = this.canvas.width * 0.5 + Math.random() * this.canvas.width * 0.5;
+                // Center confetti horizontally across the page
+                this.x = Math.random() * this.canvas.width;
                 this.y = Math.random() * this.canvas.height - this.canvas.height;
                 this.width = Math.random() * 12 + 24;
                 this.height = Math.random() * 40 + 70;
@@ -550,7 +550,7 @@
                         <path d="M154.926 25.1938C139.218 22.3716 133.777 1.75117 117.781 0.692805C112.415 0.340018 95.2626 -0.0304078 77.4566 0.00487084C59.6506 -0.0480472 42.4981 0.340018 37.145 0.692805C21.1485 1.7688 15.7075 22.3716 0 25.1938H154.926Z" fill="var(--fill-0, #161616)"/>
                     </svg>
                     <div class="price-badge-text">
-                        <p>Legacy beta price</p>
+                        <p>Early access offer</p>
                     </div>
                 </div>
                 
@@ -561,7 +561,7 @@
                         <!-- Price Breakdown -->
                         <div class="price-breakdown">
                             <h5 class="price-breakdown-title">
-                                Everything talking together
+                                Early access includes everything
                             </h5>
                         </div>
                         
@@ -588,11 +588,11 @@
                                 </div>
                                 <div class="benefit-check">
                                     <i data-lucide="check-circle"></i>
-                                    <span>All creative apps</span>
+                                    <span>Apps for creatives</span>
                                 </div>
                                 <div class="benefit-check">
                                     <i data-lucide="check-circle"></i>
-                                    <span>Priority support</span>
+                                    <span>Weekly planner</span>
                                 </div>
                             </div>
                             <div class="benefits-column">
@@ -618,8 +618,8 @@
                     <div class="price-button-container">
                         <!-- Price -->
                         <div class="price-display">
-                            <span class="price-amount">$0</span>
-                            <span class="price-unit">/ per month <br> for the value of $99</span>
+                            <span class="price-amount">Be first in and use it free.</span>
+                            <span class="price-unit">Early Access includes everything in our $99/month plan, at $0/month.</span>
                 
                         </div>
                         <div class="gcal-btn-wrapper">

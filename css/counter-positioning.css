@@ -647,7 +647,7 @@ path {
 .feature-item {
     display: flex;
     gap: 23px;
-    align-items: center;
+    align-items: flex-start;
     padding: var(--spacing-sm) 8px;
     padding-right: 20px;
     border-radius: var(--radius-lg);
@@ -660,6 +660,7 @@ path {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 2px;
 }
 
 .feature-content {
@@ -1083,10 +1084,10 @@ path {
 
 .price-badge {
     position: absolute;
-    top: -24px;
+    top: -54px;
     right: 112px;
-    width: 155px;
-    height: 25px;
+    width: 349px;
+    height: 56px;
 }
 
 .price-badge svg {
@@ -1210,6 +1211,7 @@ path {
     gap: var(--spacing-md);
     flex-shrink: 0;
     min-width: 200px;
+    width: 280px;
 }
 
 .price-display {
@@ -1219,9 +1221,10 @@ path {
 .price-amount {
     font-family: 'Geist', sans-serif;
     font-weight: 600;
-    font-size: 48px;
+    font-size: 26px;
     color: var(--brand-white);
     letter-spacing: -0.03em;
+    width: 280px;
 }
 
 .price-unit {
@@ -1260,7 +1263,7 @@ path {
 }
 
 .who-logo-wrapper {
-    margin-bottom: 12px;
+    margin-bottom: 20px;
 }
 
 .who-logo {
@@ -1545,7 +1548,7 @@ path {
     }
     
     .who-description {
-        font-size: 26px;
+        font-size: 22px;
         line-height: 32px;
     }
     
@@ -1733,7 +1736,7 @@ path {
     }
     
     .price-breakdown-title {
-        font-size: 28px;
+        font-size: 24px;
     }
     
     .benefits-columns {
@@ -1750,7 +1753,7 @@ path {
     }
     
     .price-amount {
-        font-size: 40px;
+        font-size: 24px;
     }
     
     .price-unit {
@@ -1936,7 +1939,7 @@ path {
     }
     
     .price-breakdown-title {
-        font-size: 28px;
+        font-size: 24px;
     }
     
     .benefits-columns {
