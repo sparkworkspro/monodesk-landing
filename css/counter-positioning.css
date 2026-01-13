@@ -177,7 +177,7 @@ path {
     font-size: 1.8rem;
     font-weight: 400;
     color: var(--brand-highlighter);
-    letter-spacing: -0.05rem;
+    letter-spacing: -0.3px;
     line-height: 1.2rem;
 }
 
@@ -647,7 +647,7 @@ path {
 .feature-item {
     display: flex;
     gap: 23px;
-    align-items: center;
+    align-items: flex-start;
     padding: var(--spacing-sm) 8px;
     padding-right: 20px;
     border-radius: var(--radius-lg);
@@ -660,6 +660,7 @@ path {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 2px;
 }
 
 .feature-content {
@@ -1083,10 +1084,11 @@ path {
 
 .price-badge {
     position: absolute;
-    top: -24px;
-    right: 112px;
-    width: 155px;
-    height: 25px;
+    top: -49.4px;
+    left: calc(6 / 8 * 100%);
+    transform: translateX(-50%);
+    width: 314.1px;
+    height: 50.4px;
 }
 
 .price-badge svg {
@@ -1104,18 +1106,18 @@ path {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 1.8px;
 }
 
 .price-badge-text p {
     font-family: 'Geist Mono', monospace;
     font-weight: 500;
-    font-size: 7.26px;
+    font-size: 10px;
     color: var(--brand-white);
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    width: 100px;
+    letter-spacing: 0.3px;
+    width: 200px;
 }
 
 .price-card {
@@ -1149,7 +1151,7 @@ path {
 .price-breakdown-title {
     font-family: 'Geist', sans-serif;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 28px;
     color: var(--brand-white);
     letter-spacing: -0.3px;
     line-height: 1.1;
@@ -1210,27 +1212,36 @@ path {
     gap: var(--spacing-md);
     flex-shrink: 0;
     min-width: 200px;
+    width: 280px;
 }
 
 .price-display {
     text-align: center;
+    padding: 8px;
+    width: 300px;
 }
 
 .price-amount {
     font-family: 'Geist', sans-serif;
     font-weight: 600;
-    font-size: 48px;
+    font-size: 24px;
     color: var(--brand-white);
     letter-spacing: -0.03em;
+    width: 320px;
 }
 
 .price-unit {
     font-family: 'Geist', sans-serif;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--brand-white);
     text-align: left;
     line-height: 20px;
+    margin-top: 8px;
+}
+
+.price-unit strong {
+    font-weight: 600;
 }
 
 /* ===================================
@@ -1260,7 +1271,7 @@ path {
 }
 
 .who-logo-wrapper {
-    margin-bottom: 12px;
+    margin-bottom: 20px;
 }
 
 .who-logo {
@@ -1381,7 +1392,7 @@ path {
     font-size: 20px;
     font-weight: 400;
     color: var(--background);
-    letter-spacing: -0.6px;
+    letter-spacing: -0.3px;
 }
 
 .final-cta-container .gcal-btn-wrapper {
@@ -1545,7 +1556,7 @@ path {
     }
     
     .who-description {
-        font-size: 26px;
+        font-size: 22px;
         line-height: 32px;
     }
     
@@ -1733,7 +1744,7 @@ path {
     }
     
     .price-breakdown-title {
-        font-size: 28px;
+        font-size: 24px;
     }
     
     .benefits-columns {
@@ -1750,7 +1761,7 @@ path {
     }
     
     .price-amount {
-        font-size: 40px;
+        font-size: 24px;
     }
     
     .price-unit {
@@ -1936,7 +1947,7 @@ path {
     }
     
     .price-breakdown-title {
-        font-size: 28px;
+        font-size: 24px;
     }
     
     .benefits-columns {
@@ -1949,8 +1960,8 @@ path {
     }
     
     .price-badge {
-        right: 50%;
-        transform: translateX(50%);
+        left: calc(6 / 8 * 100%);
+        transform: translateX(-50%);
     }
 }
 

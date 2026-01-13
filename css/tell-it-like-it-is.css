@@ -239,13 +239,6 @@ body {
     text-align: center;
 }
 
-.hero-waitlist {
-    font-family: 'Geist Mono', monospace;
-    font-size: 11.5px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.6);
-}
-
 .hero-image {
     position: absolute;
     right: -220px;
@@ -1248,11 +1241,11 @@ body {
 
 .apps-title {
     font-family: 'Geist', sans-serif;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--type);
     letter-spacing: -0.3px;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
     text-align: center;
 }
 
@@ -1302,7 +1295,7 @@ body {
 
 .app-card p {
     font-family: 'Geist', sans-serif;
-    font-size: 14px;
+    font-size: 32px;
     font-weight: 400;
     color: var(--type-60);
     margin: 0 20px 20px;
@@ -1623,10 +1616,11 @@ body {
 
 .price-badge {
     position: absolute;
-    top: -24px;
-    right: 112px;
-    width: 155px;
-    height: 25px;
+    top: -49.4px;
+    left: calc(6 / 8 * 100%);
+    transform: translateX(-50%);
+    width: 314.1px;
+    height: 50.4px;
 }
 
 .price-badge svg {
@@ -1644,18 +1638,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 1.8px;
 }
 
 .price-badge-text p {
     font-family: 'Geist Mono', monospace;
     font-weight: 500;
-    font-size: 7.26px;
+    font-size: 10px;
     color: var(--brand-white);
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    width: 100px;
+    letter-spacing: 0.3px;
+    width: 200px;
 }
 
 .price-card {
@@ -1689,7 +1683,7 @@ body {
 .price-breakdown-title {
     font-family: 'Geist', sans-serif;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 28px;
     color: var(--brand-white);
     letter-spacing: -0.3px;
     line-height: 1.1;
@@ -1750,27 +1744,36 @@ body {
     gap: var(--spacing-md);
     flex-shrink: 0;
     min-width: 200px;
+    width: 280px;
 }
 
 .price-display {
     text-align: center;
+    padding: 8px;
+    width: 300px;
 }
 
 .price-amount {
     font-family: 'Geist', sans-serif;
     font-weight: 600;
-    font-size: 48px;
+    font-size: 24px;
     color: var(--brand-white);
     letter-spacing: -0.03em;
+    width: 320px;
 }
 
 .price-unit {
     font-family: 'Geist', sans-serif;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--brand-white);
     text-align: left;
     line-height: 20px;
+    margin-top: 8px;
+}
+
+.price-unit strong {
+    font-weight: 600;
 }
 
 /* ===================================
@@ -1833,6 +1836,77 @@ body {
         flex-direction: column;
         gap: var(--spacing-md);
         align-items: center;
+    }
+    
+    .price-card {
+        padding: var(--spacing-xl) 60px;
+        gap: var(--spacing-lg);
+    }
+    
+    .price-breakdown {
+        width: 160px;
+        min-width: 120px;
+    }
+    
+    .price-breakdown-title {
+        font-size: 24px;
+    }
+    
+    .benefits-columns {
+        gap: 16px;
+    }
+    
+    .benefits-column {
+        width: 110px;
+        min-width: 90px;
+    }
+    
+    .benefit-check span {
+        font-size: 11px;
+    }
+    
+    .price-amount {
+        font-size: 24px;
+    }
+    
+    .price-unit {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 950px) {
+    .price-card {
+        padding: var(--spacing-lg) var(--spacing-lg);
+        gap: var(--spacing-md);
+    }
+    
+    .price-breakdown-title {
+        font-size: 24px;
+    }
+    
+    .benefits-columns {
+        gap: 12px;
+    }
+    
+    .benefits-column {
+        width: 100px;
+        min-width: 80px;
+    }
+    
+    .benefit-check span {
+        font-size: 10px;
+    }
+    
+    .price-amount {
+        font-size: 36px;
+    }
+    
+    .price-unit {
+        font-size: 14px;
+    }
+    
+    .price-button-container {
+        min-width: 180px;
     }
 }
 
@@ -2015,7 +2089,7 @@ body {
     }
     
     .price-breakdown-title {
-        font-size: 28px;
+        font-size: 24px;
     }
     
     .benefits-columns {
@@ -2028,8 +2102,8 @@ body {
     }
     
     .price-badge {
-        right: 50%;
-        transform: translateX(50%);
+        left: calc(6 / 8 * 100%);
+        transform: translateX(-50%);
     }
 }
 
