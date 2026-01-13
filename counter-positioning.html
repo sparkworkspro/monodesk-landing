@@ -432,11 +432,29 @@
     </section>
     
     <script>
-    // Timeline scroll experience
+    // Timeline scroll and click experience
     document.addEventListener('DOMContentLoaded', function() {
         const timelineSteps = document.querySelectorAll('.timeline-step[data-step]');
         const previewImages = document.querySelectorAll('.timeline-preview-img');
         
+        // Function to activate a step
+        function activateStep(step) {
+            const stepNumber = step.dataset.step;
+            
+            // Update active step styling
+            timelineSteps.forEach(s => s.classList.remove('active'));
+            step.classList.add('active');
+            
+            // Update active image
+            previewImages.forEach(img => {
+                img.classList.remove('active');
+                if (img.dataset.step === stepNumber) {
+                    img.classList.add('active');
+                }
+            });
+        }
+        
+        // Scroll-based activation
         const observerOptions = {
             root: null,
             rootMargin: '-40% 0px -40% 0px',
@@ -446,24 +464,42 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const step = entry.target.dataset.step;
-                    
-                    // Update active step styling
-                    timelineSteps.forEach(s => s.classList.remove('active'));
-                    entry.target.classList.add('active');
-                    
-                    // Update active image
-                    previewImages.forEach(img => {
-                        img.classList.remove('active');
-                        if (img.dataset.step === step) {
-                            img.classList.add('active');
-                        }
-                    });
+                    activateStep(entry.target);
                 }
             });
         }, observerOptions);
         
         timelineSteps.forEach(step => observer.observe(step));
+        
+        // Click-based activation
+        timelineSteps.forEach(step => {
+            // Click on the entire step
+            step.addEventListener('click', function() {
+                activateStep(this);
+                // Smoothly scroll the step into view
+                this.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+            
+            // Click on the number
+            const number = step.querySelector('.timeline-number');
+            if (number) {
+                number.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    activateStep(step);
+                    step.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+            }
+            
+            // Click on the title
+            const title = step.querySelector('.timeline-step-title');
+            if (title) {
+                title.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    activateStep(step);
+                    step.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+            }
+        });
     });
     </script>
 
