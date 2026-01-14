@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonoDesk - Explainer</title>
+    <link rel="icon" type="image/x-icon" href="https://monodesk.com/favicon.ico" />
+    <link rel="icon" type="image/png" href="https://monodesk.com/favicon.png" />
+    <link rel="apple-touch-icon" href="https://monodesk.com/logo192.png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/explainer.css">
+    <!-- Hotjar Tracking Code for Landing Pages -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:6605179,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-kG2tEPEBQrI6Eqsznrbzm.js"></script>
+    <script>
+        window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+        plausible.init()
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17859687023"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17859687023');
+    </script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-logo-wrapper">
+            <img src="assets/logo-lockup-white.svg" alt="MonoDesk" class="hero-logo">
+        </div>
+        <div class="container">
+            <div class="hero-badge">
+                <span>+ Now in Private Beta</span>
+            </div>
+            
+            <div class="hero-carousel">
+                <button class="carousel-nav carousel-prev" onclick="changeSlide(-1)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                
+                <div class="carousel-content">
+                    <div class="carousel-slide active">
+                        <h1>Ready to simplify your freelance life?</h1>
+                        <div class="hero-subhead-wrapper">
+                            <p class="hero-subhead"> MonoDesk is your suite of connected apps for freelance designers, developers & video creators.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <h1>Stop juggling. Start creating.</h1>
+                        <p class="hero-subhead">One connected workspace for freelance designers, developers & video creators</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h1>10 tabs. 5 subscriptions. 0 sanity.</h1>
+                        <p class="hero-subhead">There's a better way to run your freelance business</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h1>Your business is scattered across 12 apps.</h1>
+                        <p class="hero-subhead">MonoDesk brings it all together</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h1>Run your freelance business from one place</h1>
+                        <p class="hero-subhead">Projects, proposals, clients, time tracking, AI—finally connected</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h1>Finally, a workspace that works like you do</h1>
+                        <p class="hero-subhead">Everything creative pros need. Nothing they don't.</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h1>Less admin. More creative work.</h1>
+                        <p class="hero-subhead">The all-in-one suite for freelance designers, developers & video creators</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h1>Built for freelance creative pros who hate busywork</h1>
+                        <p class="hero-subhead">One app to replace the 10 you're juggling</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h1>You're a creative, not an admin</h1>
+                        <p class="hero-subhead">Let MonoDesk handle the boring stuff</p>
+                    </div>
+                    <div class="carousel-slide">
+                        <h1>For freelancers who'd rather be making things</h1>
+                        <p class="hero-subhead">All your business tools, finally in one place</p>
+                    </div>
+                </div>
+                
+                <button class="carousel-nav carousel-next" onclick="changeSlide(1)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+            
+            <div class="carousel-counter"><span id="currentSlide">1</span> / 10</div>
+        </div>
+    </section>
+
+    <!-- Compelling Features Section -->
+    <section class="compelling-features-section">
+        <div class="compelling-features-content">
+            <div class="compelling-features-header">
+                <div class="compelling-features-text">
+                    <h2 class="section-title">Everything you need to work faster, all in one workspace.</h2>
+                </div>
+            </div>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <div class="feature-card-image">
+                        <img src="assets/removing-admin-feature1.webp" alt="Organise your clients and projects" class="card-img">
+                    </div>
+                    <div class="feature-card-content">
+                        <h3 class="card-title">Organise your clients and projects</h3>
+                        <p class="card-description">Manage tasks, timelines, and progress with ease.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-image">
+                        <img src="assets/removing-admin-feature2.webp" alt="Context in one place" class="card-img">
+                    </div>
+                    <div class="feature-card-content">
+                        <h3 class="card-title">Context in one place</h3>
+                        <p class="card-description">Store client information, brand details, preferences, files, and project history together.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-image">
+                        <img src="assets/removing-admin-feature3.webp" alt="Sharing is caring" class="card-img">
+                    </div>
+                    <div class="feature-card-content">
+                        <h3 class="card-title">Sharing is caring</h3>
+                        <p class="card-description">Upload work, gather feedback, and turn it directly into clear next steps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before / After Section -->
+    <section class="before-after">
+        <div class="container">
+            <div class="comparison">
+                <div class="before">
+                    <h2>Before</h2>
+                    <div class="tool-scatter">
+                        <span class="tool-logo" style="top: 10%; left: 15%;">Harvest</span>
+                        <span class="tool-logo" style="top: 25%; left: 60%;">Trello</span>
+                        <span class="tool-logo" style="top: 45%; left: 25%;">ChatGPT</span>
+                        <span class="tool-logo" style="top: 15%; left: 40%;">Zoho</span>
+                        <span class="tool-logo" style="top: 55%; left: 55%;">Slack</span>
+                        <span class="tool-logo" style="top: 70%; left: 20%;">Notion</span>
+                        <span class="tool-logo" style="top: 35%; left: 75%;">QuickBooks</span>
+                        <span class="tool-logo" style="top: 65%; left: 70%;">Asana</span>
+                        <span class="tool-logo" style="top: 80%; left: 45%;">Calendly</span>
+                        <span class="tool-logo" style="top: 5%; left: 80%;">Dropbox</span>
+                        <span class="tool-logo" style="top: 88%; left: 10%;">Gemini</span>
+                        <span class="tool-logo" style="top: 30%; left: 5%;">Claude</span>
+                        <span class="tool-logo" style="top: 85%; left: 75%;">Apple Notes</span>
+                        <span class="tool-logo" style="top: 50%; left: 85%;">ClickUp</span>
+                        <span class="tool-logo" style="top: 92%; left: 55%;">Email Inbox</span>
+                        <span class="tool-logo" style="top: 2%; left: 30%;">Calendar</span>
+                        <span class="tool-logo" style="top: 40%; left: 45%;">Todoist</span>
+                        <span class="tool-logo" style="top: 75%; left: 5%;">Monday.com</span>
+                        <span class="tool-logo" style="top: 20%; left: 85%;">Basecamp</span>
+                        <span class="tool-logo" style="top: 60%; left: 35%;">Airtable</span>
+                        <span class="tool-logo" style="top: 95%; left: 30%;">Things</span>
+                        <span class="tool-logo" style="top: 8%; left: 55%;">Google Drive</span>
+                        <span class="tool-logo" style="top: 48%; left: 8%;">Figma</span>
+                        <span class="tool-logo" style="top: 78%; left: 60%;">Stripe</span>
+                        <span class="tool-logo" style="top: 32%; left: 92%;">Loom</span>
+                        <span class="tool-logo" style="top: 58%; left: 78%;">Miro</span>
+                    </div>
+                </div>
+                <div class="after">
+                    <h2>After</h2>
+                    <div class="monodesk-logo">
+                        <img src="assets/logo-lockup.svg" alt="MonoDesk">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Section (MonoDesk is for you) -->
+    <section class="urgency-section">
+        <div class="urgency-card-container">
+            <div class="urgency-cta-card">
+                <!-- Text Content -->
+                <div class="urgency-text-content">
+                    <div class="urgency-header">
+                        <h2 class="urgency-title-main">MonoDesk is for you if you want to</h2>
+                    </div>
+                    
+                    <div class="urgency-points-list">
+                        <div class="urgency-point active" data-urgency="01">
+                            <div class="point-icon-svg">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="point-text">
+                                <h3 class="point-title">Feel in control of the chaos with one source of truth</h3>
+                            </div>
+                        </div>
+                        <div class="urgency-point" data-urgency="02">
+                            <div class="point-icon-svg">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="point-text">
+                                <h3 class="point-title">Reduce anxiety with a companion that has your back</h3>
+                            </div>
+                        </div>
+                        <div class="urgency-point" data-urgency="03">
+                            <div class="point-icon-svg">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="point-text">
+                                <h3 class="point-title">Get your creative time back by automating the admin</h3>
+                            </div>
+                        </div>
+                        <div class="urgency-point" data-urgency="04">
+                            <div class="point-icon-svg">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="point-text">
+                                <h3 class="point-title">Eliminate the mundane by sending agents boring tasks</h3>
+                            </div>
+                        </div>
+                        <div class="urgency-point" data-urgency="05">
+                            <div class="point-icon-svg">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="point-text">
+                                <h3 class="point-title">Spend more of your time in your creative tool of choice</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image Container -->
+                <div class="urgency-image-container">
+                    <img id="urgency-swap-image" src="assets/counter-positioning/app-screenshot.webp" alt="MonoDesk Benefits">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="features-header">
+            <div class="features-header-text">
+                <h2 class="section-title">Apps for all the things you need to improve your productivity</h2>
+            </div>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/app-bg.webp" alt="AI Agent" class="feature-icon-img">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">AI Agent</h3>
+                    <p class="feature-description">Your personal assistant for creative business tasks.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/app-proposals.webp" alt="Proposals" class="feature-icon-img">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Proposals</h3>
+                    <p class="feature-description">Create client proposals from files, text or voice notes.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/app-inbox.webp" alt="Projects & Clients" class="feature-icon-img">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Projects & Clients</h3>
+                    <p class="feature-description">Manage all your projects and client relationships.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/app-time.webp" alt="Weekly Planner" class="feature-icon-img">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Weekly Planner</h3>
+                    <p class="feature-description">Plan your week and stay on top of deadlines.</p>
+                </div>
+            </div>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/app-bubbles.webp" alt="Client Portal" class="feature-icon-img">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Client Portal</h3>
+                    <p class="feature-description">Share updates and collect feedback from clients.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/app-time.webp" alt="Time Tracking" class="feature-icon-img">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Time Tracking</h3>
+                    <p class="feature-description">Track your time against tasks for easier management.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/app-inspiration.webp" alt="Inspiration" class="feature-icon-img">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Inspiration</h3>
+                    <p class="feature-description">Explore real-world projects to spark your creativity.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/app-news.webp" alt="Creative News" class="feature-icon-img">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Creative News</h3>
+                    <p class="feature-description">Industry news, personalised just for you.</p>
+                </div>
+            </div>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/app-prompts.webp" alt="Prompt Library" class="feature-icon-img">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Prompt Library</h3>
+                    <p class="feature-description">Explore, store and share your favourite prompts.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/app-files.webp" alt="Files" class="feature-icon-img">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Files</h3>
+                    <p class="feature-description">Upload, preview and share your client files and assets.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/app-bubbles.webp" alt="Quick Feedback" class="feature-icon-img">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Quick Feedback</h3>
+                    <p class="feature-description">Get interactive feedback on what you're working on.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/app-storyboard.webp" alt="Storyboard Assistant" class="feature-icon-img">
+                </div>
+                <div class="feature-content">
+                    <h3 class="feature-title">Storyboard Assistant</h3>
+                    <p class="feature-description">Create detailed storyboards for your visual projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selling Points Section (Why Switch) -->
+    <section class="selling-points">
+        <div class="selling-points-content">
+            <div class="selling-points-text">
+                <div class="selling-header">
+                    <span class="selling-label">Why switch?</span>
+                    <h2 class="section-title">You're already juggling 10+ tools</h2>
+                    <p class="selling-subtitle">Every week you wait is another week of:</p>
+                </div>
+                <div class="selling-points-list">
+                    <div class="selling-point active" data-selling="01">
+                        <div class="selling-point-icon">
+                            <!-- Lucide: wallet -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/>
+                                <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/>
+                            </svg>
+                        </div>
+                        <div class="selling-point-text">
+                            <h3 class="selling-point-title">Wasted Subscriptions</h3>
+                            <p class="selling-point-desc">Paying for subscriptions you barely use</p>
+                        </div>
+                    </div>
+                    <div class="selling-point" data-selling="02">
+                        <div class="selling-point-icon">
+                            <!-- Lucide: repeat (context switching) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m17 2 4 4-4 4"/>
+                                <path d="M3 11v-1a4 4 0 0 1 4-4h14"/>
+                                <path d="m7 22-4-4 4-4"/>
+                                <path d="M21 13v1a4 4 0 0 1-4 4H3"/>
+                            </svg>
+                        </div>
+                        <div class="selling-point-text">
+                            <h3 class="selling-point-title">Lost Hours</h3>
+                            <p class="selling-point-desc">Losing hours to context-switching between apps</p>
+                        </div>
+                    </div>
+                    <div class="selling-point" data-selling="03">
+                        <div class="selling-point-icon">
+                            <!-- Lucide: calendar-x -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M8 2v4"/>
+                                <path d="M16 2v4"/>
+                                <rect width="18" height="18" x="3" y="4" rx="2"/>
+                                <path d="M3 10h18"/>
+                                <path d="m14 14-4 4"/>
+                                <path d="m10 14 4 4"/>
+                            </svg>
+                        </div>
+                        <div class="selling-point-text">
+                            <h3 class="selling-point-title">Missed Deadlines</h3>
+                            <p class="selling-point-desc">Missing deadlines because things slip through the cracks</p>
+                        </div>
+                    </div>
+                    <div class="selling-point" data-selling="04">
+                        <div class="selling-point-icon">
+                            <!-- Lucide: list-checks (keeping track) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF5B26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m3 17 2 2 4-4"/>
+                                <path d="m3 7 2 2 4-4"/>
+                                <path d="M13 6h8"/>
+                                <path d="M13 12h8"/>
+                                <path d="M13 18h8"/>
+                            </svg>
+                        </div>
+                        <div class="selling-point-text">
+                            <h3 class="selling-point-title">Mental Overhead</h3>
+                            <p class="selling-point-desc">Mental overhead from keeping track of everything</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="selling-points-image">
+                <img id="selling-swap-image" src="assets/app-time.webp" alt="Wasted Subscriptions" class="app-screenshot">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why This Solution Section -->
+    <section class="why-us">
+        <div class="why-us-container">
+            <div class="why-us-header">
+                <span class="why-us-label">The alternative</span>
+                <h2 class="why-us-title">Why MonoDesk?</h2>
+            </div>
+            <div class="comparison-grid">
+                <div class="compare-card negative">
+                    <div class="compare-card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3 class="compare-card-title">Generic project tools</h3>
+                    <p class="compare-card-desc">Built for teams, not solo creators. Bloated with features you'll never use.</p>
+                </div>
+                <div class="compare-card negative">
+                    <div class="compare-card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3 class="compare-card-title">Stitching tools together</h3>
+                    <p class="compare-card-desc">Zapier + Notion + Harvest + ChatGPT = $200/mo and a fragile mess.</p>
+                </div>
+                <div class="compare-card negative">
+                    <div class="compare-card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3 class="compare-card-title">Spreadsheets & docs</h3>
+                    <p class="compare-card-desc">Manual entry. No automation. Falls apart when you're busy.</p>
+                </div>
+            </div>
+            <div class="compare-highlight">
+                <div class="compare-highlight-badge">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>MonoDesk</span>
+                </div>
+                <p class="compare-highlight-text">Purpose-built for freelance creative pros. One app. Everything connected. AI that actually helps.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="testimonials-content">
+            <div class="testimonials-header">
+                <h2 class="section-title">What creative professionals say</h2>
+            </div>
+            <div class="testimonials-wonky-grid">
+                <div class="testimonial-card wonky-1">
+                    <div class="testimonial-quote">
+                        <p>"For project management this tool is very very helpful."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <span class="author-role">Freelance Creative</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card wonky-2">
+                    <div class="testimonial-quote">
+                        <p>"Onboarding very simple."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <span class="author-role">Freelance Creative</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card wonky-3">
+                    <div class="testimonial-quote">
+                        <p>"Very simple, very easy.<br>Works for me."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <span class="author-role">Freelance Creative</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="final-cta guarantee-cta">
+        <div class="final-cta-container">
+            <div class="guarantee-card">
+                <div class="guarantee-badge">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <h3 class="guarantee-heading">Try it free while we're in private beta</h3>
+                <p class="guarantee-text">We'll personally help you get set up, and we expect MonoDesk to save you at least a couple of hours per week. There's low risk—you can walk away anytime if it's not for you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <div class="cta-text-container">
+                <img src="assets/logo-lockup-white.svg" alt="MonoDesk" class="cta-logo-img">
+                <h2 class="cta-title">Ready to simplify your freelance life?</h2>
+                <div class="cta-subtext">
+                    <p class="cta-subtitle">Get in touch with the MonoDesk team to get access.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Tagline -->
+    <footer class="footer-tagline">
+        <div class="footer-content">
+            <img src="assets/about-Icon-blue.webp" alt="MonoDesk" class="footer-icon">
+            <p class="footer-description">Make space for creativity. <span class="footer-description-muted">Eliminate the mundane, maximise your creativity.</span></p>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+        
+        // Check for ?vp= query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const vpParam = urlParams.get('vp');
+        
+        if (vpParam) {
+            const vpIndex = parseInt(vpParam) - 1; // Convert to 0-based index
+            if (vpIndex >= 0 && vpIndex < totalSlides) {
+                // Hide carousel controls
+                document.querySelectorAll('.carousel-nav').forEach(btn => btn.style.display = 'none');
+                document.querySelector('.carousel-counter').style.display = 'none';
+                
+                // Show the specified slide
+                slides[0].classList.remove('active');
+                slides[vpIndex].classList.add('active');
+                currentSlide = vpIndex;
+            }
+        }
+        
+        function changeSlide(direction) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            document.getElementById('currentSlide').textContent = currentSlide + 1;
+        }
+        
+        // Selling points image swapping functionality
+        const sellingImages = {
+            '01': 'assets/app-time.webp',
+            '02': 'assets/app-inbox.webp',
+            '03': 'assets/app-proposals.webp',
+            '04': 'assets/app-bg.webp'
+        };
+        
+        const sellingPoints = document.querySelectorAll('.selling-point');
+        const sellingImage = document.getElementById('selling-swap-image');
+        
+        sellingPoints.forEach(point => {
+            point.addEventListener('mouseenter', function() {
+                sellingPoints.forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+                
+                const sellingId = this.dataset.selling;
+                if (sellingImage && sellingImages[sellingId]) {
+                    sellingImage.style.opacity = '0';
+                    setTimeout(() => {
+                        sellingImage.src = sellingImages[sellingId];
+                        sellingImage.style.opacity = '1';
+                    }, 150);
+                }
+            });
+        });
+        
+        // Urgency section image swapping (MonoDesk benefits)
+        const urgencyImages = {
+            '01': 'assets/counter-positioning/app-screenshot.webp',
+            '02': 'assets/app-inspiration.webp',
+            '03': 'assets/app-proposals.webp',
+            '04': 'assets/app-bg.webp'
+        };
+        
+        const urgencyPoints = document.querySelectorAll('.urgency-point');
+        const urgencyImage = document.getElementById('urgency-swap-image');
+        
+        urgencyPoints.forEach(point => {
+            point.addEventListener('mouseenter', function() {
+                urgencyPoints.forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+                
+                const urgencyId = this.dataset.urgency;
+                if (urgencyImage && urgencyImages[urgencyId]) {
+                    urgencyImage.style.opacity = '0';
+                    setTimeout(() => {
+                        urgencyImage.src = urgencyImages[urgencyId];
+                        urgencyImage.style.opacity = '1';
+                    }, 150);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
