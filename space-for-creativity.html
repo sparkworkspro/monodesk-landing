@@ -324,6 +324,12 @@
             ctaWrappers.forEach(function(wrapper) {
                 wrapper.addEventListener('click', function() {
                     plausible('Early Access CTA Click');
+                    // Google Ads conversion tracking
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-17859687023/UeDFCKTeuuIbEO_klMRC',
+                        'value': 1.0,
+                        'currency': 'AUD'
+                    });
                 });
             });
         });
