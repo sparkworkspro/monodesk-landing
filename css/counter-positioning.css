@@ -303,7 +303,9 @@ path {
     max-width: 625px;
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .timeline-image-wrapper {
@@ -313,6 +315,33 @@ path {
     border-radius: 20px;
     overflow: hidden;
     background: #333;
+}
+
+.timeline-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.timeline-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.timeline-dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.2);
+}
+
+.timeline-dot.active {
+    background: var(--brand-orange);
 }
 
 .timeline-preview-img {
@@ -346,7 +375,7 @@ path {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
-    padding-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
     max-width: 400px;
 }
 
@@ -367,8 +396,8 @@ path {
 .timeline-step {
     display: flex;
     gap: 16px;
-    padding: 40px 20px;
-    min-height: 260px;
+    padding: 24px 20px;
+    min-height: 180px;
     opacity: 0.8;
     transition: opacity 0.4s ease;
     cursor: pointer;
@@ -383,8 +412,8 @@ path {
 }
 
 .timeline-step:last-child {
-    min-height: 200px;
-    padding-bottom: 100px;
+    min-height: 140px;
+    padding-bottom: 60px;
 }
 
 .timeline-number {
