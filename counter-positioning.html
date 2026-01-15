@@ -432,7 +432,7 @@
     </section>
     
     <script>
-    // Timeline scroll experience
+    // Timeline click experience (scroll-based switching disabled)
     document.addEventListener('DOMContentLoaded', function() {
         const timelineSteps = document.querySelectorAll('.timeline-step[data-step]');
         const previewImages = document.querySelectorAll('.timeline-preview-img');
@@ -460,22 +460,6 @@
                 activateStep(this);
             });
         });
-        
-        const observerOptions = {
-            root: null,
-            rootMargin: '-40% 0px -40% 0px',
-            threshold: 0
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    activateStep(entry.target);
-                }
-            });
-        }, observerOptions);
-        
-        timelineSteps.forEach(step => observer.observe(step));
     });
     </script>
 
