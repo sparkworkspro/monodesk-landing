@@ -315,6 +315,33 @@ path {
     background: #333;
 }
 
+.timeline-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.timeline-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.timeline-dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.2);
+}
+
+.timeline-dot.active {
+    background: var(--brand-orange);
+}
+
 .timeline-preview-img {
     position: absolute;
     top: 0;

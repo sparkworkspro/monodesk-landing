@@ -384,6 +384,11 @@
                     <img src="assets/counter-positioning/Steps-02-Brief.webp" alt="Brief preview" class="timeline-preview-img" data-step="2">
                     <img src="assets/counter-positioning/Steps-03-Kanban.webp" alt="Kanban preview" class="timeline-preview-img" data-step="3">
                 </div>
+                <div class="timeline-dots">
+                    <button class="timeline-dot active" data-step="1" aria-label="View step 1"></button>
+                    <button class="timeline-dot" data-step="2" aria-label="View step 2"></button>
+                    <button class="timeline-dot" data-step="3" aria-label="View step 3"></button>
+                </div>
             </div>
             
             <!-- Scrolling Content -->
@@ -395,7 +400,7 @@
                 </div>
                 
                 <div class="timeline-steps">
-                    <div class="timeline-step" data-step="1">
+                    <div class="timeline-step active" data-step="1">
                         <div class="timeline-number">
                             <span>1</span>
                             <div class="timeline-line"></div>
@@ -432,24 +437,35 @@
     </section>
     
     <script>
-    // Timeline click experience (scroll-based switching disabled)
+    // Timeline click experience
     document.addEventListener('DOMContentLoaded', function() {
         const timelineSteps = document.querySelectorAll('.timeline-step[data-step]');
         const previewImages = document.querySelectorAll('.timeline-preview-img');
+        const timelineDots = document.querySelectorAll('.timeline-dot');
         
-        // Function to activate a specific step
-        function activateStep(stepElement) {
-            const step = stepElement.dataset.step;
-            
+        // Function to activate a specific step by step number
+        function activateByStep(stepNumber) {
             // Update active step styling
-            timelineSteps.forEach(s => s.classList.remove('active'));
-            stepElement.classList.add('active');
+            timelineSteps.forEach(s => {
+                s.classList.remove('active');
+                if (s.dataset.step === stepNumber) {
+                    s.classList.add('active');
+                }
+            });
             
             // Update active image
             previewImages.forEach(img => {
                 img.classList.remove('active');
-                if (img.dataset.step === step) {
+                if (img.dataset.step === stepNumber) {
                     img.classList.add('active');
+                }
+            });
+            
+            // Update active dot
+            timelineDots.forEach(dot => {
+                dot.classList.remove('active');
+                if (dot.dataset.step === stepNumber) {
+                    dot.classList.add('active');
                 }
             });
         }
@@ -457,7 +473,14 @@
         // Add click handlers to timeline steps
         timelineSteps.forEach(step => {
             step.addEventListener('click', function() {
-                activateStep(this);
+                activateByStep(this.dataset.step);
+            });
+        });
+        
+        // Add click handlers to dots
+        timelineDots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                activateByStep(this.dataset.step);
             });
         });
     });
