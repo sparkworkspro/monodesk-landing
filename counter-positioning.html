@@ -843,6 +843,24 @@
         </div>
     </footer>
 
+    <!-- Google Ads Conversion Function -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17859687023/UeDFCKTeuuIbEO_klMRC',
+                'value': 1.0,
+                'currency': 'AUD',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+
     <!-- Plausible Custom Event Tracking -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -851,12 +869,7 @@
             ctaWrappers.forEach(function(wrapper) {
                 wrapper.addEventListener('click', function() {
                     plausible('Early Access CTA Click - Counter Positioning');
-                    // Google Ads conversion tracking
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-17859687023/UeDFCKTeuuIbEO_klMRC',
-                        'value': 1.0,
-                        'currency': 'AUD'
-                    });
+                    gtag_report_conversion();
                 });
             });
         });
