@@ -984,9 +984,11 @@ body {
 .testimonial-card:nth-child(4) .testimonial-quote {
     color: #fff;
 }
-.testimonial-card:nth-child(4) .testimonial-name,
-.testimonial-card:nth-child(4) .testimonial-role {
+.testimonial-card:nth-child(4) .testimonial-name {
     color: #fff;
+}
+.testimonial-card:nth-child(4) .testimonial-role {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* Card 5 - Middle center, dark */
@@ -1014,8 +1016,7 @@ body {
 
 /* Dark card variant - white text */
 .testimonial-card--dark .testimonial-quote,
-.testimonial-card--dark .testimonial-name,
-.testimonial-card--dark .testimonial-role {
+.testimonial-card--dark .testimonial-name {
     color: #fff;
 }
 
@@ -1205,7 +1206,7 @@ body {
     font-family: "Geist Mono";
     font-size: 12px;
     font-weight: 400;
-    color: var(--brand-white);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* Verified Badge */
