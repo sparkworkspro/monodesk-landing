@@ -1,0 +1,721 @@
+/* ===================================
+   RESET & BASE STYLES
+   =================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Geist', system-ui, sans-serif;
+    background: #DADEE1;
+    line-height: 1.5;
+}
+
+/* ===================================
+   DESIGN TOKENS
+   =================================== */
+
+:root {
+    /* Colors */
+    --brand-white: #FFFFFF;
+    --brand-orange: #FF5B26;
+    --brand-highlighter: #D1FF6E;
+    --brand-blue: #1C64F5;
+    --brand-blue-ribbon: #0C39ED;
+    --brand-grey: #94959A;
+    --brand-almost-black: #272727;
+    --brand-fun-green: #026232;
+    --surface-tint: #EEF2F5;
+    --surface-white: #FFFFFF;
+    --background: #DADEE1;
+    --type: #161616;
+    --type-60: rgba(22, 22, 22, 0.6);
+    --type-40: rgba(22, 22, 22, 0.4);
+    
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 40px;
+    --spacing-xl: 60px;
+    --spacing-2xl: 80px;
+    
+    /* Border Radius */
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 20px;
+    --radius-xl: 25px;
+}
+
+/* ===================================
+   HERO SECTION
+   =================================== */
+
+.hero-section {
+    width: 100%;
+    background: var(--brand-blue);
+    padding: 40px 0 0 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.hero-logo {
+    width: 169px;
+    height: 31px;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hero-main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--spacing-xl);
+}
+
+.hero-text-container {
+    max-width: 625px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-self: center;
+}
+
+.hero-title {
+    font-family: 'Geist', sans-serif;
+    font-size: 72px;
+    font-weight: 600;
+    color: var(--surface-tint);
+    line-height: 1;
+    letter-spacing: -2.16px;
+    margin: 0;
+}
+
+.hero-subtitle {
+    font-family: 'Geist', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: -0.3px;
+    line-height: 1.4;
+    margin: 0;
+    max-width: 500px;
+}
+
+.hero-image {
+    flex-shrink: 0;
+    width: 605px;
+    height: 605px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.hero-person {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom;
+}
+
+.hero-price {
+    font-size: 16px;
+    color: var(--brand-highlighter);
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.hero-price strong {
+    font-weight: 600;
+}
+
+/* ===================================
+   FEATURES SECTION
+   =================================== */
+
+.features-section {
+    width: 100%;
+    background: var(--background);
+    padding: var(--spacing-2xl) var(--spacing-xl);
+}
+
+.features-header {
+    max-width: 800px;
+    margin: 0 auto var(--spacing-2xl);
+    text-align: center;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: -0.6px;
+    line-height: 1.1;
+    color: var(--type);
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.3px;
+    color: var(--type-60);
+}
+
+.feature-block {
+    max-width: 1320px;
+    margin: 0 auto var(--spacing-2xl);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+}
+
+.feature-block.feature-reverse {
+    grid-template-columns: 1fr 1fr;
+}
+
+.feature-block.feature-reverse .feature-content {
+    order: 2;
+}
+
+.feature-block.feature-reverse .feature-image {
+    order: 1;
+}
+
+.feature-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.feature-number {
+    font-family: 'Geist Mono', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--brand-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.feature-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--type);
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.feature-desc {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--type-60);
+    letter-spacing: -0.2px;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.feature-image {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--surface-white);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+}
+
+.feature-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Final Feature Block */
+.feature-block-final {
+    max-width: 1320px;
+    margin: var(--spacing-2xl) auto 0;
+    padding: var(--spacing-2xl);
+    background: var(--brand-almost-black);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.final-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.final-title {
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--brand-white);
+    letter-spacing: -0.8px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.final-desc {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: -0.3px;
+    line-height: 1.6;
+}
+
+/* ===================================
+   PRICING SECTION
+   =================================== */
+
+.pricing-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-2xl) var(--spacing-xl);
+    background: var(--background);
+}
+
+.pricing-container {
+    position: relative;
+    width: 100%;
+    max-width: 1380px;
+}
+
+.price-badge {
+    position: absolute;
+    top: -49.4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 314.1px;
+    height: 50.4px;
+}
+
+.price-badge svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.price-badge-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-badge-text p {
+    font-family: 'Geist Mono', monospace;
+    font-weight: 500;
+    font-size: 10px;
+    color: var(--brand-white);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.price-card {
+    background: var(--brand-almost-black);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl) 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-xl);
+}
+
+.price-left {
+    flex: 1;
+    max-width: 600px;
+}
+
+.price-headline {
+    font-family: 'Geist', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--brand-white);
+    letter-spacing: -0.3px;
+    margin-bottom: var(--spacing-md);
+}
+
+.price-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.price-feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.price-feature i {
+    width: 16px;
+    height: 16px;
+    color: var(--brand-grey);
+    flex-shrink: 0;
+}
+
+.price-feature span {
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--brand-grey);
+}
+
+.price-divider {
+    height: 120px;
+    width: 1px;
+    background: var(--brand-white);
+    opacity: 0.2;
+}
+
+.price-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    min-width: 280px;
+}
+
+.price-display {
+    text-align: center;
+}
+
+.price-strike {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--brand-grey);
+    text-decoration: line-through;
+    margin-bottom: 8px;
+}
+
+.price-amount {
+    font-family: 'Geist', sans-serif;
+    font-weight: 700;
+    font-size: 52px;
+    color: var(--brand-highlighter);
+    letter-spacing: -1.5px;
+    margin-bottom: 8px;
+}
+
+.price-subtext {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--brand-white);
+    opacity: 0.8;
+}
+
+/* ===================================
+   FINAL CTA SECTION
+   =================================== */
+
+.final-cta {
+    width: 100%;
+    background: var(--brand-blue);
+    padding: var(--spacing-2xl) var(--spacing-xl);
+    text-align: center;
+}
+
+.final-cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.cta-title {
+    font-family: 'Geist', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--brand-white);
+    letter-spacing: -1.44px;
+}
+
+.cta-subtitle {
+    font-family: 'Geist', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: -0.3px;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+
+.footer {
+    width: 100%;
+    background: var(--background);
+    padding: var(--spacing-lg) 0;
+}
+
+.footer-content {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 var(--spacing-xl);
+}
+
+.footer-logo-img {
+    height: 31px;
+    width: auto;
+}
+
+/* ===================================
+   GOOGLE CALENDAR BUTTON STYLING
+   =================================== */
+
+.gcal-btn-wrapper {
+    margin-top: 0;
+}
+
+.gcal-btn-wrapper button {
+    background: #D1FF6E !important;
+    color: #026232 !important;
+    border-radius: 999px !important;
+    font-family: 'Geist', system-ui, sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    padding: 16px 32px !important;
+    height: auto !important;
+    min-width: 240px !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: box-shadow 0.3s ease, transform 0.2s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    overflow: hidden !important;
+    z-index: 1 !important;
+}
+
+.gcal-btn-wrapper button::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: #026232 !important;
+    transition: left 0.4s ease !important;
+    z-index: -1 !important;
+    border-radius: 999px !important;
+}
+
+.gcal-btn-wrapper button:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+    transform: translateY(-2px) !important;
+}
+
+.gcal-btn-wrapper button:hover::before {
+    left: 0 !important;
+}
+
+.gcal-btn-wrapper button:hover {
+    color: #D1FF6E !important;
+}
+
+.gcal-btn-wrapper button:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+
+@media (max-width: 1200px) {
+    .feature-block,
+    .feature-block.feature-reverse {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .feature-block.feature-reverse .feature-content,
+    .feature-block.feature-reverse .feature-image {
+        order: unset;
+    }
+    
+    .price-card {
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-section {
+        padding: 40px 40px 0;
+    }
+    
+    .hero-title {
+        font-size: 56px;
+    }
+    
+    .hero-image {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 950px) {
+    .hero-main {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-lg);
+    }
+    
+    .hero-text-container {
+        max-width: 100%;
+        align-self: flex-start;
+    }
+    
+    .hero-image {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        aspect-ratio: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 32px 24px 0;
+    }
+    
+    .hero-title {
+        font-size: 42px;
+        letter-spacing: -1.26px;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .hero-image {
+        max-width: 400px;
+    }
+    
+    .section-title {
+        font-size: 32px;
+    }
+    
+    .section-subtitle {
+        font-size: 18px;
+    }
+    
+    .feature-title {
+        font-size: 24px;
+    }
+    
+    .feature-desc {
+        font-size: 16px;
+    }
+    
+    .final-title {
+        font-size: 32px;
+    }
+    
+    .final-desc {
+        font-size: 18px;
+    }
+    
+    .price-card {
+        flex-direction: column;
+        padding: var(--spacing-lg);
+        gap: var(--spacing-lg);
+    }
+    
+    .price-features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .price-divider {
+        display: none;
+    }
+    
+    .price-amount {
+        font-size: 42px;
+    }
+    
+    .cta-title {
+        font-size: 32px;
+    }
+    
+    .cta-subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 24px 16px 0;
+    }
+    
+    .hero-logo {
+        width: 140px;
+        height: auto;
+    }
+    
+    .hero-title {
+        font-size: 32px;
+        letter-spacing: -0.96px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .hero-image {
+        max-width: 300px;
+    }
+    
+    .features-section {
+        padding: var(--spacing-xl) var(--spacing-sm);
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .feature-title {
+        font-size: 20px;
+    }
+    
+    .gcal-btn-wrapper button {
+        min-width: 200px !important;
+        padding: 14px 24px !important;
+        font-size: 14px !important;
+    }
+}
