@@ -159,13 +159,15 @@ body {
 .features-section {
     width: 100%;
     background: var(--background);
-    padding: var(--spacing-2xl) var(--spacing-xl);
+    padding: 0;
 }
 
 .features-header {
     max-width: 800px;
-    margin: 0 auto var(--spacing-2xl);
+    margin: 0 auto;
+    padding: var(--spacing-2xl) var(--spacing-xl);
     text-align: center;
+    background: var(--background);
 }
 
 .section-title {
@@ -185,12 +187,32 @@ body {
 }
 
 .feature-block {
-    max-width: 1320px;
-    margin: 0 auto var(--spacing-2xl);
+    max-width: 100%;
+    margin: 0 auto;
+    padding: var(--spacing-2xl) var(--spacing-xl);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-2xl);
     align-items: center;
+}
+
+/* Alternating backgrounds - starts from 2nd child because header is 1st */
+.features-section .feature-block:nth-child(2),
+.features-section .feature-block:nth-child(4),
+.features-section .feature-block:nth-child(6) {
+    background: var(--background);
+}
+
+.features-section .feature-block:nth-child(3),
+.features-section .feature-block:nth-child(5),
+.features-section .feature-block:nth-child(7) {
+    background: var(--surface-tint);
+}
+
+.feature-block .feature-content,
+.feature-block .feature-image {
+    max-width: 625px;
+    margin: 0 auto;
 }
 
 .feature-block.feature-reverse {
@@ -253,11 +275,10 @@ body {
 
 /* Final Feature Block */
 .feature-block-final {
-    max-width: 1320px;
-    margin: var(--spacing-2xl) auto 0;
-    padding: var(--spacing-2xl);
+    width: 100%;
+    margin: 0;
+    padding: var(--spacing-2xl) var(--spacing-xl);
     background: var(--brand-almost-black);
-    border-radius: var(--radius-lg);
     text-align: center;
 }
 
@@ -562,6 +583,7 @@ body {
     .feature-block.feature-reverse {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
+        padding: var(--spacing-2xl) var(--spacing-lg);
     }
     
     .feature-block.feature-reverse .feature-content,
@@ -701,7 +723,11 @@ body {
         max-width: 300px;
     }
     
-    .features-section {
+    .feature-block {
+        padding: var(--spacing-xl) var(--spacing-sm);
+    }
+    
+    .features-header {
         padding: var(--spacing-xl) var(--spacing-sm);
     }
     
