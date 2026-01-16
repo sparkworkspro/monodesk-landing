@@ -181,6 +181,16 @@ path {
     line-height: 1.2rem;
 }
 
+.hero-subtext {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: -0.2px;
+    line-height: 1.6rem;
+    max-width: 500px;
+    margin-top: var(--spacing-sm);
+}
+
 /* ===================================
    CTA TOAST
    =================================== */
@@ -1682,6 +1692,12 @@ path {
         font-size: 1.4rem;
     }
     
+    .hero-subtext {
+        font-size: 0.95rem;
+        line-height: 1.4rem;
+        max-width: 100%;
+    }
+    
     .timeline-container {
         grid-template-columns: minmax(80px, 32%) 1fr;
         gap: var(--spacing-sm);
@@ -1867,6 +1883,11 @@ path {
         font-size: 1.1rem;
     }
     
+    .hero-subtext {
+        font-size: 0.85rem;
+        line-height: 1.3rem;
+    }
+    
     .section-title {
         font-size: 28px;
     }
@@ -2031,6 +2052,11 @@ path {
         line-height: 0.9rem;
     }
     
+    .hero-subtext {
+        font-size: 0.7rem;
+        line-height: 1rem;
+    }
+    
     .timeline-section {
         padding: var(--spacing-md) var(--spacing-sm);
     }
@@ -2095,6 +2121,11 @@ path {
     .hero-tagline {
         font-size: 0.6rem;
         line-height: 0.7rem;
+    }
+    
+    .hero-subtext {
+        font-size: 0.55rem;
+        line-height: 0.8rem;
     }
     
     .timeline-container {
